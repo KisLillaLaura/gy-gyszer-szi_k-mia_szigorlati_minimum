@@ -2,14 +2,42 @@
 
 // Adatstruktúrák
 const pharmacoGroups = [
-    "Analgetikumok", "Anesztetikumok", "Antiallergikumok", "Antibiotikumok", 
-    "Antidepresszánsok", "Antidiabetikumok", "Antiepileptikumok", "Antihisztaminok",
-    "Antihypertenzív szerek", "Antiinflamatóriumok", "Antimikotikumok", "Antiparkinson szerek",
-    "Antipszichotikumok", "Antitusszívok", "Anxiolitikumok", "Beta-blokkolók",
-    "Ca-antagonisták", "Diuretikumok", "Expectoránsok", "Hormonok",
-    "Immunszuppresszánsok", "Koleszterincsökkentők", "Központi idegrendszerre ható szerek", 
-    "Migrénszerek", "Muszkolinerg szerek", "NSAID-ok", "Opioidok", 
-    "Szívglikozidok", "Szimpatomimetikumok", "Vazodilatátorok", "Vitaminok"
+    const pharmacoGroups = [
+    "Major analgetikum",
+    "Minor analgetikum",
+    "NSAID",
+    "Szedato-hipnotikum",
+    "Lokális anesztetikum",
+    "Antipszichotikum",
+    "Antidepresszív szerek",
+    "Antiepileptikum",
+    "Paraszimpatomimetikum",
+    "Paraszimpatolitikum",
+    "Szimpatomimetikum",
+    "Emésztőrendszerre ható szer",
+    "Kardiotonikum",
+    "Antiaritmiás szer",
+    "Béta-blokkoló",
+    "Antianginás szer",
+    "Antikoaguláns",
+    "Diuretikum",
+    "Antidiabetikum",
+    "Vitamin",
+    "Antihisztamin",
+    "Antihipertenzív szer",
+    "Érelmeszesedés elleni szer",
+    "Glükokortikoidok",
+    "Nemi hormonok",
+    "Antibakteriális és protozoon ellenes szerek",
+    "Szulfonamid antibiotikumok",
+    "Antibiotikum",
+    "Antifungális szer",
+    "Tetraciklin antibiotikum",
+    "Aminoglikozid antibiotikum",
+    "Béta-laktám antibiotikumok",
+    "Vírusellenes szer",
+    "Daganat ellenes szer"
+];
 ];
 
 let moleculesData = [];

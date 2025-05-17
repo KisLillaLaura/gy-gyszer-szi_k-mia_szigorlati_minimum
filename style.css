@@ -264,12 +264,55 @@ body {
 
 /* Reszponzív design */
 @media (max-width: 768px) {
+    /* Molekula rács */
     .molecule-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
     .checkbox-group {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Táblázat mobil nézet */
+    .molecule-table,
+    .molecule-table thead,
+    .molecule-table tbody,
+    .molecule-table th,
+    .molecule-table td,
+    .molecule-table tr {
+        display: block;
+    }
+    
+    .molecule-table tr {
+        margin-bottom: 15px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+    }
+    
+    .molecule-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    .molecule-table td::before {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+    }
+    
+    /* Felülírjuk a korábbi oszlopszélességeket */
+    .molecule-table--2cols td,
+    .molecule-table--3cols td,
+    .molecule-table--4cols td,
+    .molecule-table--5cols td {
+        width: 100%;
     }
     
     :root {

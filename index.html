@@ -124,61 +124,70 @@
             });
         }
         
-        function createMoleculeCard(molecule) {
-            // Létrehoz egy molekula kártyát a megadott molekula adataival
-            const card = document.createElement('div');
-            card.className = 'molecule-card';
-            
-            const img = document.createElement('img');
-            img.className = 'molecule-image';
-            img.src = `molecules/${molecule.image}`; // feltételezve, hogy a képek a molecules mappában vannak
-            img.alt = molecule.name;
-            
-            const name = document.createElement('h3');
-            name.textContent = 'Molekula';
-            
-            const table = document.createElement('table');
-            table.className = 'molecule-table';
-            table.innerHTML = `
-                <tr>
-                    <th>Latin név</th>
-                    <td><input type="text" class="latin-name"></td>
-                </tr>
-                <tr>
-                    <th>Hatástani csoport</th>
-                    <td>
-                        <select class="pharm-group">
+ function createMoleculeCard(molecule) {
+    const availableFields = [
+        { key: 'latinName', label: 'Latin név', type: 'input' },
+        { key: 'group', label: 'Hatástani csoport', type: 'select' },
+        { key: 'subgroup', label: 'Alcsoport', type: 'select' },
+        { key: 'target', label: 'Gyógyszeres célpont', type: 'select' },
+        { key: 'generation', label: 'Generáció', type: 'input', optional: true }
+    ];
+
+    // Szűrés csak a nem üres mezőkre
+    const fieldsToShow = availableFields.filter(field => {
+        const value = molecule[field.key];
+        return (value !== undefined && value !== null && value !== '') || !field.optional;
+    });
+
+    // Oszloposztály meghatározása
+    const colCount = fieldsToShow.length;
+    const tableClass = `molecule-table molecule-table--${colCount}cols`;
+
+    // Táblázat HTML generálása
+    let tableHTML = `<table class="${tableClass}">`;
+    
+    fieldsToShow.forEach(field => {
+        const value = molecule[field.key] || '';
+        const isGeneration = field.key === 'generation';
+        const rowClass = isGeneration ? 'generation-field' : '';
+        
+        tableHTML += `
+            <tr class="${rowClass}">
+                <th>${field.label}</th>
+                <td data-label="${field.label}">
+                    ${field.type === 'select' ? 
+                        `<select class="${field.key}">
                             <option value="">Válassz...</option>
-                            ${pharmacoGroups.map(g => `<option value="${g}">${g}</option>`).join('')}
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Alcsoport</th>
-                    <td>
-                        <select class="subgroup">
-                            <option value="">Válassz...</option>
-                            <!-- Alcsoportok dinamikusan kerülnek betöltésre a kiválasztott hatástani csoport alapján -->
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Gyógyszeres célpont</th>
-                    <td>
-                        <select class="target">
-                            <option value="">Válassz...</option>
-                            <!-- Célpontok dinamikusan kerülnek betöltésre -->
-                        </select>
-                    </td>
-                </tr>
-            `;
-            
-            card.appendChild(img);
-            card.appendChild(name);
-            card.appendChild(table);
-            
-            return card;
-        }
+                            ${getOptionsForField(field.key)}
+                        </select>` :
+                        `<input type="text" class="${field.key}" value="${value}">`
+                    }
+                </td>
+            </tr>
+        `;
+    });
+    
+    tableHTML += '</table>';
+
+    // Kártya összeállítása
+    const card = document.createElement('div');
+    card.className = 'molecule-card';
+    
+    const img = document.createElement('img');
+    img.className = 'molecule-image';
+    img.src = `molecules/${molecule.image}`;
+    img.alt = molecule.name;
+    
+    const name = document.createElement('h3');
+    name.className = 'molecule-card__title';
+    name.textContent = molecule.name || 'Molekula';
+    
+    card.appendChild(img);
+    card.appendChild(name);
+    card.innerHTML += tableHTML;
+    
+    return card;
+}       
         
         function checkAnswers() {
             // Ellenőrzi a válaszokat és kiértékeli az eredményt

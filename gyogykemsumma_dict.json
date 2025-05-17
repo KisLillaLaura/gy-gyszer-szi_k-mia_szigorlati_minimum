@@ -1,0 +1,1346 @@
+{
+  "Morphinum.jpg": {
+    "latin": "Morphinum",
+    "hatástani csoport": "major analgetikum",
+    "alcsoport": "",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Codeinum.jpg": {
+    "latin": "Codeinum",
+    "hatástani csoport": "major analgetikum",
+    "alcsoport": "félszintetikus morfinszármazék",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Aethylmorphinum.jpg": {
+    "latin": "Aethylmorphinum",
+    "hatástani csoport": "major analgetikum",
+    "alcsoport": "félszintetikus morfinszármazék",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Dihydrocodeinum.jpg": {
+    "latin": "Dihydrocodeinum",
+    "hatástani csoport": "major analgetikum",
+    "alcsoport": "félszintetikus morfinszármazék",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Oxycodonum.jpg": {
+    "latin": "Oxycodonum",
+    "hatástani csoport": "major analgetikum",
+    "alcsoport": "félszintetikus morfinszármazék",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Naloxonum.jpg": {
+    "latin": "Naloxonum",
+    "hatástani csoport": "major analgetikum",
+    "alcsoport": "félszintetikus morfinszármazék",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Naltrexonum.jpg": {
+    "latin": "Naltrexonum",
+    "hatástani csoport": "major analgetikum",
+    "alcsoport": "félszintetikus morfinszármazék",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Dextromethorphanum.jpg": {
+    "latin": "Dextromethorphanum",
+    "hatástani csoport": "major analgetikum",
+    "alcsoport": "morfinán",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Fentanylum.jpg": {
+    "latin": "Fentanylum",
+    "hatástani csoport": "major analgetikum",
+    "alcsoport": "anilidopiperidinek",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Methadonum.jpg": {
+    "latin": "Methadonum",
+    "hatástani csoport": "major analgetikum",
+    "alcsoport": "diaril-alkil-keton",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Tramadolum.jpg": {
+    "latin": "Tramadolum",
+    "hatástani csoport": "major analgetikum",
+    "alcsoport": "diaril-alkil-keton",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Paracetamolum.jpg": {
+    "latin": "Paracetamolum",
+    "hatástani csoport": "minor analgetikum",
+    "alcsoport": "anilin származék",
+    "target": "COX enzimek",
+    "generáció": ""
+  },
+  "Phenazonum.jpg": {
+    "latin": "Phenazonum",
+    "hatástani csoport": "minor analgetikum",
+    "alcsoport": "pirazolon",
+    "target": "COX enzimek",
+    "generáció": ""
+  },
+  "Metamizolum_natricum.jpg": {
+    "latin": "Metamizolum natricum",
+    "hatástani csoport": "minor analgetikum",
+    "alcsoport": "pirazolon",
+    "target": "COX enzimek",
+    "generáció": ""
+  },
+  "Acidum_salicylicum.jpg": {
+    "latin": "Acidum salicylicum",
+    "hatástani csoport": "minor analgetikum",
+    "alcsoport": "szalicilát",
+    "target": "COX enzimek",
+    "generáció": ""
+  },
+  "Acidum_acetylsalicylicum.jpg": {
+    "latin": "Acidum acetylsalicylicum",
+    "hatástani csoport": "minor analgetikum ÉS antikoaguláns",
+    "alcsoport": "szalicilát",
+    "target": "COX enzimek",
+    "generáció": ""
+  },
+  "Acidum_niflumicum.jpg": {
+    "latin": "Acidum niflumicum",
+    "hatástani csoport": "NSAID",
+    "alcsoport": "N-aril-antarnilsav származék",
+    "target": "COX enzimek",
+    "generáció": ""
+  },
+  "Diclofenacum.jpg": {
+    "latin": "Diclofenacum",
+    "hatástani csoport": "NSAID",
+    "alcsoport": "heteroarilecetsav származék",
+    "target": "COX enzimek",
+    "generáció": ""
+  },
+  "Ibuprofenum.jpg": {
+    "latin": "Ibuprofenum",
+    "hatástani csoport": "NSAID",
+    "alcsoport": "arilproprionsav származék",
+    "target": "COX enzimek",
+    "generáció": ""
+  },
+  "Naproxenum.jpg": {
+    "latin": "Naproxenum",
+    "hatástani csoport": "NSAID",
+    "alcsoport": "arilproprionsav származék",
+    "target": "COX enzimek",
+    "generáció": ""
+  },
+  "Phenylbutazonum.jpg": {
+    "latin": "Phenylbutazonum",
+    "hatástani csoport": "NSAID",
+    "alcsoport": "pirazolidindion származék",
+    "target": "COX enzimek",
+    "generáció": ""
+  },
+  "Piroxicamum.jpg": {
+    "latin": "Piroxicamum",
+    "hatástani csoport": "NSAID",
+    "alcsoport": "1,2-benzotiazin származék",
+    "target": "COX enzimek",
+    "generáció": ""
+  },
+  "Celecoxibum.jpg": {
+    "latin": "Celecoxibum",
+    "hatástani csoport": "NSAID",
+    "alcsoport": "szelektív COX-2-inhibitor",
+    "target": "COX-2 enzim",
+    "generáció": ""
+  },
+  "Nimesulidum.jpg": {
+    "latin": "Nimesulidum",
+    "hatástani csoport": "NSAID",
+    "alcsoport": "szelektív COX-2-inhibitor",
+    "target": "COX-2 enzim",
+    "generáció": ""
+  },
+  "Sevofluranum.jpg": {
+    "latin": "Sevofluranum",
+    "hatástani csoport": "szedato-hipnotikum",
+    "alcsoport": "inhalációs anesztetikum",
+    "target": "GABAA receptor",
+    "generáció": "III."
+  },
+  "Propofolum.jpg": {
+    "latin": "Propofolum",
+    "hatástani csoport": "szedato-hipnotikum",
+    "alcsoport": "injekciós anesztetikum",
+    "target": "GABAA receptor",
+    "generáció": ""
+  },
+  "Nitrazepamum.jpg": {
+    "latin": "Nitrazepamum",
+    "hatástani csoport": "szedato-hipnotikum",
+    "alcsoport": "benzodiazepin",
+    "target": "GABAA receptor",
+    "generáció": "I."
+  },
+  "Diazepamum.jpg": {
+    "latin": "Diazepamum",
+    "hatástani csoport": "szedato-hipnotikum",
+    "alcsoport": "benzodiazepin",
+    "target": "GABAA receptor",
+    "generáció": "I."
+  },
+  "Chlordiazepoxidum.jpg": {
+    "latin": "Chlordiazepoxidum",
+    "hatástani csoport": "szedato-hipnotikum",
+    "alcsoport": "benzodiazepin",
+    "target": "GABAA receptor",
+    "generáció": "I."
+  },
+  "Midazolamum.jpg": {
+    "latin": "Midazolamum",
+    "hatástani csoport": "szedato-hipnotikum",
+    "alcsoport": "benzodiazepin",
+    "target": "GABAA receptor",
+    "generáció": "II."
+  },
+  "Alprazolamum.jpg": {
+    "latin": "Alprazolamum",
+    "hatástani csoport": "szedato-hipnotikum",
+    "alcsoport": "benzodiazepin",
+    "target": "GABAA receptor",
+    "generáció": "II."
+  },
+  "Cocainum.jpg": {
+    "latin": "Cocainum",
+    "hatástani csoport": "lokális anesztetikum",
+    "alcsoport": "észter-típusú",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Benzocainum.jpg": {
+    "latin": "Benzocainum",
+    "hatástani csoport": "lokális anesztetikum",
+    "alcsoport": "észter-típusú",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Procainum.jpg": {
+    "latin": "Procainum",
+    "hatástani csoport": "lokális anesztetikum",
+    "alcsoport": "észter-típusú",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Tetracainum.jpg": {
+    "latin": "Tetracainum",
+    "hatástani csoport": "lokális anesztetikum",
+    "alcsoport": "észter-típusú",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Lidocainum.jpg": {
+    "latin": "Lidocainum",
+    "hatástani csoport": "lokális anesztetikum ÉS antiaritmiás szer",
+    "alcsoport": "savamid-típusú ÉS I. osztály",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Mepivacainum.jpg": {
+    "latin": "Mepivacainum",
+    "hatástani csoport": "lokális anesztetikum",
+    "alcsoport": "savamid-típusú",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Ropivacainum.jpg": {
+    "latin": "Ropivacainum",
+    "hatástani csoport": "lokális anesztetikum",
+    "alcsoport": "savamid-típusú",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Bupivacainum.jpg": {
+    "latin": "Bupivacainum",
+    "hatástani csoport": "lokális anesztetikum",
+    "alcsoport": "savamid-típusú",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Chlorpromazinum.jpg": {
+    "latin": "Chlorpromazinum",
+    "hatástani csoport": "antipszichotikum",
+    "alcsoport": "fenotiazinvázas",
+    "target": "D2 receptorok ",
+    "generáció": "I."
+  },
+  "Levomepromazinum.jpg": {
+    "latin": "Levomepromazinum",
+    "hatástani csoport": "antipszichotikum",
+    "alcsoport": "fenotiazinvázas",
+    "target": "D2 receptorok ",
+    "generáció": "I."
+  },
+  "Fluphenazinum.jpg": {
+    "latin": "Fluphenazinum",
+    "hatástani csoport": "antipszichotikum",
+    "alcsoport": "fenotiazinvázas",
+    "target": "D2 receptorok ",
+    "generáció": "I."
+  },
+  "Fluphenazini_decanoas.jpg": {
+    "latin": "Fluphenazini decanoas",
+    "hatástani csoport": "antipszichotikum",
+    "alcsoport": "fenotiazinvázas",
+    "target": "D2 receptorok ",
+    "generáció": "I."
+  },
+  "Chlorprothixenum.jpg": {
+    "latin": "Chlorprothixenum",
+    "hatástani csoport": "antipszichotikum",
+    "alcsoport": "tioxanténvázas",
+    "target": "D2 receptorok ",
+    "generáció": "I."
+  },
+  "Flupentixolum.jpg": {
+    "latin": "Flupentixolum",
+    "hatástani csoport": "antipszichotikum",
+    "alcsoport": "tioxanténvázas",
+    "target": "D2 receptorok ",
+    "generáció": "I."
+  },
+  "Sulpiridum.jpg": {
+    "latin": "Sulpiridum",
+    "hatástani csoport": "antipszichotikum",
+    "alcsoport": "benzamid",
+    "target": "D2/D3 receptorok",
+    "generáció": "II."
+  },
+  "Clozapinum.jpg": {
+    "latin": "Clozapinum",
+    "hatástani csoport": "antipszichotikum",
+    "alcsoport": "triciklusos",
+    "target": "5HT2A > D2 receptorok",
+    "generáció": "II."
+  },
+  "Imipraminum.jpg": {
+    "latin": "Imipraminum",
+    "hatástani csoport": "antidepresszív szerek",
+    "alcsoport": "triciklusos",
+    "target": "SERT, NAT",
+    "generáció": "I."
+  },
+  "Amitriptylinum.jpg": {
+    "latin": "Amitriptylinum",
+    "hatástani csoport": "antidepresszív szerek",
+    "alcsoport": "triciklusos",
+    "target": "SERT, NAT",
+    "generáció": "I."
+  },
+  "Maprotilinum.jpg": {
+    "latin": "Maprotilinum",
+    "hatástani csoport": "antidepresszív szerek",
+    "alcsoport": "tetraciklusos",
+    "target": "SERT, NAT",
+    "generáció": "I."
+  },
+  "Fluoxetinum.jpg": {
+    "latin": "Fluoxetinum",
+    "hatástani csoport": "antidepresszív szerek",
+    "alcsoport": "SSRI",
+    "target": "SERT ",
+    "generáció": "II."
+  },
+  "Sertralinum.jpg": {
+    "latin": "Sertralinum",
+    "hatástani csoport": "antidepresszív szerek",
+    "alcsoport": "SSRI",
+    "target": "SERT ",
+    "generáció": "II."
+  },
+  "Phenobarbitalum.jpg": {
+    "latin": "Phenobarbitalum",
+    "hatástani csoport": "antiepileptikum ÉS szedato-hipnotikum",
+    "alcsoport": "barbitál",
+    "target": "GABAA receptor ÉS AMPA",
+    "generáció": "I."
+  },
+  "Phenytoinum.jpg": {
+    "latin": "Phenytoinum",
+    "hatástani csoport": "antiepileptikum",
+    "alcsoport": "hidantoin",
+    "target": "feszültség függő Na+ csatorna neuron membrán",
+    "generáció": "I."
+  },
+  "Levetiracetamum.jpg": {
+    "latin": "Levetiracetamum",
+    "hatástani csoport": "antiepileptikum",
+    "alcsoport": "pirrolidin",
+    "target": "SV2A protein Ca2+ függő vezikula felszabadulás",
+    "generáció": "I."
+  },
+  "Clonazepamum.jpg": {
+    "latin": "Clonazepamum",
+    "hatástani csoport": "antiepileptikum",
+    "alcsoport": "benzodiazepin",
+    "target": "GABAA receptor",
+    "generáció": "I."
+  },
+  "Carbamazepinum.jpg": {
+    "latin": "Carbamazepinum",
+    "hatástani csoport": "antiepileptikum",
+    "alcsoport": "dibenzoazepin",
+    "target": "feszültség függő Na+ csatorna neuron membrán",
+    "generáció": "I."
+  },
+  "Acidum_valproicum.jpg": {
+    "latin": "Acidum valproicum",
+    "hatástani csoport": "antiepileptikum",
+    "alcsoport": "karbonsav",
+    "target": "T típusú Ca2+ csatorna",
+    "generáció": "I."
+  },
+  "Gabapentinum.jpg": {
+    "latin": "Gabapentinum",
+    "hatástani csoport": "antiepileptikum",
+    "alcsoport": "GABA analóg",
+    "target": "nem T típusú magas küszöbű feszültségfüggő Ca2+",
+    "generáció": "II."
+  },
+  "Acetylcholinum.jpg": {
+    "latin": "Acetylcholinum",
+    "hatástani csoport": "paraszimpatomimetikum",
+    "alcsoport": "direkt hatású",
+    "target": "muszkarin-receptor",
+    "generáció": ""
+  },
+  "Carbacholum.jpg": {
+    "latin": "Carbacholum",
+    "hatástani csoport": "paraszimpatomimetikum",
+    "alcsoport": "direkt hatású",
+    "target": "muszkarin-receptor",
+    "generáció": ""
+  },
+  "Pilocarpinum.jpg": {
+    "latin": "Pilocarpinum",
+    "hatástani csoport": "paraszimpatomimetikum",
+    "alcsoport": "direkt hatású",
+    "target": "muszkarin-receptor",
+    "generáció": ""
+  },
+  "Physostigminum.jpg": {
+    "latin": "Physostigminum",
+    "hatástani csoport": "paraszimpatomimetikum",
+    "alcsoport": "reverzibilis kolinészterázgátló",
+    "target": "koleszterinészteráz",
+    "generáció": ""
+  },
+  "Pyridostigminum.jpg": {
+    "latin": "Pyridostigminum",
+    "hatástani csoport": "paraszimpatomimetikum",
+    "alcsoport": "reverzibilis kolinészterázgátló",
+    "target": "koleszterinészteráz",
+    "generáció": ""
+  },
+  "Atropinum.jpg": {
+    "latin": "Atropinum",
+    "hatástani csoport": "paraszimpatolitikum",
+    "alcsoport": "muszkarin-antagonista",
+    "target": "muszkarin-receptor",
+    "generáció": ""
+  },
+  "Scopolaminum.jpg": {
+    "latin": "Scopolaminum",
+    "hatástani csoport": "paraszimpatolitikum",
+    "alcsoport": "muszkarin-antagonista",
+    "target": "muszkarin-receptor",
+    "generáció": ""
+  },
+  "Homatropinum.jpg": {
+    "latin": "Homatropinum",
+    "hatástani csoport": "paraszimpatolitikum",
+    "alcsoport": "muszkarin-antagonista",
+    "target": "muszkarin-receptor",
+    "generáció": ""
+  },
+  "Homatropini_methylbromidum.jpg": {
+    "latin": "Homatropini methylbromidum",
+    "hatástani csoport": "paraszimpatolitikum",
+    "alcsoport": "muszkarin-antagonista",
+    "target": "muszkarin-receptor",
+    "generáció": ""
+  },
+  "Ipratropii_bromidum.jpg": {
+    "latin": "Ipratropii bromidum",
+    "hatástani csoport": "paraszimpatolitikum",
+    "alcsoport": "muszkarin-antagonista",
+    "target": "muszkarin-receptor",
+    "generáció": ""
+  },
+  "Tiotropii_bromidum.jpg": {
+    "latin": "Tiotropii bromidum",
+    "hatástani csoport": "paraszimpatolitikum",
+    "alcsoport": "muszkarin-antagonista",
+    "target": "muszkarin-receptor",
+    "generáció": ""
+  },
+  "Noradrenalinum.jpg": {
+    "latin": "Noradrenalinum",
+    "hatástani csoport": "szimpatomimetikum",
+    "alcsoport": "fenil-alkamin-szerkezetű",
+    "target": "alfa és béta receptor",
+    "generáció": ""
+  },
+  "Adrenalinum.jpg": {
+    "latin": "Adrenalinum",
+    "hatástani csoport": "szimpatomimetikum",
+    "alcsoport": "fenil-alkamin-szerkezetű",
+    "target": "alfa és béta receptor",
+    "generáció": ""
+  },
+  "Isoprenalinum.jpg": {
+    "latin": "Isoprenalinum",
+    "hatástani csoport": "szimpatomimetikum",
+    "alcsoport": "fenil-alkamin-szerkezetű",
+    "target": "alfa és béta receptor",
+    "generáció": ""
+  },
+  "Terbutalinum.jpg": {
+    "latin": "Terbutalinum",
+    "hatástani csoport": "szimpatomimetikum",
+    "alcsoport": "szelektív B2-adrenerg agonista",
+    "target": " béta2 receptor",
+    "generáció": ""
+  },
+  "Phenylephrinum.jpg": {
+    "latin": "Phenylephrinum",
+    "hatástani csoport": "szimpatomimetikum",
+    "alcsoport": "fenil-alkamin-szerkezetű",
+    "target": "alfa és béta receptor",
+    "generáció": ""
+  },
+  "Ephedrinum.jpg": {
+    "latin": "Ephedrinum",
+    "hatástani csoport": "szimpatomimetikum",
+    "alcsoport": "fenil-alkamin-szerkezetű",
+    "target": "alfa és béta receptor",
+    "generáció": ""
+  },
+  "Naphazolinum.jpg": {
+    "latin": "Naphazolinum",
+    "hatástani csoport": "szimpatomimetikum",
+    "alcsoport": "1,2H-imidazolin-vázas ",
+    "target": "alfa és béta receptor",
+    "generáció": ""
+  },
+  "Omeprazolum.jpg": {
+    "latin": "Omeprazolum",
+    "hatástani csoport": "emésztőrendszerre ható szer",
+    "alcsoport": "protonpumpa-gátló",
+    "target": "protonpumpa",
+    "generáció": ""
+  },
+  "Cimetidinum.jpg": {
+    "latin": "Cimetidinum",
+    "hatástani csoport": "emésztőrendszerre ható szer",
+    "alcsoport": "H2-hisztaminreceptor-blokkoló",
+    "target": "H2-hisztaminreceptor",
+    "generáció": ""
+  },
+  "Loperamidum.jpg": {
+    "latin": "Loperamidum",
+    "hatástani csoport": "emésztőrendszerre ható szer",
+    "alcsoport": "hasmenés gátló",
+    "target": "opioidreceptorok",
+    "generáció": ""
+  },
+  "Apomorphinum.jpg": {
+    "latin": "Apomorphinum",
+    "hatástani csoport": "emésztőrendszerre ható szer",
+    "alcsoport": "hánytató szer",
+    "target": "D2-receptor, 5-HT3-receptor",
+    "generáció": ""
+  },
+  "Digitoxinum.jpg": {
+    "latin": "Digitoxinum",
+    "hatástani csoport": "kardiotonikum",
+    "alcsoport": "digitálisz-glikozid",
+    "target": "Na⁺/K⁺-ATPáz",
+    "generáció": ""
+  },
+  "Digoxinum.jpg": {
+    "latin": "Digoxinum",
+    "hatástani csoport": "kardiotonikum",
+    "alcsoport": "digitálisz-glikozid",
+    "target": "Na⁺/K⁺-ATPáz",
+    "generáció": ""
+  },
+  "Deslanosidum.jpg": {
+    "latin": "Deslanosidum",
+    "hatástani csoport": "kardiotonikum",
+    "alcsoport": "digitálisz-glikozid",
+    "target": "Na⁺/K⁺-ATPáz",
+    "generáció": ""
+  },
+  "Lanatosidum.jpg": {
+    "latin": "Lanatosidum",
+    "hatástani csoport": "kardiotonikum",
+    "alcsoport": "digitálisz-glikozid",
+    "target": "Na⁺/K⁺-ATPáz",
+    "generáció": ""
+  },
+  "Gitoxinum.jpg": {
+    "latin": "Gitoxinum",
+    "hatástani csoport": "kardiotonikum",
+    "alcsoport": "digitálisz-glikozid",
+    "target": "Na⁺/K⁺-ATPáz",
+    "generáció": ""
+  },
+  "Chinidinum.jpg": {
+    "latin": "Chinidinum",
+    "hatástani csoport": "antiaritmiás szer",
+    "alcsoport": "I. osztály",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Procainamidum.jpg": {
+    "latin": "Procainamidum",
+    "hatástani csoport": "antiaritmiás szer",
+    "alcsoport": "I. osztály",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Mexiletinum.jpg": {
+    "latin": "Mexiletinum",
+    "hatástani csoport": "antiaritmiás szer",
+    "alcsoport": "I. osztály",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Propafenonum.jpg": {
+    "latin": "Propafenonum",
+    "hatástani csoport": "antiaritmiás szer",
+    "alcsoport": "I. osztály",
+    "target": "Na+ csatorna idegszövet membránjában",
+    "generáció": ""
+  },
+  "Propranololum.jpg": {
+    "latin": "Propranololum",
+    "hatástani csoport": "béta-blokkoló",
+    "alcsoport": "nem szelektív béta szimpatolitikum",
+    "target": " béta2 receptor",
+    "generáció": ""
+  },
+  "Metoprololum.jpg": {
+    "latin": "Metoprololum",
+    "hatástani csoport": "béta-blokkoló",
+    "alcsoport": "kardioszelektív béta szimpatolitikum",
+    "target": " béta1 receptor",
+    "generáció": ""
+  },
+  "Bisoprololum.jpg": {
+    "latin": "Bisoprololum",
+    "hatástani csoport": "béta-blokkoló",
+    "alcsoport": "kardioszelektív béta szimpatolitikum",
+    "target": " béta1 receptor",
+    "generáció": ""
+  },
+  "Amylis_nitris.jpg": {
+    "latin": "Amylis nitris",
+    "hatástani csoport": "antianginás szer",
+    "alcsoport": "szerves nitrit- és nitrát észterek",
+    "target": "guanil-cikláz",
+    "generáció": ""
+  },
+  "Glycerylis_trinitras.jpg": {
+    "latin": "Glycerylis trinitras",
+    "hatástani csoport": "antianginás szer",
+    "alcsoport": "szerves nitrit- és nitrát észterek",
+    "target": "guanil-cikláz",
+    "generáció": ""
+  },
+  "Isosorbidi_mononitras.jpg": {
+    "latin": "Isosorbidi mononitras",
+    "hatástani csoport": "antianginás szer",
+    "alcsoport": "szerves nitrit- és nitrát észterek",
+    "target": "guanil-cikláz",
+    "generáció": ""
+  },
+  "Nifedipinum.jpg": {
+    "latin": "Nifedipinum",
+    "hatástani csoport": "antianginás szer",
+    "alcsoport": "1,4-dihidropiridin-származékok",
+    "target": "Ca+ csatorna",
+    "generáció": ""
+  },
+  "Nitrendipinum.jpg": {
+    "latin": "Nitrendipinum",
+    "hatástani csoport": "antianginás szer",
+    "alcsoport": "1,4-dihidropiridin-származékok",
+    "target": "Ca+ csatorna",
+    "generáció": ""
+  },
+  "Ticlopidinum.jpg": {
+    "latin": "Ticlopidinum",
+    "hatástani csoport": "antikoaguláns",
+    "alcsoport": "Adenozin difoszfát receptor antagonisták",
+    "target": "",
+    "generáció": ""
+  },
+  "Clopidogrelum.jpg": {
+    "latin": "Clopidogrelum",
+    "hatástani csoport": "antikoaguláns",
+    "alcsoport": "Adenozin difoszfát receptor antagonisták",
+    "target": "",
+    "generáció": ""
+  },
+  "Hydrochlorothiazidum.jpg": {
+    "latin": "Hydrochlorothiazidum",
+    "hatástani csoport": "diuretikum",
+    "alcsoport": "sóűrítő diuretikum",
+    "target": "Na+/Cl- kotranszporter ",
+    "generáció": ""
+  },
+  "Chlortalidonum.jpg": {
+    "latin": "Chlortalidonum",
+    "hatástani csoport": "diuretikum",
+    "alcsoport": "sóűrítő diuretikum",
+    "target": "Na+/Cl- kotranszporter ",
+    "generáció": ""
+  },
+  "Indapamidum.jpg": {
+    "latin": "Indapamidum",
+    "hatástani csoport": "diuretikum",
+    "alcsoport": "sóűrítő diuretikum",
+    "target": "Na+/Cl- kotranszporter ",
+    "generáció": ""
+  },
+  "Acidum_etacrynicum.jpg": {
+    "latin": "Acidum etacrynicum",
+    "hatástani csoport": "diuretikum",
+    "alcsoport": "kacsdiuretikum",
+    "target": "K+/Na+/Cl- kotranszporter",
+    "generáció": ""
+  },
+  "Furosemidum.jpg": {
+    "latin": "Furosemidum",
+    "hatástani csoport": "diuretikum",
+    "alcsoport": "kacsdiuretikum",
+    "target": "K+/Na+/Cl- kotranszporter",
+    "generáció": ""
+  },
+  "Gliclazidum.jpg": {
+    "latin": "Gliclazidum",
+    "hatástani csoport": "antidiabetikum",
+    "alcsoport": "szulfonil-larbamid",
+    "target": "inzulinreceptor",
+    "generáció": ""
+  },
+  "Nateglinidum.jpg": {
+    "latin": "Nateglinidum",
+    "hatástani csoport": "antidiabetikum",
+    "alcsoport": "meglitinid-típusú",
+    "target": "béta sejt ATP-függő K+ csatorna",
+    "generáció": ""
+  },
+  "Metforminum.jpg": {
+    "latin": "Metforminum",
+    "hatástani csoport": "antidiabetikum",
+    "alcsoport": "biguanid-típusú",
+    "target": "inzulinreceptor",
+    "generáció": ""
+  },
+  "Vildagliptinum.jpg": {
+    "latin": "Vildagliptinum",
+    "hatástani csoport": "antidiabetikum",
+    "alcsoport": "DPP4-gátló",
+    "target": "DPP4",
+    "generáció": ""
+  },
+  "Retinolum.jpg": {
+    "latin": "Retinolum",
+    "hatástani csoport": "vitamin",
+    "alcsoport": "zsíroldékony",
+    "target": "",
+    "generáció": ""
+  },
+  "Retinoli_acetas.jpg": {
+    "latin": "Retinoli acetas",
+    "hatástani csoport": "vitamin",
+    "alcsoport": "zsíroldékony",
+    "target": "",
+    "generáció": ""
+  },
+  "Colecalciferolum.jpg": {
+    "latin": "Colecalciferolum",
+    "hatástani csoport": "vitamin",
+    "alcsoport": "zsíroldékony",
+    "target": "",
+    "generáció": ""
+  },
+  "Calcipotriolum.jpg": {
+    "latin": "Calcipotriolum",
+    "hatástani csoport": "vitamin",
+    "alcsoport": "zsíroldékony",
+    "target": "",
+    "generáció": ""
+  },
+  "Thiaminum.jpg": {
+    "latin": "Thiaminum",
+    "hatástani csoport": "vitamin",
+    "alcsoport": "vízoldékony",
+    "target": "",
+    "generáció": ""
+  },
+  "Riboflavinum.jpg": {
+    "latin": "Riboflavinum",
+    "hatástani csoport": "vitamin",
+    "alcsoport": "vízoldékony",
+    "target": "",
+    "generáció": ""
+  },
+  "Pyridoxinum.jpg": {
+    "latin": "Pyridoxinum",
+    "hatástani csoport": "vitamin",
+    "alcsoport": "vízoldékony",
+    "target": "",
+    "generáció": ""
+  },
+  "Acidum_ascorbicum.jpg": {
+    "latin": "Acidum ascorbicum",
+    "hatástani csoport": "vitamin",
+    "alcsoport": "vízoldékony",
+    "target": "",
+    "generáció": ""
+  },
+  "Histaminum.jpg": {
+    "latin": "Histaminum",
+    "hatástani csoport": "antihisztamin",
+    "alcsoport": "",
+    "target": "H1-receptor",
+    "generáció": ""
+  },
+  "Diphenhydraminum.jpg": {
+    "latin": "Diphenhydraminum",
+    "hatástani csoport": "antihisztamin",
+    "alcsoport": "aminoalkil-éterek",
+    "target": "H1-receptor",
+    "generáció": ""
+  },
+  "Dimetindenum.jpg": {
+    "latin": "Dimetindenum",
+    "hatástani csoport": "antihisztamin",
+    "alcsoport": "alkil- és alkenil-aminok",
+    "target": "H1-receptor",
+    "generáció": ""
+  },
+  "Hydroxyzinum.jpg": {
+    "latin": "Hydroxyzinum",
+    "hatástani csoport": "antihisztamin",
+    "alcsoport": "benzhidrilpiperazin-származék",
+    "target": "H1-receptor",
+    "generáció": ""
+  },
+  "Promethazinum.jpg": {
+    "latin": "Promethazinum",
+    "hatástani csoport": "antihisztamin",
+    "alcsoport": "fenotiazin-származék",
+    "target": "H1-receptor",
+    "generáció": ""
+  },
+  "Amlodipinum.jpg": {
+    "latin": "Amlodipinum",
+    "hatástani csoport": "antihipertenzív szer ÉS antianginás szer",
+    "alcsoport": "dihidropiridin-származék",
+    "target": "Ca+ csatorna",
+    "generáció": ""
+  },
+  "Captoprilum.jpg": {
+    "latin": "Captoprilum",
+    "hatástani csoport": "antihipertenzív szer",
+    "alcsoport": "ACE gátló",
+    "target": "ACE",
+    "generáció": ""
+  },
+  "Enalaprilum.jpg": {
+    "latin": "Enalaprilum",
+    "hatástani csoport": "antihipertenzív szer",
+    "alcsoport": "ACE gátló",
+    "target": "ACE",
+    "generáció": ""
+  },
+  "Lisinoprilum.jpg": {
+    "latin": "Lisinoprilum",
+    "hatástani csoport": "antihipertenzív szer",
+    "alcsoport": "ACE gátló",
+    "target": "ACE",
+    "generáció": ""
+  },
+  "Ramiprilum.jpg": {
+    "latin": "Ramiprilum",
+    "hatástani csoport": "antihipertenzív szer",
+    "alcsoport": "ACE gátló",
+    "target": "ACE",
+    "generáció": ""
+  },
+  "Quinaprilum.jpg": {
+    "latin": "Quinaprilum",
+    "hatástani csoport": "antihipertenzív szer",
+    "alcsoport": "ACE gátló",
+    "target": "ACE",
+    "generáció": ""
+  },
+  "Losartanum.jpg": {
+    "latin": "Losartanum",
+    "hatástani csoport": "antihipertenzív szer",
+    "alcsoport": "AT1-receptor antagonista",
+    "target": "AT1-receptor",
+    "generáció": ""
+  },
+  "Clofibratum.jpg": {
+    "latin": "Clofibratum",
+    "hatástani csoport": "érelmeszesedés elleni szer",
+    "alcsoport": "fibrát",
+    "target": "PPAR-α",
+    "generáció": "I."
+  },
+  "Ciprofibratum.jpg": {
+    "latin": "Ciprofibratum",
+    "hatástani csoport": "érelmeszesedés elleni szer",
+    "alcsoport": "fibrát",
+    "target": "PPAR-α",
+    "generáció": "II."
+  },
+  "Lovastatinum.jpg": {
+    "latin": "Lovastatinum",
+    "hatástani csoport": "érelmeszesedés elleni szer",
+    "alcsoport": "HMG-CoA inhibitor",
+    "target": "HMG-CoA",
+    "generáció": ""
+  },
+  "Fluvastatinum.jpg": {
+    "latin": "Fluvastatinum",
+    "hatástani csoport": "érelmeszesedés elleni szer",
+    "alcsoport": "HMG-CoA inhibitor",
+    "target": "HMG-CoA",
+    "generáció": ""
+  },
+  "Warfarinum.jpg": {
+    "latin": "Warfarinum",
+    "hatástani csoport": "antikoaguláns",
+    "alcsoport": "K-vitamin antagonista",
+    "target": "Vitamin K epoxid reduktáz komplex",
+    "generáció": ""
+  },
+  "Acenocoumarolum.jpg": {
+    "latin": "Acenocoumarolum",
+    "hatástani csoport": "antikoaguláns",
+    "alcsoport": "K-vitamin antagonista",
+    "target": "Vitamin K epoxid reduktáz komplex",
+    "generáció": ""
+  },
+  "Glucosaminum.jpg": {
+    "latin": "Glucosaminum",
+    "hatástani csoport": "antikoaguláns",
+    "alcsoport": "",
+    "target": "",
+    "generáció": ""
+  },
+  "Acidum_glucuronicum.jpg": {
+    "latin": "Acidum glucuronicum",
+    "hatástani csoport": "antikoaguláns",
+    "alcsoport": "",
+    "target": "",
+    "generáció": ""
+  },
+  "Acidum_iduronicum.jpg": {
+    "latin": "Acidum iduronicum",
+    "hatástani csoport": "antikoaguláns",
+    "alcsoport": "",
+    "target": "",
+    "generáció": ""
+  },
+  "Cetirizinum.jpg": {
+    "latin": "Cetirizinum",
+    "hatástani csoport": "antihisztamin",
+    "alcsoport": "benzhidrilpiperazin-származék",
+    "target": "H1-receptor",
+    "generáció": ""
+  },
+  "Loratadinum.jpg": {
+    "latin": "Loratadinum",
+    "hatástani csoport": "antihisztamin",
+    "alcsoport": "6-7-6 triciklus",
+    "target": "H1-receptor",
+    "generáció": ""
+  },
+  "Desloratadinum.jpg": {
+    "latin": "Desloratadinum",
+    "hatástani csoport": "antihisztamin",
+    "alcsoport": "6-7-6 triciklus",
+    "target": "H1-receptor",
+    "generáció": ""
+  },
+  "Cortisonum.jpg": {
+    "latin": "Cortisonum",
+    "hatástani csoport": "glükkokortikoidok",
+    "alcsoport": "szisztémás kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generáció": ""
+  },
+  "Hydrocortisonum.jpg": {
+    "latin": "Hydrocortisonum",
+    "hatástani csoport": "glükkokortikoidok",
+    "alcsoport": "szisztémás kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generáció": ""
+  },
+  "Prednisonum.jpg": {
+    "latin": "Prednisonum",
+    "hatástani csoport": "glükkokortikoidok",
+    "alcsoport": "szisztémás kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generáció": ""
+  },
+  "Prednisolonum.jpg": {
+    "latin": "Prednisolonum",
+    "hatástani csoport": "glükkokortikoidok",
+    "alcsoport": "szisztémás kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generáció": ""
+  },
+  "Triamcinolonum.jpg": {
+    "latin": "Triamcinolonum",
+    "hatástani csoport": "glükkokortikoidok",
+    "alcsoport": "lokális kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generáció": ""
+  },
+  "Dexamethasonum.jpg": {
+    "latin": "Dexamethasonum",
+    "hatástani csoport": "glükkokortikoidok",
+    "alcsoport": "lokális kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generáció": ""
+  },
+  "Betamethasonum.jpg": {
+    "latin": "Betamethasonum",
+    "hatástani csoport": "glükkokortikoidok",
+    "alcsoport": "lokális kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generáció": ""
+  },
+  "Hydrocortisoni_acetas.jpg": {
+    "latin": "Hydrocortisoni acetas",
+    "hatástani csoport": "glükkokortikoidok",
+    "alcsoport": "szisztémás kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generáció": ""
+  },
+  "Triamcinoloni_acetonidum.jpg": {
+    "latin": "Triamcinoloni acetonidum",
+    "hatástani csoport": "glükkokortikoidok",
+    "alcsoport": "lokális kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generáció": ""
+  },
+  "Fluocinoloni_acetonidum.jpg": {
+    "latin": "Fluocinoloni acetonidum",
+    "hatástani csoport": "glükkokortikoidok",
+    "alcsoport": "lokális kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generáció": ""
+  },
+  "Budesonidum.jpg": {
+    "latin": "Budesonidum",
+    "hatástani csoport": "glükkokortikoidok",
+    "alcsoport": "nazális és inhalációs kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generáció": ""
+  },
+  "Oestronum.jpg": {
+    "latin": "Oestronum",
+    "hatástani csoport": "nemi hormonok",
+    "alcsoport": "természetes ösztrogének",
+    "target": "Ösztrogén receptor",
+    "generáció": ""
+  },
+  "Oestradiolum.jpg": {
+    "latin": "Oestradiolum",
+    "hatástani csoport": "nemi hormonok",
+    "alcsoport": "természetes ösztrogének",
+    "target": "Ösztrogén receptor",
+    "generáció": ""
+  },
+  "Oestriolum.jpg": {
+    "latin": "Oestriolum",
+    "hatástani csoport": "nemi hormonok",
+    "alcsoport": "természetes ösztrogének",
+    "target": "Ösztrogén receptor",
+    "generáció": ""
+  },
+  "Ethinyloestradiolum.jpg": {
+    "latin": "Ethinyloestradiolum",
+    "hatástani csoport": "nemi hormonok",
+    "alcsoport": "félszintetikus ösztrogén",
+    "target": "Ösztrogén receptor",
+    "generáció": ""
+  },
+  "Diethylstilbestrolum.jpg": {
+    "latin": "Diethylstilbestrolum",
+    "hatástani csoport": "nemi hormonok",
+    "alcsoport": "nemszteroid ösztrogén",
+    "target": "Ösztrogén receptor",
+    "generáció": ""
+  },
+  "Tamoxifenum.jpg": {
+    "latin": "Tamoxifenum",
+    "hatástani csoport": "nemi hormonok",
+    "alcsoport": "ösztrogén-antagonista",
+    "target": "ösztrogén receptor",
+    "generáció": "I."
+  },
+  "Chloraminum.jpg": {
+    "latin": "Chloraminum",
+    "hatástani csoport": "Antibakteriális és protozón ellenes szerek",
+    "alcsoport": "",
+    "target": "",
+    "generáció": ""
+  },
+  "Resorcinolum.jpg": {
+    "latin": "Resorcinolum",
+    "hatástani csoport": "Antibakteriális és protozón ellenes szerek",
+    "alcsoport": "",
+    "target": "",
+    "generáció": ""
+  },
+  "Sulfacetamidum.jpg": {
+    "latin": "Sulfacetamidum",
+    "hatástani csoport": "Szulfonamid antibiotikumok",
+    "alcsoport": "",
+    "target": "DHF-reduktáz",
+    "generáció": ""
+  },
+  "Sulfadimidinum.jpg": {
+    "latin": "Sulfadimidinum",
+    "hatástani csoport": "Szulfonamid antibiotikumok",
+    "alcsoport": "",
+    "target": "DHF-reduktáz",
+    "generáció": ""
+  },
+  "Sulfaguanidinum.jpg": {
+    "latin": "Sulfaguanidinum",
+    "hatástani csoport": "Szulfonamid antibiotikumok",
+    "alcsoport": "",
+    "target": "DHF-reduktáz",
+    "generáció": ""
+  },
+  "Chininum.jpg": {
+    "latin": "Chininum",
+    "hatástani csoport": "Antibakteriális és protozón ellenes szerek",
+    "alcsoport": "antimaláriás szer",
+    "target": "",
+    "generáció": ""
+  },
+  "Ciprofloxacinum.jpg": {
+    "latin": "Ciprofloxacinum",
+    "hatástani csoport": "Antibakteriális és protozón ellenes szerek",
+    "alcsoport": "fluorokinolon",
+    "target": "DNS-giráz",
+    "generáció": "II."
+  },
+  "Norfloxacinum.jpg": {
+    "latin": "Norfloxacinum",
+    "hatástani csoport": "Antibakteriális és protozón ellenes szerek",
+    "alcsoport": "fluorokinolon",
+    "target": "DNS-giráz",
+    "generáció": "II."
+  },
+  "Ofloxacinum.jpg": {
+    "latin": "Ofloxacinum",
+    "hatástani csoport": "Antibakteriális és protozón ellenes szerek",
+    "alcsoport": "fluorokinolon",
+    "target": "DNS-giráz",
+    "generáció": "III."
+  },
+  "Levofloxacinum.jpg": {
+    "latin": "Levofloxacinum",
+    "hatástani csoport": "Antibakteriális és protozón ellenes szerek",
+    "alcsoport": "fluorokinolon",
+    "target": "DNS-giráz",
+    "generáció": "III."
+  },
+  "Isoniazidum.jpg": {
+    "latin": "Isoniazidum",
+    "hatástani csoport": "antibiotikum",
+    "alcsoport": "antituberkulotikum",
+    "target": "sejtfalszintézis",
+    "generáció": ""
+  },
+  "Bifonazolum.jpg": {
+    "latin": "Bifonazolum",
+    "hatástani csoport": "antifungális szer",
+    "alcsoport": "imidazol-származék",
+    "target": "ergoszterol szintézis",
+    "generáció": ""
+  },
+  "Clotrimazolum.jpg": {
+    "latin": "Clotrimazolum",
+    "hatástani csoport": "antifungális szer",
+    "alcsoport": "imidazol-származék",
+    "target": "ergoszterol szintézis",
+    "generáció": ""
+  },
+  "Miconazolum.jpg": {
+    "latin": "Miconazolum",
+    "hatástani csoport": "antifungális szer",
+    "alcsoport": "imidazol-származék",
+    "target": "ergoszterol szintézis",
+    "generáció": ""
+  },
+  "Fluconazolum.jpg": {
+    "latin": "Fluconazolum",
+    "hatástani csoport": "antifungális szer",
+    "alcsoport": "triazol-gyűrűs",
+    "target": "30s riboszóma",
+    "generáció": ""
+  },
+  "Tetracyclinum.jpg": {
+    "latin": "Tetracyclinum",
+    "hatástani csoport": "tetraciklin antibiotikum",
+    "alcsoport": "tetraciklin",
+    "target": "30s riboszóma",
+    "generáció": ""
+  },
+  "Oxytetracyclinum.jpg": {
+    "latin": "Oxytetracyclinum",
+    "hatástani csoport": "tetraciklin antibiotikum",
+    "alcsoport": "tetraciklin",
+    "target": "30s riboszóma",
+    "generáció": ""
+  },
+  "Doxycyclinum.jpg": {
+    "latin": "Doxycyclinum",
+    "hatástani csoport": "tetraciklin antibiotikum",
+    "alcsoport": "tetraciklin",
+    "target": "30s riboszóma",
+    "generáció": ""
+  },
+  "Streptomycinum.jpg": {
+    "latin": "Streptomycinum",
+    "hatástani csoport": "aminoglikozid antibiotikum",
+    "alcsoport": "aminoglikozid",
+    "target": "30s riboszóma",
+    "generáció": "I."
+  },
+  "Benzylpenicillinum.jpg": {
+    "latin": "Benzylpenicillinum",
+    "hatástani csoport": "béta-laktám antibiotikumok",
+    "alcsoport": "béta-laktám ",
+    "target": "PBP",
+    "generáció": ""
+  },
+  "Ampicillinum.jpg": {
+    "latin": "Ampicillinum",
+    "hatástani csoport": "béta-laktám antibiotikumok",
+    "alcsoport": "béta-laktám ",
+    "target": "PBP",
+    "generáció": ""
+  },
+  "Amoxicillinum.jpg": {
+    "latin": "Amoxicillinum",
+    "hatástani csoport": "béta-laktám antibiotikumok",
+    "alcsoport": "béta-laktám ",
+    "target": "PBP",
+    "generáció": ""
+  },
+  "Sultamicillinum.jpg": {
+    "latin": "Sultamicillinum",
+    "hatástani csoport": "béta-laktám antibiotikumok",
+    "alcsoport": "béta-laktám és béta--laktamáz enzim gátló",
+    "target": "PBP ÉS béta-laktamáz",
+    "generáció": ""
+  },
+  "Acidum_clavulanicum.jpg": {
+    "latin": "Acidum clavulanicum",
+    "hatástani csoport": "béta-laktám antibiotikumok",
+    "alcsoport": "béta-laktamáz enzim gátló",
+    "target": "béta-laktamáz",
+    "generáció": ""
+  },
+  "Sulbactamum.jpg": {
+    "latin": "Sulbactamum",
+    "hatástani csoport": "béta-laktám antibiotikumok",
+    "alcsoport": "béta-laktamáz enzim gátló",
+    "target": "béta-laktamáz",
+    "generáció": ""
+  },
+  "Cefalexinum.jpg": {
+    "latin": "Cefalexinum",
+    "hatástani csoport": "béta-laktám antibiotikumok",
+    "alcsoport": "kefalosporin",
+    "target": "PBP",
+    "generáció": "II."
+  },
+  "Cefaclorum.jpg": {
+    "latin": "Cefaclorum",
+    "hatástani csoport": "béta-laktám antibiotikumok",
+    "alcsoport": "kefalosporin",
+    "target": "PBP",
+    "generáció": "II."
+  },
+  "Aciclovirum.jpg": {
+    "latin": "Aciclovirum",
+    "hatástani csoport": "vírusellenes szer",
+    "alcsoport": "nukleozid származék",
+    "target": "",
+    "generáció": ""
+  },
+  "Zidovudinum.jpg": {
+    "latin": "Zidovudinum",
+    "hatástani csoport": "vírusellenes szer",
+    "alcsoport": "nukleozidanalóg típusú reverz transzkriptáz gátló",
+    "target": "",
+    "generáció": ""
+  },
+  "Amantadinum.jpg": {
+    "latin": "Amantadinum",
+    "hatástani csoport": "vírusellenes szer",
+    "alcsoport": "adamantán-származék",
+    "target": "",
+    "generáció": ""
+  },
+  "Oseltamivirum.jpg": {
+    "latin": "Oseltamivirum",
+    "hatástani csoport": "vírusellenes szer",
+    "alcsoport": "neuraminidáz-gátló",
+    "target": "neuraminidáz",
+    "generáció": ""
+  },
+  "Cyclophosphamidum.jpg": {
+    "latin": "Cyclophosphamidum",
+    "hatástani csoport": "daganat ellenes szer",
+    "alcsoport": "alkilezőszer típusú citotoxikum",
+    "target": "DNS",
+    "generáció": ""
+  },
+  "Cisplatinum.jpg": {
+    "latin": "Cisplatinum",
+    "hatástani csoport": "daganat ellenes szer",
+    "alcsoport": "platina-amminkomplex",
+    "target": "DNS ",
+    "generáció": ""
+  },
+  "Fluorouracilum.jpg": {
+    "latin": "Fluorouracilum",
+    "hatástani csoport": "daganat ellenes szer",
+    "alcsoport": "pirimidin-analóg antimetabolit",
+    "target": "thimidilát-szintáz",
+    "generáció": ""
+  }
+}

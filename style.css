@@ -154,10 +154,18 @@ body {
 }
 
 /* Táblázat stílusok */
+/* Táblázat stílusok - FRISSÍTVE */
 .molecule-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    table-layout: fixed;
+}
+
+.molecule-table th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
 }
 
 .molecule-table th, 
@@ -165,21 +173,35 @@ body {
     border: 1px solid var(--border-color);
     padding: 8px;
     text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
 }
 
-.molecule-table th {
-    background-color: #f2f2f2;
+/* Dinamikus oszlopszélesség */
+.molecule-table--2cols th,
+.molecule-table--2cols td {
+    width: 50%;
 }
 
-.molecule-table select, 
-.molecule-table input {
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+.molecule-table--3cols th,
+.molecule-table--3cols td {
+    width: 33.33%;
 }
 
+.molecule-table--4cols th,
+.molecule-table--4cols td {
+    width: 25%;
+}
+
+.molecule-table--5cols th,
+.molecule-table--5cols td {
+    width: 20%;
+}
+
+/* Generáció mező speciális stílusa */
+.generation-field {
+    background-color: rgba(76, 175, 80, 0.1);
+}
 /* Vezérlő gombok */
 .controls {
     margin-top: 20px;

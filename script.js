@@ -40,29 +40,49 @@ const pharmacoGroups = [
 ];
 ];
 
+
 let moleculesData = [];
 
-// Fő függvények
-function loadPharmacoGroups() {
-    const container = document.getElementById('pharmGroups');
-    pharmacoGroups.forEach(group => {
-        const div = document.createElement('div');
-        div.className = 'checkbox-item';
+async function loadMoleculesData() {
+    try {
+        // Betöltjük a molekulákat és a csoportokat
+        const [moleculesRes, groupsRes] = await Promise.all([
+            fetch('molecules.json'),
+            fetch('pharmaco-groups.json')
+        ]);
         
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.id = `group-${group}`;
-        checkbox.value = group;
+        moleculesData = await moleculesRes.json();
+        pharmacoGroups = await groupsRes.json();
         
-        const label = document.createElement('label');
-        label.htmlFor = `group-${group}`;
-        label.textContent = group;
-        
-        div.appendChild(checkbox);
-        div.appendChild(label);
-        container.appendChild(div);
-    });
+        console.log('Adatok sikeresen betöltve');
+    } catch (error) {
+        console.error('Hiba történt:', error);
+    }
 }
+
+function createMoleculeCard(molecule) {
+    const availableFields = [
+        { key: 'latinName', label: 'Latin név', type: 'input' },
+        { 
+            key: 'groups', 
+            label: 'Hatástani csoport(ok)', 
+            type: 'display',
+            format: values => values.join(', ')
+        },
+        { key: 'subgroup', label: 'Alcsoport', type: 'select' },
+        { key: 'target', label: 'Gyógyszeres célpont', type: 'select' },
+        { key: 'generation', label: 'Generáció', type: 'input', optional: true }
+    ];
+
+    // ... (a többi része változatlan) ...
+}
+
+// ... (egyéb függvények változatlanul maradnak) ...
+
+
+
+        
+
 
 function showPracticeSubmenu() {
     document.getElementById('practiceSubmenu').style.display = 'block';

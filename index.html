@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyógyszerismereti Játék</title>
+    <link rel="stylesheet" href="style.css">
+      
+    
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Gyógyszerismereti Játék</h1>
+        
+        <button id="quizBtn" class="menu-button">Beugró szimuláció</button>
+        <button id="practiceBtn" class="menu-button">Gyakorlás hatástani csoportok szerint</button>
+        
+        <div id="practiceSubmenu" class="submenu">
+            <h2>Válassz hatástani csoport(ok)at</h2>
+            <div class="checkbox-group" id="pharmGroups">
+                <!-- A 31 hatástani csoport checkboxai JavaScript segítségével kerülnek betöltésre -->
+            </div>
+            
+            <div>
+                <label for="moleculeCount">Molekulák száma (1-<span id="maxMolecules">31</span>):</label>
+                <input type="number" id="moleculeCount" min="1" max="31" value="10">
+            </div>
+            
+            <button id="startPracticeBtn" class="menu-button">Gyakorlás indítása</button>
+        </div>
+    </div>
+    
+    <div id="gameContainer" class="game-container">
+        <div class="molecule-grid" id="moleculeGrid">
+            <!-- A 9 molekula kártya kerül ide dinamikusan -->
+        </div>
+        
+        <div class="controls">
+            <button id="checkAnswersBtn">Válaszok ellenőrzése</button>
+            <button id="newGameBtn">Új játék</button>
+            <button id="backToMenuBtn">Vissza a főmenübe</button>
+        </div>
+        
+        <div id="scoreDisplay" style="text-align: center; margin-top: 20px; font-size: 18px;"></div>
+    </div>
+
+    <script>
+        // Főmenü gombok kezelése
+        document.getElementById('quizBtn').addEventListener('click', startQuiz);
+        document.getElementById('practiceBtn').addEventListener('click', showPracticeSubmenu);
+        document.getElementById('startPracticeBtn').addEventListener('click', startPractice);
+        document.getElementById('checkAnswersBtn').addEventListener('click', checkAnswers);
+        document.getElementById('newGameBtn').addEventListener('click', newGame);
+        document.getElementById('backToMenuBtn').addEventListener('click', backToMenu);
+        
+        // Példa adatok - ezeket később a CSV-ből kell betölteni
+        const pharmacoGroups = [
+            "Analgetikumok", "Anesztetikumok", "Antiallergikumok", "Antibiotikumok", 
+            "Antidepresszánsok", "Antidiabetikumok", "Antiepileptikumok", "Antihisztaminok",
+            "Antihypertenzív szerek", "Antiinflamatóriumok", "Antimikotikumok", "Antiparkinson szerek",
+            "Antipszichotikumok", "Antitusszívok", "Anxiolitikumok", "Beta-blokkolók",
+            "Ca-antagonisták", "Diuretikumok", "Expectoránsok", "Hormonok",
+            "Immunszuppresszánsok", "Koleszterincsökkentők", "Központi idegrendszerre ható szerek", 
+            "Migrénszerek", "Muszkolinerg szerek", "NSAID-ok", "Opioidok", 
+            "Szívglikozidok", "Szimpatomimetikumok", "Vazodilatátorok", "Vitaminok"
+        ];
+        
+        // Betöltjük a hatástani csoportokat a checkbox groupba
+        function loadPharmacoGroups() {
+            const container = document.getElementById('pharmGroups');
+            pharmacoGroups.forEach(group => {
+                const div = document.createElement('div');
+                div.className = 'checkbox-item';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `group-${group}`;
+                checkbox.value = group;
+                
+                const label = document.createElement('label');
+                label.htmlFor = `group-${group}`;
+                label.textContent = group;
+                
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                container.appendChild(div);
+            });
+        }
+        
+        // Főmenü funkciók
+        function showPracticeSubmenu() {
+            document.getElementById('practiceSubmenu').style.display = 'block';
+        }
+        
+        function startQuiz() {
+            // Véletlenszerűen kiválasztott molekulákkal indít a beugró szimuláció
+            startGame(getRandomMolecules(9));
+        }
+        
+        function startPractice() {
+            // Kiválasztott hatástani csoportok alapján indít gyakorlást
+            const selectedGroups = Array.from(document.querySelectorAll('#pharmGroups input:checked')).map(cb => cb.value);
+            const count = parseInt(document.getElementById('moleculeCount').value);
+            
+            if (selectedGroups.length === 0) {
+                alert('Válassz legalább egy hatástani csoportot!');
+                return;
+            }
+            
+            startGame(getMoleculesFromGroups(selectedGroups, count));
+        }
+        
+        function startGame(molecules) {
+            // Megjeleníti a játékot a kiválasztott molekulákkal
+            document.getElementById('practiceSubmenu').style.display = 'none';
+            document.getElementById('gameContainer').style.display = 'block';
+            
+            const container = document.getElementById('moleculeGrid');
+            container.innerHTML = '';
+            
+            molecules.forEach(molecule => {
+                const card = createMoleculeCard(molecule);
+                container.appendChild(card);
+            });
+        }
+        
+        function createMoleculeCard(molecule) {
+            // Létrehoz egy molekula kártyát a megadott molekula adataival
+            const card = document.createElement('div');
+            card.className = 'molecule-card';
+            
+            const img = document.createElement('img');
+            img.className = 'molecule-image';
+            img.src = `molecules/${molecule.image}`; // feltételezve, hogy a képek a molecules mappában vannak
+            img.alt = molecule.name;
+            
+            const name = document.createElement('h3');
+            name.textContent = 'Molekula';
+            
+            const table = document.createElement('table');
+            table.className = 'molecule-table';
+            table.innerHTML = `
+                <tr>
+                    <th>Latin név</th>
+                    <td><input type="text" class="latin-name"></td>
+                </tr>
+                <tr>
+                    <th>Hatástani csoport</th>
+                    <td>
+                        <select class="pharm-group">
+                            <option value="">Válassz...</option>
+                            ${pharmacoGroups.map(g => `<option value="${g}">${g}</option>`).join('')}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Alcsoport</th>
+                    <td>
+                        <select class="subgroup">
+                            <option value="">Válassz...</option>
+                            <!-- Alcsoportok dinamikusan kerülnek betöltésre a kiválasztott hatástani csoport alapján -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Gyógyszeres célpont</th>
+                    <td>
+                        <select class="target">
+                            <option value="">Válassz...</option>
+                            <!-- Célpontok dinamikusan kerülnek betöltésre -->
+                        </select>
+                    </td>
+                </tr>
+            `;
+            
+            card.appendChild(img);
+            card.appendChild(name);
+            card.appendChild(table);
+            
+            return card;
+        }
+        
+        function checkAnswers() {
+            // Ellenőrzi a válaszokat és kiértékeli az eredményt
+            // Implementáció később...
+            alert('Válaszok ellenőrzése...');
+        }
+        
+        function newGame() {
+            // Új játékot indít az aktuális beállításokkal
+            if (document.getElementById('practiceSubmenu').style.display === 'block') {
+                startPractice();
+            } else {
+                startQuiz();
+            }
+        }
+        
+        function backToMenu() {
+            // Visszatér a főmenübe
+            document.getElementById('gameContainer').style.display = 'none';
+            document.getElementById('practiceSubmenu').style.display = 'none';
+        }
+        
+        // Segédfüggvények
+        function getRandomMolecules(count) {
+            // Véletlenszerűen kiválaszt 'count' számú molekulát
+            // Ez egy példa implementáció, a valóságban a dictionary-ből kell választani
+            const molecules = [];
+            for (let i = 0; i < count; i++) {
+                molecules.push({
+                    name: `Molekula ${i+1}`,
+                    latinName: `Molecula ${i+1}`,
+                    group: pharmacoGroups[Math.floor(Math.random() * pharmacoGroups.length)],
+                    image: `molecule${Math.floor(Math.random() * 100)}.jpg`
+                });
+            }
+            return molecules;
+        }
+        
+        function getMoleculesFromGroups(groups, count) {
+            // A kiválasztott csoportokból választ 'count' számú molekulát
+            // Ez egy példa implementáció, a valóságban a dictionary-ből kell szűrni
+            const molecules = [];
+            for (let i = 0; i < count; i++) {
+                const randomGroup = groups[Math.floor(Math.random() * groups.length)];
+                molecules.push({
+                    name: `Molekula ${i+1}`,
+                    latinName: `Molecula ${i+1}`,
+                    group: randomGroup,
+                    image: `molecule${Math.floor(Math.random() * 100)}.jpg`
+                });
+            }
+            return molecules;
+        }
+        
+        // Oldal betöltésekor
+        window.addEventListener('DOMContentLoaded', () => {
+            loadPharmacoGroups();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+/* style.css - Gyógyszerismereti Játék stíluslapja */
+/* Utolsó frissítés: 2023.11.15 */
+
+/* Reset és alapbeállítások */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Színváltozók */
+    --primary-color: #4CAF50;
+    --primary-hover: #45a049;
+    --secondary-color: #2196F3;
+    --danger-color: #f44336;
+    --card-bg: white;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --border-color: #ddd;
+    --shadow-light: rgba(0,0,0,0.1);
+    
+    /* Átméretezési változók */
+    --border-radius: 8px;
+    --card-padding: 15px;
+    --button-padding: 15px 30px;
+}
+
+/* Alap stílusok */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Főmenü konténer */
+.menu {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.menu__title {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+/* Gomb stílusok */
+.button {
+    display: inline-block;
+    padding: var(--button-padding);
+    margin: 10px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.button--primary {
+    background-color: var(--primary-color);
+}
+
+.button--primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.button--secondary {
+    background-color: var(--secondary-color);
+}
+
+.button--danger {
+    background-color: var(--danger-color);
+}
+
+/* Almenü stílusai */
+.submenu {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+.submenu__title {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input {
+    margin-right: 8px;
+}
+
+/* Játék konténer */
+.game-container {
+    display: none;
+    margin-top: 30px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Molekula rács */
+.molecule-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Molekula kártya */
+.molecule-card {
+    background-color: var(--card-bg);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px var(--shadow-light);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.molecule-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+.molecule-card__image {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.molecule-card__title {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Táblázat stílusok */
+.molecule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.molecule-table th, 
+.molecule-table td {
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    text-align: left;
+}
+
+.molecule-table th {
+    background-color: #f2f2f2;
+}
+
+.molecule-table select, 
+.molecule-table input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+/* Vezérlő gombok */
+.controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.controls__button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+/* Pontmegjelenítés */
+.score-display {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+.score-display--success {
+    color: var(--primary-color);
+    border-left: 5px solid var(--primary-color);
+}
+
+.score-display--warning {
+    color: #FF9800;
+    border-left: 5px solid #FF9800;
+}
+
+/* Animációk */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reszponzív design */
+@media (max-width: 768px) {
+    .molecule-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .checkbox-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    :root {
+        --button-padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .molecule-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+    
+    body {
+        padding: 15px;
+    }
+    
+    .menu {
+        margin-top: 20px;
+    }
+    
+    :root {
+        --card-padding: 10px;
+    }
+}

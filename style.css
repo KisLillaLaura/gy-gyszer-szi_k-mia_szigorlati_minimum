@@ -197,6 +197,27 @@ body {
 .molecule-table--5cols td {
     width: 20%;
 }
+/* Validációs stílusok */
+.molecule-table .valid {
+    border-color: var(--primary-color);
+    background-color: rgba(76, 175, 80, 0.05);
+}
+
+.molecule-table .invalid {
+    border-color: var(--danger-color);
+    background-color: rgba(244, 67, 54, 0.05);
+}
+
+/* Hiányzó adatok stílusa */
+.empty-data-cell {
+    color: #999;
+    font-style: italic;
+}
+
+.empty-data-cell::after {
+    content: "nincs adat";
+    font-size: 0.8em;
+}
 
 /* Generáció mező speciális stílusa */
 .generation-field {

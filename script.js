@@ -161,7 +161,7 @@ function createMoleculeCard(molecule) {
     
     const img = document.createElement('img');
     img.className = 'molecule-image';
-    img.src = `molecules/${molecule.image}`;
+    img.src = `molekulak/${molecule.image}`;
     img.alt = molecule.name;
     img.onerror = function() {
         this.src = 'placeholder.png';

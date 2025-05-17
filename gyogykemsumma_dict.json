@@ -331,21 +331,21 @@
   "Imipraminum.jpg": {
     "latin": "Imipraminum",
     "hatástani csoport": "antidepresszív szerek",
-    "alcsoport": "triciklusos",
+    "alcsoport": "dibenzo-azepin",
     "target": "SERT, NAT",
     "generáció": "I."
   },
   "Amitriptylinum.jpg": {
     "latin": "Amitriptylinum",
     "hatástani csoport": "antidepresszív szerek",
-    "alcsoport": "triciklusos",
+    "alcsoport": "dibenzo-cikloheptadién",
     "target": "SERT, NAT",
     "generáció": "I."
   },
   "Maprotilinum.jpg": {
     "latin": "Maprotilinum",
     "hatástani csoport": "antidepresszív szerek",
-    "alcsoport": "tetraciklusos",
+    "alcsoport": "etano-antracén váz",
     "target": "SERT, NAT",
     "generáció": "I."
   },

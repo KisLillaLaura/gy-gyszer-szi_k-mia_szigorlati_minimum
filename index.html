@@ -5,47 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gyógyszerismereti Játék</title>
     <link rel="stylesheet" href="style.css">
-      
-    
 </head>
 <body>
-    <div class="menu-container">
-        <h1>Gyógyszerismereti Játék</h1>
+    <div class="menu">
+        <h1 class="menu__title">Gyógyszerismereti Játék</h1>
         
-        <button id="quizBtn" class="menu-button">Beugró szimuláció</button>
-        <button id="practiceBtn" class="menu-button">Gyakorlás hatástani csoportok szerint</button>
+        <button id="quizBtn" class="button button--primary">Beugró szimuláció</button>
+        <button id="practiceBtn" class="button button--secondary">Gyakorlás hatástani csoportok szerint</button>
         
         <div id="practiceSubmenu" class="submenu">
-            <h2>Válassz hatástani csoport(ok)at</h2>
+            <h2 class="submenu__title">Válassz hatástani csoport(ok)at</h2>
             <div class="checkbox-group" id="pharmGroups">
-                <!-- A 31 hatástani csoport checkboxai JavaScript segítségével kerülnek betöltésre -->
+                <!-- A hatástani csoportok checkboxai JavaScript segítségével kerülnek betöltésre -->
             </div>
             
-            <div>
+            <div style="margin: 20px 0;">
                 <label for="moleculeCount">Molekulák száma (1-<span id="maxMolecules">31</span>):</label>
-                <input type="number" id="moleculeCount" min="1" max="31" value="10">
+                <input type="number" id="moleculeCount" min="1" max="31" value="10" style="padding: 5px;">
             </div>
             
-            <button id="startPracticeBtn" class="menu-button">Gyakorlás indítása</button>
+            <button id="startPracticeBtn" class="button button--primary">Gyakorlás indítása</button>
         </div>
     </div>
     
     <div id="gameContainer" class="game-container">
         <div class="molecule-grid" id="moleculeGrid">
-            <!-- A 9 molekula kártya kerül ide dinamikusan -->
+            <!-- A molekula kártyák kerülnek ide dinamikusan -->
         </div>
         
         <div class="controls">
-            <button id="checkAnswersBtn">Válaszok ellenőrzése</button>
-            <button id="newGameBtn">Új játék</button>
-            <button id="backToMenuBtn">Vissza a főmenübe</button>
+            <button id="checkAnswersBtn" class="button button--primary">Válaszok ellenőrzése</button>
+            <button id="newGameBtn" class="button button--secondary">Új játék</button>
+            <button id="backToMenuBtn" class="button button--danger">Vissza a főmenübe</button>
         </div>
         
-        <div id="scoreDisplay" style="text-align: center; margin-top: 20px; font-size: 18px;"></div>
+        <div id="scoreDisplay" class="score-display"></div>
     </div>
 
     <script src="script.js"></script>
-       
-    
 </body>
 </html>

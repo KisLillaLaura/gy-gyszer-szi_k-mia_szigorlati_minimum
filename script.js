@@ -42,7 +42,7 @@ let moleculesData = [];
 
 async function loadMoleculesData() {
     try {
-        const response = await fetch('molekulak.json');
+        const response = await fetch('gyogykemsumma_dict.json');
         if (!response.ok) {
             throw new Error('Hiba a JSON betöltésekor');
         }

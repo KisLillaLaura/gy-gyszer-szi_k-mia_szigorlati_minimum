@@ -1,1347 +1,1894 @@
-{
-  "Morphinum.jpg": {
-    "latin": "Morphinum",
+[
+  {
+    "name": "Morphinum",
+    "image": "Morphinum.jpg",
+    "latinName": "Morphinum",
     "groups": ["major analgetikum"],
     "subgroup": "",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "Codeinum.jpg": {
-    "latin": "Codeinum",
+  {
+    "name": "Codeinum",
+    "image": "Codeinum.jpg",
+    "latinName": "Codeinum",
     "groups": ["major analgetikum"],
     "subgroup": "félszintetikus morfinszármazék",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "ethylmorphinum.jpg": {
-    "latin": "ethylmorphinum",
+  {
+    "name": "Ethylmorphinum",
+    "image": "ethylmorphinum.jpg",
+    "latinName": "ethylmorphinum",
     "groups": ["major analgetikum"],
     "subgroup": "félszintetikus morfinszármazék",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "Dihydrocodeinum.jpg": {
-    "latin": "Dihydrocodeinum",
+  {
+    "name": "Dihydrocodeinum",
+    "image": "Dihydrocodeinum.jpg",
+    "latinName": "Dihydrocodeinum",
     "groups": ["major analgetikum"],
     "subgroup": "félszintetikus morfinszármazék",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "Oxycodonum.jpg": {
-    "latin": "Oxycodonum",
+  {
+    "name": "Oxycodonum",
+    "image": "Oxycodonum.jpg",
+    "latinName": "Oxycodonum",
     "groups": ["major analgetikum"],
     "subgroup": "félszintetikus morfinszármazék",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "Naloxonum.jpg": {
-    "latin": "Naloxonum",
+  {
+    "name": "Naloxonum",
+    "image": "Naloxonum.jpg",
+    "latinName": "Naloxonum",
     "groups": ["major analgetikum"],
     "subgroup": "félszintetikus morfinszármazék",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "Naltrexonum.jpg": {
-    "latin": "Naltrexonum",
+  {
+    "name": "Naltrexonum",
+    "image": "Naltrexonum.jpg",
+    "latinName": "Naltrexonum",
     "groups": ["major analgetikum"],
     "subgroup": "félszintetikus morfinszármazék",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "Dextromethorphanum.jpg": {
-    "latin": "Dextromethorphanum",
+  {
+    "name": "Dextromethorphanum",
+    "image": "Dextromethorphanum.jpg",
+    "latinName": "Dextromethorphanum",
     "groups": ["major analgetikum"],
     "subgroup": "morfinán",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "Fentanylum.jpg": {
-    "latin": "Fentanylum",
+  {
+    "name": "Fentanylum",
+    "image": "Fentanylum.jpg",
+    "latinName": "Fentanylum",
     "groups": ["major analgetikum"],
     "subgroup": "anilidopiperidinek",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "Methadonum.jpg": {
-    "latin": "Methadonum",
+  {
+    "name": "Methadonum",
+    "image": "Methadonum.jpg",
+    "latinName": "Methadonum",
     "groups": ["major analgetikum"],
     "subgroup": "diaril-alkil-keton",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "Tramadolum.jpg": {
-    "latin": "Tramadolum",
+  {
+    "name": "Tramadolum",
+    "image": "Tramadolum.jpg",
+    "latinName": "Tramadolum",
     "groups": ["major analgetikum"],
     "subgroup": "diaril-alkil-keton",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "Paracetamolum.jpg": {
-    "latin": "Paracetamolum",
+  {
+    "name": "Paracetamolum",
+    "image": "Paracetamolum.jpg",
+    "latinName": "Paracetamolum",
     "groups": ["minor analgetikum"],
     "subgroup": "anilin származék",
     "target": "COX enzimek",
     "generation": ""
   },
-  "Phenazonum.jpg": {
-    "latin": "Phenazonum",
+  {
+    "name": "Phenazonum",
+    "image": "Phenazonum.jpg",
+    "latinName": "Phenazonum",
     "groups": ["minor analgetikum"],
     "subgroup": "pirazolon",
     "target": "COX enzimek",
     "generation": ""
   },
-  "Metamizolum_natricum.jpg": {
-    "latin": "Metamizolum natricum",
+  {
+    "name": "Metamizolum natricum",
+    "image": "Metamizolum_natricum.jpg",
+    "latinName": "Metamizolum natricum",
     "groups": ["minor analgetikum"],
     "subgroup": "pirazolon",
     "target": "COX enzimek",
     "generation": ""
   },
-  "Acidum_salicylicum.jpg": {
-    "latin": "Acidum salicylicum",
+  {
+    "name": "Acidum salicylicum",
+    "image": "Acidum_salicylicum.jpg",
+    "latinName": "Acidum salicylicum",
     "groups": ["minor analgetikum"],
     "subgroup": "szalicilát",
     "target": "COX enzimek",
     "generation": ""
   },
-  "Acidum_acetylsalicylicum.jpg": {
-    "latin": "Acidum acetylsalicylicum",
+  {
+    "name": "Acidum acetylsalicylicum",
+    "image": "Acidum_acetylsalicylicum.jpg",
+    "latinName": "Acidum acetylsalicylicum",
     "groups": ["minor analgetikum", "antikoaguláns"],
     "subgroup": "szalicilát",
     "target": "COX enzimek",
     "generation": ""
   },
-  "Acidum_niflumicum.jpg": {
-    "latin": "Acidum niflumicum",
+  {
+    "name": "Acidum niflumicum",
+    "image": "Acidum_niflumicum.jpg",
+    "latinName": "Acidum niflumicum",
     "groups": ["NSAID"],
     "subgroup": "N-aril-antarnilsav származék",
     "target": "COX enzimek",
     "generation": ""
   },
-  "Diclofenacum.jpg": {
-    "latin": "Diclofenacum",
+  {
+    "name": "Diclofenacum",
+    "image": "Diclofenacum.jpg",
+    "latinName": "Diclofenacum",
     "groups": ["NSAID"],
     "subgroup": "heteroarilecetsav származék",
     "target": "COX enzimek",
     "generation": ""
   },
-  "Ibuprofenum.jpg": {
-    "latin": "Ibuprofenum",
+  {
+    "name": "Ibuprofenum",
+    "image": "Ibuprofenum.jpg",
+    "latinName": "Ibuprofenum",
     "groups": ["NSAID"],
     "subgroup": "arilproprionsav származék",
     "target": "COX enzimek",
     "generation": ""
   },
-  "Naproxenum.jpg": {
-    "latin": "Naproxenum",
+  {
+    "name": "Naproxenum",
+    "image": "Naproxenum.jpg",
+    "latinName": "Naproxenum",
     "groups": ["NSAID"],
     "subgroup": "arilproprionsav származék",
     "target": "COX enzimek",
     "generation": ""
   },
-  "Phenylbutazonum.jpg": {
-    "latin": "Phenylbutazonum",
+  {
+    "name": "Phenylbutazonum",
+    "image": "Phenylbutazonum.jpg",
+    "latinName": "Phenylbutazonum",
     "groups": ["NSAID"],
     "subgroup": "pirazolidindion származék",
     "target": "COX enzimek",
     "generation": ""
   },
-  "Piroxicamum.jpg": {
-    "latin": "Piroxicamum",
+  {
+    "name": "Piroxicamum",
+    "image": "Piroxicamum.jpg",
+    "latinName": "Piroxicamum",
     "groups": ["NSAID"],
     "subgroup": "1,2-benzotiazin származék",
     "target": "COX enzimek",
     "generation": ""
   },
-  "Celecoxibum.jpg": {
-    "latin": "Celecoxibum",
+  {
+    "name": "Celecoxibum",
+    "image": "Celecoxibum.jpg",
+    "latinName": "Celecoxibum",
     "groups": ["NSAID"],
     "subgroup": "szelektív COX-2-inhibitor",
     "target": "COX-2 enzim",
     "generation": ""
   },
-  "Nimesulidum.jpg": {
-    "latin": "Nimesulidum",
+  {
+    "name": "Nimesulidum",
+    "image": "Nimesulidum.jpg",
+    "latinName": "Nimesulidum",
     "groups": ["NSAID"],
     "subgroup": "szelektív COX-2-inhibitor",
     "target": "COX-2 enzim",
     "generation": ""
   },
-  "Sevofluranum.jpg": {
-    "latin": "Sevofluranum",
+  {
+    "name": "Sevofluranum",
+    "image": "Sevofluranum.jpg",
+    "latinName": "Sevofluranum",
     "groups": ["szedato-hipnotikum"],
     "subgroup": "inhalációs anesztetikum",
     "target": "GABAA receptor",
     "generation": "III."
   },
-  "Propofolum.jpg": {
-    "latin": "Propofolum",
+  {
+    "name": "Propofolum",
+    "image": "Propofolum.jpg",
+    "latinName": "Propofolum",
     "groups": ["szedato-hipnotikum"],
     "subgroup": "injekciós anesztetikum",
     "target": "GABAA receptor",
     "generation": ""
   },
-  "Nitrazepamum.jpg": {
-    "latin": "Nitrazepamum",
-    "groups": ["szedato-hipnotikum"],
-    "subgroup": "benzodiazepin",
-    "target": "GABAA receptor",
-    "generáció": "I."
-  },
-  "Diazepamum.jpg": {
-    "latin": "Diazepamum",
+  {
+    "name": "Nitrazepamum",
+    "image": "Nitrazepamum.jpg",
+    "latinName": "Nitrazepamum",
     "groups": ["szedato-hipnotikum"],
     "subgroup": "benzodiazepin",
     "target": "GABAA receptor",
     "generation": "I."
   },
-  "Chlordiazepoxidum.jpg": {
-    "latin": "Chlordiazepoxidum",
+  {
+    "name": "Diazepamum",
+    "image": "Diazepamum.jpg",
+    "latinName": "Diazepamum",
     "groups": ["szedato-hipnotikum"],
     "subgroup": "benzodiazepin",
     "target": "GABAA receptor",
     "generation": "I."
   },
-  "Midazolamum.jpg": {
-    "latin": "Midazolamum",
+  {
+    "name": "Chlordiazepoxidum",
+    "image": "Chlordiazepoxidum.jpg",
+    "latinName": "Chlordiazepoxidum",
+    "groups": ["szedato-hipnotikum"],
+    "subgroup": "benzodiazepin",
+    "target": "GABAA receptor",
+    "generation": "I."
+  },
+  {
+    "name": "Midazolamum",
+    "image": "Midazolamum.jpg",
+    "latinName": "Midazolamum",
     "groups": ["szedato-hipnotikum"],
     "subgroup": "benzodiazepin",
     "target": "GABAA receptor",
     "generation": "II."
   },
-  "Alprazolamum.jpg": {
-    "latin": "Alprazolamum",
+  {
+    "name": "Alprazolamum",
+    "image": "Alprazolamum.jpg",
+    "latinName": "Alprazolamum",
     "groups": ["szedato-hipnotikum"],
     "subgroup": "benzodiazepin",
     "target": "GABAA receptor",
     "generation": "II."
   },
-  "Cocainum.jpg": {
-    "latin": "Cocainum",
+  {
+    "name": "Cocainum",
+    "image": "Cocainum.jpg",
+    "latinName": "Cocainum",
     "groups": ["lokális anesztetikum"],
     "subgroup": "észter-típusú",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Benzocainum.jpg": {
-    "latin": "Benzocainum",
+  {
+    "name": "Benzocainum",
+    "image": "Benzocainum.jpg",
+    "latinName": "Benzocainum",
     "groups": ["lokális anesztetikum"],
     "subgroup": "észter-típusú",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Procainum.jpg": {
-    "latin": "Procainum",
+  {
+    "name": "Procainum",
+    "image": "Procainum.jpg",
+    "latinName": "Procainum",
     "groups": ["lokális anesztetikum"],
     "subgroup": "észter-típusú",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Tetracainum.jpg": {
-    "latin": "Tetracainum",
+  {
+    "name": "Tetracainum",
+    "image": "Tetracainum.jpg",
+    "latinName": "Tetracainum",
     "groups": ["lokális anesztetikum"],
     "subgroup": "észter-típusú",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Lidocainum.jpg": {
-    "latin": "Lidocainum",
+  {
+    "name": "Lidocainum",
+    "image": "Lidocainum.jpg",
+    "latinName": "Lidocainum",
     "groups": ["lokális anesztetikum", "antiaritmiás szer"],
     "subgroup": "savamid-típusú",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Mepivacainum.jpg": {
-    "latin": "Mepivacainum",
+  {
+    "name": "Mepivacainum",
+    "image": "Mepivacainum.jpg",
+    "latinName": "Mepivacainum",
     "groups": ["lokális anesztetikum"],
     "subgroup": "savamid-típusú",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Ropivacainum.jpg": {
-    "latin": "Ropivacainum",
+  {
+    "name": "Ropivacainum",
+    "image": "Ropivacainum.jpg",
+    "latinName": "Ropivacainum",
     "groups": ["lokális anesztetikum"],
     "subgroup": "savamid-típusú",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Bupivacainum.jpg": {
-    "latin": "Bupivacainum",
+  {
+    "name": "Bupivacainum",
+    "image": "Bupivacainum.jpg",
+    "latinName": "Bupivacainum",
     "groups": ["lokális anesztetikum"],
     "subgroup": "savamid-típusú",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Chlorpromazinum.jpg": {
-    "latin": "Chlorpromazinum",
+  {
+    "name": "Chlorpromazinum",
+    "image": "Chlorpromazinum.jpg",
+    "latinName": "Chlorpromazinum",
     "groups": ["antipszichotikum"],
     "subgroup": "fenotiazinvázas",
     "target": "D2 receptorok",
     "generation": "I."
   },
-  "Levomepromazinum.jpg": {
-    "latin": "Levomepromazinum",
+  {
+    "name": "Levomepromazinum",
+    "image": "Levomepromazinum.jpg",
+    "latinName": "Levomepromazinum",
     "groups": ["antipszichotikum"],
     "subgroup": "fenotiazinvázas",
     "target": "D2 receptorok",
     "generation": "I."
   },
-  "Fluphenazinum.jpg": {
-    "latin": "Fluphenazinum",
+  {
+    "name": "Fluphenazinum",
+    "image": "Fluphenazinum.jpg",
+    "latinName": "Fluphenazinum",
     "groups": ["antipszichotikum"],
     "subgroup": "fenotiazinvázas",
     "target": "D2 receptorok",
     "generation": "I."
   },
-  "Fluphenazini_decanoas.jpg": {
-    "latin": "Fluphenazini decanoas",
+  {
+    "name": "Fluphenazini decanoas",
+    "image": "Fluphenazini_decanoas.jpg",
+    "latinName": "Fluphenazini decanoas",
     "groups": ["antipszichotikum"],
     "subgroup": "fenotiazinvázas",
     "target": "D2 receptorok",
     "generation": "I."
   },
-  "Chlorprothixenum.jpg": {
-    "latin": "Chlorprothixenum",
+  {
+    "name": "Chlorprothixenum",
+    "image": "Chlorprothixenum.jpg",
+    "latinName": "Chlorprothixenum",
     "groups": ["antipszichotikum"],
     "subgroup": "tioxanténvázas",
     "target": "D2 receptorok",
     "generation": "I."
   },
-  "Flupentixolum.jpg": {
-    "latin": "Flupentixolum",
+  {
+    "name": "Flupentixolum",
+    "image": "Flupentixolum.jpg",
+    "latinName": "Flupentixolum",
     "groups": ["antipszichotikum"],
     "subgroup": "tioxanténvázas",
     "target": "D2 receptorok",
     "generation": "I."
   },
-  "Sulpiridum.jpg": {
-    "latin": "Sulpiridum",
+  {
+    "name": "Sulpiridum",
+    "image": "Sulpiridum.jpg",
+    "latinName": "Sulpiridum",
     "groups": ["antipszichotikum"],
     "subgroup": "benzamid",
     "target": "D2/D3 receptorok",
     "generation": "II."
   },
-  "Clozapinum.jpg": {
-    "latin": "Clozapinum",
+  {
+    "name": "Clozapinum",
+    "image": "Clozapinum.jpg",
+    "latinName": "Clozapinum",
     "groups": ["antipszichotikum"],
     "subgroup": "triciklusos",
     "target": "5HT2A > D2 receptorok",
     "generation": "II."
   },
-  "Imipraminum.jpg": {
-    "latin": "Imipraminum",
+  {
+    "name": "Imipraminum",
+    "image": "Imipraminum.jpg",
+    "latinName": "Imipraminum",
     "groups": ["antidepresszív szerek"],
     "subgroup": "dibenzo-azepin",
     "target": "SERT, NAT",
     "generation": "I."
   },
-  "Amitriptylinum.jpg": {
-    "latin": "Amitriptylinum",
+  {
+    "name": "Amitriptylinum",
+    "image": "Amitriptylinum.jpg",
+    "latinName": "Amitriptylinum",
     "groups": ["antidepresszív szerek"],
     "subgroup": "dibenzo-cikloheptadién",
     "target": "SERT, NAT",
     "generation": "I."
   },
-  "Maprotilinum.jpg": {
-    "latin": "Maprotilinum",
+  {
+    "name": "Maprotilinum",
+    "image": "Maprotilinum.jpg",
+    "latinName": "Maprotilinum",
     "groups": ["antidepresszív szerek"],
     "subgroup": "etano-antracén váz",
     "target": "SERT, NAT",
     "generation": "I."
   },
-  "Fluoxetinum.jpg": {
-    "latin": "Fluoxetinum",
+  {
+    "name": "Fluoxetinum",
+    "image": "Fluoxetinum.jpg",
+    "latinName": "Fluoxetinum",
     "groups": ["antidepresszív szerek"],
     "subgroup": "SSRI",
     "target": "SERT",
     "generation": "II."
   },
-  "Sertralinum.jpg": {
-    "latin": "Sertralinum",
+  {
+    "name": "Sertralinum",
+    "image": "Sertralinum.jpg",
+    "latinName": "Sertralinum",
     "groups": ["antidepresszív szerek"],
     "subgroup": "SSRI",
     "target": "SERT",
     "generation": "II."
   },
-  "Phenobarbitalum.jpg": {
-    "latin": "Phenobarbitalum",
+  {
+    "name": "Phenobarbitalum",
+    "image": "Phenobarbitalum.jpg",
+    "latinName": "Phenobarbitalum",
     "groups": ["antiepileptikum", "szedato-hipnotikum"],
     "subgroup": "barbitál",
     "target": "GABAA receptor",
     "generation": "I."
   },
-  "Phenytoinum.jpg": {
-    "latin": "Phenytoinum",
+  {
+    "name": "Phenytoinum",
+    "image": "Phenytoinum.jpg",
+    "latinName": "Phenytoinum",
     "groups": ["antiepileptikum"],
     "subgroup": "hidantoin",
     "target": "feszültség függő Na+ csatorna neuron membrán",
     "generation": "I."
   },
-  "Levetiracetamum.jpg": {
-    "latin": "Levetiracetamum",
+  {
+    "name": "Levetiracetamum",
+    "image": "Levetiracetamum.jpg",
+    "latinName": "Levetiracetamum",
     "groups": ["antiepileptikum"],
     "subgroup": "pirrolidin",
     "target": "SV2A protein Ca2+ függő vezikula felszabadulás",
     "generation": "I."
   },
-  "Clonazepamum.jpg": {
-    "latin": "Clonazepamum",
+  {
+    "name": "Clonazepamum",
+    "image": "Clonazepamum.jpg",
+    "latinName": "Clonazepamum",
     "groups": ["antiepileptikum"],
     "subgroup": "benzodiazepin",
     "target": "GABAA receptor",
     "generation": "I."
   },
-  "Carbamazepinum.jpg": {
-    "latin": "Carbamazepinum",
+  {
+    "name": "Carbamazepinum",
+    "image": "Carbamazepinum.jpg",
+    "latinName": "Carbamazepinum",
     "groups": ["antiepileptikum"],
     "subgroup": "dibenzoazepin",
     "target": "feszültség függő Na+ csatorna neuron membrán",
     "generation": "I."
   },
-  "Acidum_valproicum.jpg": {
-    "latin": "Acidum valproicum",
+  {
+    "name": "Acidum valproicum",
+    "image": "Acidum_valproicum.jpg",
+    "latinName": "Acidum valproicum",
     "groups": ["antiepileptikum"],
     "subgroup": "karbonsav",
     "target": "T típusú Ca2+ csatorna",
     "generation": "I."
   },
-  "Gabapentinum.jpg": {
-    "latin": "Gabapentinum",
+  {
+    "name": "Gabapentinum",
+    "image": "Gabapentinum.jpg",
+    "latinName": "Gabapentinum",
     "groups": ["antiepileptikum"],
     "subgroup": "GABA analóg",
     "target": "nem T típusú magas küszöbű feszültségfüggő Ca2+",
     "generation": "II."
   },
-  "Acetylcholinum.jpg": {
-    "latin": "Acetylcholinum",
+  {
+    "name": "Acetylcholinum",
+    "image": "Acetylcholinum.jpg",
+    "latinName": "Acetylcholinum",
+    "groups": ["paraszimpatomimetikum"],
+    "subgroup": "direkt hatású",
+    "target": "muszkarin-receptor",
+    "generation": ""
+  }, 
+  {
+    "name": "Carbacholum",
+    "image": "Carbacholum.jpg",
+    "latinName": "Carbacholum",
     "groups": ["paraszimpatomimetikum"],
     "subgroup": "direkt hatású",
     "target": "muszkarin-receptor",
     "generation": ""
   },
-  "Carbacholum.jpg": {
-    "latin": "Carbacholum",
+  {
+    "name": "Pilocarpinum",
+    "image": "Pilocarpinum.jpg",
+    "latinName": "Pilocarpinum",
     "groups": ["paraszimpatomimetikum"],
     "subgroup": "direkt hatású",
     "target": "muszkarin-receptor",
     "generation": ""
   },
-  "Pilocarpinum.jpg": {
-    "latin": "Pilocarpinum",
-    "groups": ["paraszimpatomimetikum"],
-    "subgroup": "direkt hatású",
-    "target": "muszkarin-receptor",
-    "generation": ""
-  },
-  "Physostigminum.jpg": {
-    "latin": "Physostigminum",
+  {
+    "name": "Physostigminum",
+    "image": "Physostigminum.jpg",
+    "latinName": "Physostigminum",
     "groups": ["paraszimpatomimetikum"],
     "subgroup": "reverzibilis kolinészterázgátló",
     "target": "koleszterinészteráz",
     "generation": ""
   },
-  "Pyridostigminum.jpg": {
-    "latin": "Pyridostigminum",
+  {
+    "name": "Pyridostigminum",
+    "image": "Pyridostigminum.jpg",
+    "latinName": "Pyridostigminum",
     "groups": ["paraszimpatomimetikum"],
     "subgroup": "reverzibilis kolinészterázgátló",
     "target": "koleszterinészteráz",
     "generation": ""
   },
-  "Atropinum.jpg": {
-    "latin": "Atropinum",
+  {
+    "name": "Atropinum",
+    "image": "Atropinum.jpg",
+    "latinName": "Atropinum",
     "groups": ["paraszimpatolitikum"],
     "subgroup": "muszkarin-antagonista",
     "target": "muszkarin-receptor",
     "generation": ""
   },
-  "Scopolaminum.jpg": {
-    "latin": "Scopolaminum",
+  {
+    "name": "Scopolaminum",
+    "image": "Scopolaminum.jpg",
+    "latinName": "Scopolaminum",
     "groups": ["paraszimpatolitikum"],
     "subgroup": "muszkarin-antagonista",
     "target": "muszkarin-receptor",
     "generation": ""
   },
-  "Homatropinum.jpg": {
-    "latin": "Homatropinum",
+  {
+    "name": "Homatropinum",
+    "image": "Homatropinum.jpg",
+    "latinName": "Homatropinum",
     "groups": ["paraszimpatolitikum"],
     "subgroup": "muszkarin-antagonista",
     "target": "muszkarin-receptor",
     "generation": ""
   },
-  "Homatropini_methylbromidum.jpg": {
-    "latin": "Homatropini methylbromidum",
+  {
+    "name": "Homatropini methylbromidum",
+    "image": "Homatropini_methylbromidum.jpg",
+    "latinName": "Homatropini methylbromidum",
     "groups": ["paraszimpatolitikum"],
     "subgroup": "muszkarin-antagonista",
     "target": "muszkarin-receptor",
     "generation": ""
   },
-  "Ipratropii_bromidum.jpg": {
-    "latin": "Ipratropii bromidum",
+  {
+    "name": "Ipratropii bromidum",
+    "image": "Ipratropii_bromidum.jpg",
+    "latinName": "Ipratropii bromidum",
     "groups": ["paraszimpatolitikum"],
     "subgroup": "muszkarin-antagonista",
     "target": "muszkarin-receptor",
     "generation": ""
   },
-  "Tiotropii_bromidum.jpg": {
-    "latin": "Tiotropii bromidum",
+  {
+    "name": "Tiotropii bromidum",
+    "image": "Tiotropii_bromidum.jpg",
+    "latinName": "Tiotropii bromidum",
     "groups": ["paraszimpatolitikum"],
     "subgroup": "muszkarin-antagonista",
     "target": "muszkarin-receptor",
     "generation": ""
   },
-  "Noradrenalinum.jpg": {
-    "latin": "Noradrenalinum",
+  {
+    "name": "Noradrenalinum",
+    "image": "Noradrenalinum.jpg",
+    "latinName": "Noradrenalinum",
     "groups": ["szimpatomimetikum"],
     "subgroup": "fenil-alkamin-szerkezetű",
     "target": "alfa és béta receptor",
     "generation": ""
   },
-  "Adrenalinum.jpg": {
-    "latin": "Adrenalinum",
+  {
+    "name": "Adrenalinum",
+    "image": "Adrenalinum.jpg",
+    "latinName": "Adrenalinum",
     "groups": ["szimpatomimetikum"],
     "subgroup": "fenil-alkamin-szerkezetű",
     "target": "alfa és béta receptor",
     "generation": ""
   },
-  "Isoprenalinum.jpg": {
-    "latin": "Isoprenalinum",
+  {
+    "name": "Isoprenalinum",
+    "image": "Isoprenalinum.jpg",
+    "latinName": "Isoprenalinum",
     "groups": ["szimpatomimetikum"],
     "subgroup": "fenil-alkamin-szerkezetű",
     "target": "alfa és béta receptor",
     "generation": ""
   },
-  "Terbutalinum.jpg": {
-    "latin": "Terbutalinum",
+  {
+    "name": "Terbutalinum",
+    "image": "Terbutalinum.jpg",
+    "latinName": "Terbutalinum",
     "groups": ["szimpatomimetikum"],
     "subgroup": "szelektív B2-adrenerg agonista",
     "target": "béta2 receptor",
     "generation": ""
   },
-  "Phenylephrinum.jpg": {
-    "latin": "Phenylephrinum",
+  {
+    "name": "Phenylephrinum",
+    "image": "Phenylephrinum.jpg",
+    "latinName": "Phenylephrinum",
     "groups": ["szimpatomimetikum"],
     "subgroup": "fenil-alkamin-szerkezetű",
     "target": "alfa és béta receptor",
     "generation": ""
   },
-  "Ephedrinum.jpg": {
-    "latin": "Ephedrinum",
+  {
+    "name": "Ephedrinum",
+    "image": "Ephedrinum.jpg",
+    "latinName": "Ephedrinum",
     "groups": ["szimpatomimetikum"],
     "subgroup": "fenil-alkamin-szerkezetű",
     "target": "alfa és béta receptor",
     "generation": ""
   },
-  "Naphazolinum.jpg": {
-    "latin": "Naphazolinum",
+  {
+    "name": "Naphazolinum",
+    "image": "Naphazolinum.jpg",
+    "latinName": "Naphazolinum",
     "groups": ["szimpatomimetikum"],
     "subgroup": "1,2H-imidazolin-vázas",
     "target": "alfa és béta receptor",
     "generation": ""
   },
-  "Omeprazolum.jpg": {
-    "latin": "Omeprazolum",
+  {
+    "name": "Omeprazolum",
+    "image": "Omeprazolum.jpg",
+    "latinName": "Omeprazolum",
     "groups": ["emésztőrendszerre ható szer"],
     "subgroup": "protonpumpa-gátló",
     "target": "protonpumpa",
     "generation": ""
   },
-  "Cimetidinum.jpg": {
-    "latin": "Cimetidinum",
+  {
+    "name": "Cimetidinum",
+    "image": "Cimetidinum.jpg",
+    "latinName": "Cimetidinum",
     "groups": ["emésztőrendszerre ható szer"],
     "subgroup": "H2-hisztaminreceptor-blokkoló",
     "target": "H2-hisztaminreceptor",
     "generation": ""
   },
-  "Loperamidum.jpg": {
-    "latin": "Loperamidum",
+  {
+    "name": "Loperamidum",
+    "image": "Loperamidum.jpg",
+    "latinName": "Loperamidum",
     "groups": ["emésztőrendszerre ható szer"],
     "subgroup": "hasmenés gátló",
     "target": "opioidreceptorok",
     "generation": ""
   },
-  "Apomorphinum.jpg": {
-    "latin": "Apomorphinum",
+  {
+    "name": "Apomorphinum",
+    "image": "Apomorphinum.jpg",
+    "latinName": "Apomorphinum",
     "groups": ["emésztőrendszerre ható szer"],
     "subgroup": "hánytató szer",
     "target": "D2-receptor, 5-HT3-receptor",
     "generation": ""
   },
-  "Digitoxinum.jpg": {
-    "latin": "Digitoxinum",
+  {
+    "name": "Digitoxinum",
+    "image": "Digitoxinum.jpg",
+    "latinName": "Digitoxinum",
     "groups": ["kardiotonikum"],
     "subgroup": "digitálisz-glikozid",
     "target": "Na⁺/K⁺-ATPáz",
     "generation": ""
   },
-  "Digoxinum.jpg": {
-    "latin": "Digoxinum",
+  {
+    "name": "Digoxinum",
+    "image": "Digoxinum.jpg",
+    "latinName": "Digoxinum",
     "groups": ["kardiotonikum"],
     "subgroup": "digitálisz-glikozid",
     "target": "Na⁺/K⁺-ATPáz",
     "generation": ""
   },
-  "Deslanosidum.jpg": {
-    "latin": "Deslanosidum",
+  {
+    "name": "Deslanosidum",
+    "image": "Deslanosidum.jpg",
+    "latinName": "Deslanosidum",
     "groups": ["kardiotonikum"],
     "subgroup": "digitálisz-glikozid",
     "target": "Na⁺/K⁺-ATPáz",
     "generation": ""
   },
-  "Lanatosidum.jpg": {
-    "latin": "Lanatosidum",
+  {
+    "name": "Lanatosidum",
+    "image": "Lanatosidum.jpg",
+    "latinName": "Lanatosidum",
     "groups": ["kardiotonikum"],
     "subgroup": "digitálisz-glikozid",
     "target": "Na⁺/K⁺-ATPáz",
     "generation": ""
   },
-  "Gitoxinum.jpg": {
-    "latin": "Gitoxinum",
+  {
+    "name": "Gitoxinum",
+    "image": "Gitoxinum.jpg",
+    "latinName": "Gitoxinum",
     "groups": ["kardiotonikum"],
     "subgroup": "digitálisz-glikozid",
     "target": "Na⁺/K⁺-ATPáz",
     "generation": ""
   },
-  "Chinidinum.jpg": {
-    "latin": "Chinidinum",
+  {
+    "name": "Chinidinum",
+    "image": "Chinidinum.jpg",
+    "latinName": "Chinidinum",
     "groups": ["antiaritmiás szer"],
     "subgroup": "I. osztály",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Procainamidum.jpg": {
-    "latin": "Procainamidum",
+  {
+    "name": "Procainamidum",
+    "image": "Procainamidum.jpg",
+    "latinName": "Procainamidum",
     "groups": ["antiaritmiás szer"],
     "subgroup": "I. osztály",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Mexiletinum.jpg": {
-    "latin": "Mexiletinum",
+  {
+    "name": "Mexiletinum",
+    "image": "Mexiletinum.jpg",
+    "latinName": "Mexiletinum",
     "groups": ["antiaritmiás szer"],
     "subgroup": "I. osztály",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Propafenonum.jpg": {
-    "latin": "Propafenonum",
+  {
+    "name": "Propafenonum",
+    "image": "Propafenonum.jpg",
+    "latinName": "Propafenonum",
     "groups": ["antiaritmiás szer"],
     "subgroup": "I. osztály",
     "target": "Na+ csatorna idegszövet membránjában",
     "generation": ""
   },
-  "Propranololum.jpg": {
-    "latin": "Propranololum",
+  {
+    "name": "Propranololum",
+    "image": "Propranololum.jpg",
+    "latinName": "Propranololum",
     "groups": ["béta-blokkoló"],
     "subgroup": "nem szelektív béta szimpatolitikum",
     "target": "béta2 receptor",
     "generation": ""
   },
-  "Metoprololum.jpg": {
-    "latin": "Metoprololum",
+  {
+    "name": "Metoprololum",
+    "image": "Metoprololum.jpg",
+    "latinName": "Metoprololum",
     "groups": ["béta-blokkoló"],
     "subgroup": "kardioszelektív béta szimpatolitikum",
     "target": "béta1 receptor",
     "generation": ""
   },
-  "Bisoprololum.jpg": {
-    "latin": "Bisoprololum",
+  {
+    "name": "Bisoprololum",
+    "image": "Bisoprololum.jpg",
+    "latinName": "Bisoprololum",
     "groups": ["béta-blokkoló"],
     "subgroup": "kardioszelektív béta szimpatolitikum",
     "target": "béta1 receptor",
     "generation": ""
   },
-  "Amylis_nitris.jpg": {
-    "latin": "Amylis nitris",
+  {
+    "name": "Amylis nitris",
+    "image": "Amylis_nitris.jpg",
+    "latinName": "Amylis nitris",
     "groups": ["antianginás szer"],
     "subgroup": "szerves nitrit- és nitrát észterek",
     "target": "guanil-cikláz",
     "generation": ""
   },
-  "Glycerylis_trinitras.jpg": {
-    "latin": "Glycerylis trinitras",
+  {
+    "name": "Glycerylis trinitras",
+    "image": "Glycerylis_trinitras.jpg",
+    "latinName": "Glycerylis trinitras",
     "groups": ["antianginás szer"],
     "subgroup": "szerves nitrit- és nitrát észterek",
     "target": "guanil-cikláz",
     "generation": ""
   },
-  "Isosorbidi_mononitras.jpg": {
-    "latin": "Isosorbidi mononitras",
+  {
+    "name": "Isosorbidi mononitras",
+    "image": "Isosorbidi_mononitras.jpg",
+    "latinName": "Isosorbidi mononitras",
     "groups": ["antianginás szer"],
     "subgroup": "szerves nitrit- és nitrát észterek",
     "target": "guanil-cikláz",
     "generation": ""
   },
-  "Nifedipinum.jpg": {
-    "latin": "Nifedipinum",
+  {
+    "name": "Nifedipinum",
+    "image": "Nifedipinum.jpg",
+    "latinName": "Nifedipinum",
     "groups": ["antianginás szer"],
     "subgroup": "1,4-dihidropiridin-származékok",
     "target": "Ca+ csatorna",
     "generation": ""
   },
-  "Nitrendipinum.jpg": {
-    "latin": "Nitrendipinum",
+  {
+    "name": "Nitrendipinum",
+    "image": "Nitrendipinum.jpg",
+    "latinName": "Nitrendipinum",
     "groups": ["antianginás szer"],
     "subgroup": "1,4-dihidropiridin-származékok",
     "target": "Ca+ csatorna",
     "generation": ""
   },
-  "Ticlopidinum.jpg": {
-    "latin": "Ticlopidinum",
+  {
+    "name": "Ticlopidinum",
+    "image": "Ticlopidinum.jpg",
+    "latinName": "Ticlopidinum",
     "groups": ["antikoaguláns"],
     "subgroup": "Adenozin difoszfát receptor antagonisták",
     "target": "",
     "generation": ""
   },
-  "Clopidogrelum.jpg": {
-    "latin": "Clopidogrelum",
+  {
+    "name": "Clopidogrelum",
+    "image": "Clopidogrelum.jpg",
+    "latinName": "Clopidogrelum",
     "groups": ["antikoaguláns"],
     "subgroup": "Adenozin difoszfát receptor antagonisták",
     "target": "",
     "generation": ""
   },
-  "Hydrochlorothiazidum.jpg": {
-    "latin": "Hydrochlorothiazidum",
+  {
+    "name": "Hydrochlorothiazidum",
+    "image": "Hydrochlorothiazidum.jpg",
+    "latinName": "Hydrochlorothiazidum",
     "groups": ["diuretikum"],
     "subgroup": "sóűrítő diuretikum",
     "target": "Na+/Cl- kotranszporter",
     "generation": ""
   },
-  "Chlortalidonum.jpg": {
-    "latin": "Chlortalidonum",
+  {
+    "name": "Chlortalidonum",
+    "image": "Chlortalidonum.jpg",
+    "latinName": "Chlortalidonum",
     "groups": ["diuretikum"],
     "subgroup": "sóűrítő diuretikum",
     "target": "Na+/Cl- kotranszporter",
     "generation": ""
   },
-  "Indapamidum.jpg": {
-    "latin": "Indapamidum",
+  {
+    "name": "Indapamidum",
+    "image": "Indapamidum.jpg",
+    "latinName": "Indapamidum",
     "groups": ["diuretikum"],
     "subgroup": "sóűrítő diuretikum",
     "target": "Na+/Cl- kotranszporter",
     "generation": ""
   },
-  "Acidum_etacrynicum.jpg": {
-    "latin": "Acidum etacrynicum",
+  {
+    "name": "Acidum etacrynicum",
+    "image": "Acidum_etacrynicum.jpg",
+    "latinName": "Acidum etacrynicum",
     "groups": ["diuretikum"],
     "subgroup": "kacsdiuretikum",
     "target": "K+/Na+/Cl- kotranszporter",
     "generation": ""
   },
-  "Furosemidum.jpg": {
-    "latin": "Furosemidum",
+  {
+    "name": "Furosemidum",
+    "image": "Furosemidum.jpg",
+    "latinName": "Furosemidum",
     "groups": ["diuretikum"],
     "subgroup": "kacsdiuretikum",
     "target": "K+/Na+/Cl- kotranszporter",
     "generation": ""
   },
-  "Gliclazidum.jpg": {
-    "latin": "Gliclazidum",
+  {
+    "name": "Gliclazidum",
+    "image": "Gliclazidum.jpg",
+    "latinName": "Gliclazidum",
     "groups": ["antidiabetikum"],
     "subgroup": "szulfonil-larbamid",
     "target": "inzulinreceptor",
     "generation": ""
   },
-  "Nateglinidum.jpg": {
-    "latin": "Nateglinidum",
+  {
+    "name": "Nateglinidum",
+    "image": "Nateglinidum.jpg",
+    "latinName": "Nateglinidum",
     "groups": ["antidiabetikum"],
     "subgroup": "meglitinid-típusú",
     "target": "béta sejt ATP-függő K+ csatorna",
     "generation": ""
   },
-  "Metforminum.jpg": {
-    "latin": "Metforminum",
+  {
+    "name": "Metforminum",
+    "image": "Metforminum.jpg",
+    "latinName": "Metforminum",
     "groups": ["antidiabetikum"],
     "subgroup": "biguanid-típusú",
     "target": "inzulinreceptor",
     "generation": ""
   },
-  "Vildagliptinum.jpg": {
-    "latin": "Vildagliptinum",
+  {
+    "name": "Vildagliptinum",
+    "image": "Vildagliptinum.jpg",
+    "latinName": "Vildagliptinum",
     "groups": ["antidiabetikum"],
     "subgroup": "DPP4-gátló",
     "target": "DPP4",
     "generation": ""
   },
-  "Retinolum.jpg": {
-    "latin": "Retinolum",
+  {
+    "name": "Retinolum",
+    "image": "Retinolum.jpg",
+    "latinName": "Retinolum",
     "groups": ["vitamin"],
     "subgroup": "zsíroldékony",
     "target": "",
     "generation": ""
   },
-  "Retinoli_acetas.jpg": {
-    "latin": "Retinoli acetas",
+  {
+    "name": "Retinoli acetas",
+    "image": "Retinoli_acetas.jpg",
+    "latinName": "Retinoli acetas",
     "groups": ["vitamin"],
     "subgroup": "zsíroldékony",
     "target": "",
     "generation": ""
   },
-  "Colecalciferolum.jpg": {
-    "latin": "Colecalciferolum",
+  {
+    "name": "Colecalciferolum",
+    "image": "Colecalciferolum.jpg",
+    "latinName": "Colecalciferolum",
     "groups": ["vitamin"],
     "subgroup": "zsíroldékony",
     "target": "",
     "generation": ""
   },
-  "Calcipotriolum.jpg": {
-    "latin": "Calcipotriolum",
+  {
+    "name": "Calcipotriolum",
+    "image": "Calcipotriolum.jpg",
+    "latinName": "Calcipotriolum",
     "groups": ["vitamin"],
     "subgroup": "zsíroldékony",
     "target": "",
     "generation": ""
   },
-  "Thiaminum.jpg": {
-    "latin": "Thiaminum",
+  {
+    "name": "Thiaminum",
+    "image": "Thiaminum.jpg",
+    "latinName": "Thiaminum",
     "groups": ["vitamin"],
     "subgroup": "vízoldékony",
     "target": "",
     "generation": ""
   },
-  "Riboflavinum.jpg": {
-    "latin": "Riboflavinum",
+  {
+    "name": "Riboflavinum",
+    "image": "Riboflavinum.jpg",
+    "latinName": "Riboflavinum",
     "groups": ["vitamin"],
     "subgroup": "vízoldékony",
     "target": "",
     "generation": ""
   },
-  "Pyridoxinum.jpg": {
-    "latin": "Pyridoxinum",
+  {
+    "name": "Pyridoxinum",
+    "image": "Pyridoxinum.jpg",
+    "latinName": "Pyridoxinum",
     "groups": ["vitamin"],
     "subgroup": "vízoldékony",
     "target": "",
     "generation": ""
   },
-  "Acidum_ascorbicum.jpg": {
-    "latin": "Acidum ascorbicum",
+  {
+    "name": "Acidum ascorbicum",
+    "image": "Acidum_ascorbicum.jpg",
+    "latinName": "Acidum ascorbicum",
     "groups": ["vitamin"],
     "subgroup": "vízoldékony",
     "target": "",
     "generation": ""
   },
-    "Histaminum.jpg": {
-    "latin": "Histaminum",
+  {
+    "name": "Histaminum",
+    "image": "Histaminum.jpg",
+    "latinName": "Histaminum",
     "groups": ["antihisztamin"],
     "subgroup": "",
     "target": "H1-receptor",
     "generation": ""
   },
-  "Diphenhydraminum.jpg": {
-    "latin": "Diphenhydraminum",
+  {
+    "name": "Diphenhydraminum",
+    "image": "Diphenhydraminum.jpg",
+    "latinName": "Diphenhydraminum",
     "groups": ["antihisztamin"],
     "subgroup": "aminoalkil-éterek",
     "target": "H1-receptor",
     "generation": ""
   },
-  "Dimetindenum.jpg": {
-    "latin": "Dimetindenum",
+  {
+    "name": "Dimetindenum",
+    "image": "Dimetindenum.jpg",
+    "latinName": "Dimetindenum",
     "groups": ["antihisztamin"],
     "subgroup": "alkil- és alkenil-aminok",
     "target": "H1-receptor",
     "generation": ""
   },
-  "Hydroxyzinum.jpg": {
-    "latin": "Hydroxyzinum",
+  {
+    "name": "Hydroxyzinum",
+    "image": "Hydroxyzinum.jpg",
+    "latinName": "Hydroxyzinum",
     "groups": ["antihisztamin"],
     "subgroup": "benzhidrilpiperazin-származék",
     "target": "H1-receptor",
     "generation": ""
   },
-  "Promethazinum.jpg": {
-    "latin": "Promethazinum",
+  {
+    "name": "Promethazinum",
+    "image": "Promethazinum.jpg",
+    "latinName": "Promethazinum",
     "groups": ["antihisztamin"],
     "subgroup": "fenotiazin-származék",
     "target": "H1-receptor",
     "generation": ""
   },
-  "Amlodipinum.jpg": {
-    "latin": "Amlodipinum",
+  {
+    "name": "Amlodipinum",
+    "image": "Amlodipinum.jpg",
+    "latinName": "Amlodipinum",
     "groups": ["antianginás szer"],
     "subgroup": "dihidropiridin-származék",
     "target": "Ca+ csatorna",
     "generation": ""
   },
-  "Captoprilum.jpg": {
-    "latin": "Captoprilum",
+  {
+    "name": "Captoprilum",
+    "image": "Captoprilum.jpg",
+    "latinName": "Captoprilum",
     "groups": ["antihipertenzív szer"],
     "subgroup": "ACE gátló",
     "target": "ACE",
     "generation": ""
   },
-  "Enalaprilum.jpg": {
-    "latin": "Enalaprilum",
+  {
+    "name": "Enalaprilum",
+    "image": "Enalaprilum.jpg",
+    "latinName": "Enalaprilum",
     "groups": ["antihipertenzív szer"],
     "subgroup": "ACE gátló",
     "target": "ACE",
     "generation": ""
   },
-  "Lisinoprilum.jpg": {
-    "latin": "Lisinoprilum",
+  {
+    "name": "Lisinoprilum",
+    "image": "Lisinoprilum.jpg",
+    "latinName": "Lisinoprilum",
     "groups": ["antihipertenzív szer"],
     "subgroup": "ACE gátló",
     "target": "ACE",
     "generation": ""
   },
-  "Ramiprilum.jpg": {
-    "latin": "Ramiprilum",
+  {
+    "name": "Ramiprilum",
+    "image": "Ramiprilum.jpg",
+    "latinName": "Ramiprilum",
     "groups": ["antihipertenzív szer"],
     "subgroup": "ACE gátló",
     "target": "ACE",
     "generation": ""
   },
-  "Quinaprilum.jpg": {
-    "latin": "Quinaprilum",
+  {
+    "name": "Quinaprilum",
+    "image": "Quinaprilum.jpg",
+    "latinName": "Quinaprilum",
     "groups": ["antihipertenzív szer"],
     "subgroup": "ACE gátló",
     "target": "ACE",
     "generation": ""
   },
-  "Losartanum.jpg": {
-    "latin": "Losartanum",
+  {
+    "name": "Losartanum",
+    "image": "Losartanum.jpg",
+    "latinName": "Losartanum",
     "groups": ["antihipertenzív szer"],
     "subgroup": "AT1-receptor antagonista",
     "target": "AT1-receptor",
     "generation": ""
   },
-  "Clofibratum.jpg": {
-    "latin": "Clofibratum",
+  {
+    "name": "Clofibratum",
+    "image": "Clofibratum.jpg",
+    "latinName": "Clofibratum",
     "groups": ["érelmeszesedés elleni szer"],
     "subgroup": "fibrát",
     "target": "PPAR-α",
     "generation": "I."
   },
-  "Ciprofibratum.jpg": {
-    "latin": "Ciprofibratum",
+  {
+    "name": "Ciprofibratum",
+    "image": "Ciprofibratum.jpg",
+    "latinName": "Ciprofibratum",
     "groups": ["érelmeszesedés elleni szer"],
     "subgroup": "fibrát",
     "target": "PPAR-α",
     "generation": "II."
   },
-  "Lovastatinum.jpg": {
-    "latin": "Lovastatinum",
+  {
+    "name": "Lovastatinum",
+    "image": "Lovastatinum.jpg",
+    "latinName": "Lovastatinum",
     "groups": ["érelmeszesedés elleni szer"],
     "subgroup": "HMG-CoA inhibitor",
     "target": "HMG-CoA",
     "generation": ""
   },
-  "Fluvastatinum.jpg": {
-    "latin": "Fluvastatinum",
+  {
+    "name": "Fluvastatinum",
+    "image": "Fluvastatinum.jpg",
+    "latinName": "Fluvastatinum",
     "groups": ["érelmeszesedés elleni szer"],
     "subgroup": "HMG-CoA inhibitor",
     "target": "HMG-CoA",
     "generation": ""
   },
-  "Warfarinum.jpg": {
-    "latin": "Warfarinum",
+  {
+    "name": "Warfarinum",
+    "image": "Warfarinum.jpg",
+    "latinName": "Warfarinum",
     "groups": ["antikoaguláns"],
     "subgroup": "K-vitamin antagonista",
     "target": "Vitamin K epoxid reduktáz komplex",
     "generation": ""
   },
-  "Acenocoumarolum.jpg": {
-    "latin": "Acenocoumarolum",
+  {
+    "name": "Acenocoumarolum",
+    "image": "Acenocoumarolum.jpg",
+    "latinName": "Acenocoumarolum",
     "groups": ["antikoaguláns"],
     "subgroup": "K-vitamin antagonista",
     "target": "Vitamin K epoxid reduktáz komplex",
     "generation": ""
   },
-  "Glucosaminum.jpg": {
-    "latin": "Glucosaminum",
+  {
+    "name": "Glucosaminum",
+    "image": "Glucosaminum.jpg",
+    "latinName": "Glucosaminum",
     "groups": ["antikoaguláns"],
     "subgroup": "",
     "target": "",
     "generation": ""
   },
-  "Acidum_glucuronicum.jpg": {
-    "latin": "Acidum glucuronicum",
+  {
+    "name": "Acidum glucuronicum",
+    "image": "Acidum_glucuronicum.jpg",
+    "latinName": "Acidum glucuronicum",
     "groups": ["antikoaguláns"],
     "subgroup": "",
     "target": "",
     "generation": ""
   },
-  "Acidum_iduronicum.jpg": {
-    "latin": "Acidum iduronicum",
+  {
+    "name": "Acidum iduronicum",
+    "image": "Acidum_iduronicum.jpg",
+    "latinName": "Acidum iduronicum",
     "groups": ["antikoaguláns"],
     "subgroup": "",
     "target": "",
     "generation": ""
   },
-  "Cetirizinum.jpg": {
-    "latin": "Cetirizinum",
+  {
+    "name": "Cetirizinum",
+    "image": "Cetirizinum.jpg",
+    "latinName": "Cetirizinum",
     "groups": ["antihisztamin"],
     "subgroup": "benzhidrilpiperazin-származék",
     "target": "H1-receptor",
     "generation": ""
   },
-  "Loratadinum.jpg": {
-    "latin": "Loratadinum",
+  {
+    "name": "Loratadinum",
+    "image": "Loratadinum.jpg",
+    "latinName": "Loratadinum",
     "groups": ["antihisztamin"],
     "subgroup": "6-7-6 triciklus",
     "target": "H1-receptor",
     "generation": ""
   },
-  "Desloratadinum.jpg": {
-    "latin": "Desloratadinum",
+  {
+    "name": "Desloratadinum",
+    "image": "Desloratadinum.jpg",
+    "latinName": "Desloratadinum",
     "groups": ["antihisztamin"],
     "subgroup": "6-7-6 triciklus",
     "target": "H1-receptor",
     "generation": ""
   },
-  "Cortisonum.jpg": {
-    "latin": "Cortisonum",
+  {
+    "name": "Cortisonum",
+    "image": "Cortisonum.jpg",
+    "latinName": "Cortisonum",
     "groups": ["glükokortikoidok"],
     "subgroup": "szisztémás kortikoszteroid",
     "target": "Glükokortikoid receptor",
     "generation": ""
   },
-  "Hydrocortisonum.jpg": {
-    "latin": "Hydrocortisonum",
+  {
+    "name": "Hydrocortisonum",
+    "image": "Hydrocortisonum.jpg",
+    "latinName": "Hydrocortisonum",
     "groups": ["glükokortikoidok"],
     "subgroup": "szisztémás kortikoszteroid",
     "target": "Glükokortikoid receptor",
     "generation": ""
   },
-  "Prednisonum.jpg": {
-    "latin": "Prednisonum",
+  {
+    "name": "Prednisonum",
+    "image": "Prednisonum.jpg",
+    "latinName": "Prednisonum",
     "groups": ["glükokortikoidok"],
     "subgroup": "szisztémás kortikoszteroid",
     "target": "Glükokortikoid receptor",
     "generation": ""
   },
-  "Prednisolonum.jpg": {
-    "latin": "Prednisolonum",
+  {
+    "name": "Prednisolonum",
+    "image": "Prednisolonum.jpg",
+    "latinName": "Prednisolonum",
     "groups": ["glükokortikoidok"],
     "subgroup": "szisztémás kortikoszteroid",
     "target": "Glükokortikoid receptor",
     "generation": ""
   },
-  "Triamcinolonum.jpg": {
-    "latin": "Triamcinolonum",
+  {
+    "name": "Triamcinolonum",
+    "image": "Triamcinolonum.jpg",
+    "latinName": "Triamcinolonum",
     "groups": ["glükokortikoidok"],
     "subgroup": "lokális kortikoszteroid",
     "target": "Glükokortikoid receptor",
     "generation": ""
   },
-  "Dexamethasonum.jpg": {
-    "latin": "Dexamethasonum",
+  {
+    "name": "Dexamethasonum",
+    "image": "Dexamethasonum.jpg",
+    "latinName": "Dexamethasonum",
     "groups": ["glükokortikoidok"],
     "subgroup": "lokális kortikoszteroid",
     "target": "Glükokortikoid receptor",
     "generation": ""
   },
-  "Betamethasonum.jpg": {
-    "latin": "Betamethasonum",
+  {
+    "name": "Betamethasonum",
+    "image": "Betamethasonum.jpg",
+    "latinName": "Betamethasonum",
     "groups": ["glükkokortikoidok"],
     "subgroup": "lokális kortikoszteroid",
     "target": "Glükokortikoid receptor",
     "generation": ""
   },
-  "Hydrocortisoni_acetas.jpg": {
-    "latin": "Hydrocortisoni acetas",
+  {
+    "name": "Hydrocortisoni acetas",
+    "image": "Hydrocortisoni_acetas.jpg",
+    "latinName": "Hydrocortisoni acetas",
     "groups": ["glükokortikoidok"],
     "subgroup": "szisztémás kortikoszteroid",
     "target": "Glükokortikoid receptor",
     "generation": ""
   },
-  "Triamcinoloni_acetonidum.jpg": {
-    "latin": "Triamcinoloni acetonidum",
+  {
+    "name": "Triamcinoloni acetonidum",
+    "image": "Triamcinoloni_acetonidum.jpg",
+    "latinName": "Triamcinoloni acetonidum",
     "groups": ["glükokortikoidok"],
     "subgroup": "lokális kortikoszteroid",
     "target": "Glükokortikoid receptor",
     "generation": ""
   },
-  "Fluocinoloni_acetonidum.jpg": {
-    "latin": "Fluocinoloni acetonidum",
+  {
+    "name": "Fluocinoloni acetonidum",
+    "image": "Fluocinoloni_acetonidum.jpg",
+    "latinName": "Fluocinoloni acetonidum",
     "groups": ["glükokortikoidok"],
     "subgroup": "lokális kortikoszteroid",
     "target": "Glükokortikoid receptor",
     "generation": ""
   },
-  "Budesonidum.jpg": {
-    "latin": "Budesonidum",
+  {
+    "name": "Budesonidum",
+    "image": "Budesonidum.jpg",
+    "latinName": "Budesonidum",
     "groups": ["glükokortikoidok"],
     "subgroup": "nazális és inhalációs kortikoszteroid",
     "target": "Glükokortikoid receptor",
     "generation": ""
   },
-  "estronum.jpg": {
-    "latin": "estronum",
+  {
+    "name": "estronum",
+    "image": "estronum.jpg",
+    "latinName": "estronum",
     "groups": ["nemi hormonok"],
     "subgroup": "természetes ösztrogének",
     "target": "Ösztrogén receptor",
     "generation": ""
   },
-  "estradiolum.jpg": {
-    "latin": "estradiolum",
+  {
+    "name": "estradiolum",
+    "image": "estradiolum.jpg",
+    "latinName": "estradiolum",
     "groups": ["nemi hormonok"],
     "subgroup": "természetes ösztrogének",
     "target": "Ösztrogén receptor",
     "generation": ""
   },
-  "estriolum.jpg": {
-    "latin": "estriolum",
+  {
+    "name": "estriolum",
+    "image": "estriolum.jpg",
+    "latinName": "estriolum",
     "groups": ["nemi hormonok"],
     "subgroup": "természetes ösztrogének",
     "target": "Ösztrogén receptor",
     "generation": ""
   },
-  "Ethinylestradiolum.jpg": {
-    "latin": "Ethinylestradiolum",
+  {
+    "name": "Ethinylestradiolum",
+    "image": "Ethinylestradiolum.jpg",
+    "latinName": "Ethinylestradiolum",
     "groups": ["nemi hormonok"],
     "subgroup": "félszintetikus ösztrogén",
     "target": "Ösztrogén receptor",
     "generation": ""
   },
-  "Diethylstilbestrolum.jpg": {
-    "latin": "Diethylstilbestrolum",
+  {
+    "name": "Diethylstilbestrolum",
+    "image": "Diethylstilbestrolum.jpg",
+    "latinName": "Diethylstilbestrolum",
     "groups": ["nemi hormonok"],
     "subgroup": "nemszteroid ösztrogén",
     "target": "Ösztrogén receptor",
     "generation": ""
   },
-  "Tamoxifenum.jpg": {
-    "latin": "Tamoxifenum",
+  {
+    "name": "Tamoxifenum",
+    "image": "Tamoxifenum.jpg",
+    "latinName": "Tamoxifenum",
     "groups": ["nemi hormonok"],
     "subgroup": "ösztrogén-antagonista",
     "target": "ösztrogén receptor",
     "generation": "I."
   },
-  "Chloraminum.jpg": {
-    "latin": "Chloraminum",
+  {
+    "name": "Desloratadinum",
+    "image": "Desloratadinum.jpg",
+    "latinName": "Desloratadinum",
+    "groups": ["antihisztamin"],
+    "subgroup": "6-7-6 triciklus",
+    "target": "H1-receptor",
+    "generation": ""
+  },
+  {
+    "name": "Cortisonum",
+    "image": "Cortisonum.jpg",
+    "latinName": "Cortisonum",
+    "groups": ["glükokortikoidok"],
+    "subgroup": "szisztémás kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generation": ""
+  },
+  {
+    "name": "Hydrocortisonum",
+    "image": "Hydrocortisonum.jpg",
+    "latinName": "Hydrocortisonum",
+    "groups": ["glükokortikoidok"],
+    "subgroup": "szisztémás kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generation": ""
+  },
+  {
+    "name": "Prednisonum",
+    "image": "Prednisonum.jpg",
+    "latinName": "Prednisonum",
+    "groups": ["glükokortikoidok"],
+    "subgroup": "szisztémás kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generation": ""
+  },
+  {
+    "name": "Prednisolonum",
+    "image": "Prednisolonum.jpg",
+    "latinName": "Prednisolonum",
+    "groups": ["glükokortikoidok"],
+    "subgroup": "szisztémás kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generation": ""
+  },
+  {
+    "name": "Triamcinolonum",
+    "image": "Triamcinolonum.jpg",
+    "latinName": "Triamcinolonum",
+    "groups": ["glükokortikoidok"],
+    "subgroup": "lokális kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generation": ""
+  },
+  {
+    "name": "Dexamethasonum",
+    "image": "Dexamethasonum.jpg",
+    "latinName": "Dexamethasonum",
+    "groups": ["glükokortikoidok"],
+    "subgroup": "lokális kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generation": ""
+  },
+  {
+    "name": "Betamethasonum",
+    "image": "Betamethasonum.jpg",
+    "latinName": "Betamethasonum",
+    "groups": ["glükkokortikoidok"],
+    "subgroup": "lokális kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generation": ""
+  },
+  {
+    "name": "Hydrocortisoni acetas",
+    "image": "Hydrocortisoni_acetas.jpg",
+    "latinName": "Hydrocortisoni acetas",
+    "groups": ["glükokortikoidok"],
+    "subgroup": "szisztémás kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generation": ""
+  },
+  {
+    "name": "Triamcinoloni acetonidum",
+    "image": "Triamcinoloni_acetonidum.jpg",
+    "latinName": "Triamcinoloni acetonidum",
+    "groups": ["glükokortikoidok"],
+    "subgroup": "lokális kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generation": ""
+  },
+  {
+    "name": "Fluocinoloni acetonidum",
+    "image": "Fluocinoloni_acetonidum.jpg",
+    "latinName": "Fluocinoloni acetonidum",
+    "groups": ["glükokortikoidok"],
+    "subgroup": "lokális kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generation": ""
+  },
+  {
+    "name": "Budesonidum",
+    "image": "Budesonidum.jpg",
+    "latinName": "Budesonidum",
+    "groups": ["glükokortikoidok"],
+    "subgroup": "nazális és inhalációs kortikoszteroid",
+    "target": "Glükokortikoid receptor",
+    "generation": ""
+  },
+  {
+    "name": "estronum",
+    "image": "estronum.jpg",
+    "latinName": "estronum",
+    "groups": ["nemi hormonok"],
+    "subgroup": "természetes ösztrogének",
+    "target": "Ösztrogén receptor",
+    "generation": ""
+  },
+  {
+    "name": "estradiolum",
+    "image": "estradiolum.jpg",
+    "latinName": "estradiolum",
+    "groups": ["nemi hormonok"],
+    "subgroup": "természetes ösztrogének",
+    "target": "Ösztrogén receptor",
+    "generation": ""
+  },
+  {
+    "name": "estriolum",
+    "image": "estriolum.jpg",
+    "latinName": "estriolum",
+    "groups": ["nemi hormonok"],
+    "subgroup": "természetes ösztrogének",
+    "target": "Ösztrogén receptor",
+    "generation": ""
+  },
+  {
+    "name": "Ethinylestradiolum",
+    "image": "Ethinylestradiolum.jpg",
+    "latinName": "Ethinylestradiolum",
+    "groups": ["nemi hormonok"],
+    "subgroup": "félszintetikus ösztrogén",
+    "target": "Ösztrogén receptor",
+    "generation": ""
+  },
+  {
+    "name": "Diethylstilbestrolum",
+    "image": "Diethylstilbestrolum.jpg",
+    "latinName": "Diethylstilbestrolum",
+    "groups": ["nemi hormonok"],
+    "subgroup": "nemszteroid ösztrogén",
+    "target": "Ösztrogén receptor",
+    "generation": ""
+  },
+  {
+    "name": "Tamoxifenum",
+    "image": "Tamoxifenum.jpg",
+    "latinName": "Tamoxifenum",
+    "groups": ["nemi hormonok"],
+    "subgroup": "ösztrogén-antagonista",
+    "target": "ösztrogén receptor",
+    "generation": "I."
+  },
+  {
+    "name": "Chloraminum",
+    "image": "Chloraminum.jpg",
+    "latinName": "Chloraminum",
     "groups": ["Antibakteriális és protozón ellenes szerek"],
     "subgroup": "",
     "target": "",
     "generation": ""
   },
-  "Resorcinolum.jpg": {
-    "latin": "Resorcinolum",
+  {
+    "name": "Resorcinolum",
+    "image": "Resorcinolum.jpg",
+    "latinName": "Resorcinolum",
     "groups": ["Antibakteriális és protozón ellenes szerek"],
     "subgroup": "",
     "target": "",
     "generation": ""
   },
-  "Sulfacetamidum.jpg": {
-    "latin": "Sulfacetamidum",
+  {
+    "name": "Sulfacetamidum",
+    "image": "Sulfacetamidum.jpg",
+    "latinName": "Sulfacetamidum",
     "groups": ["Szulfonamid antibiotikumok"],
     "subgroup": "",
     "target": "DHF-reduktáz",
     "generation": ""
   },
-  "Sulfadimidinum.jpg": {
-    "latin": "Sulfadimidinum",
+  {
+    "name": "Sulfadimidinum",
+    "image": "Sulfadimidinum.jpg",
+    "latinName": "Sulfadimidinum",
     "groups": ["Szulfonamid antibiotikumok"],
     "subgroup": "",
     "target": "DHF-reduktáz",
     "generation": ""
   },
-  "Sulfaguanidinum.jpg": {
-    "latin": "Sulfaguanidinum",
+  {
+    "name": "Sulfaguanidinum",
+    "image": "Sulfaguanidinum.jpg",
+    "latinName": "Sulfaguanidinum",
     "groups": ["Szulfonamid antibiotikumok"],
     "subgroup": "",
     "target": "DHF-reduktáz",
     "generation": ""
   },
-  "Chininum.jpg": {
-    "latin": "Chininum",
+  {
+    "name": "Chininum",
+    "image": "Chininum.jpg",
+    "latinName": "Chininum",
     "groups": ["Antibakteriális és protozón ellenes szerek"],
     "subgroup": "antimaláriás szer",
     "target": "",
     "generation": ""
   },
-  "Ciprofloxacinum.jpg": {
-    "latin": "Ciprofloxacinum",
+  {
+    "name": "Ciprofloxacinum",
+    "image": "Ciprofloxacinum.jpg",
+    "latinName": "Ciprofloxacinum",
     "groups": ["Antibakteriális és protozón ellenes szerek"],
     "subgroup": "fluorokinolon",
     "target": "DNS-giráz",
     "generation": "II."
   },
-  "Norfloxacinum.jpg": {
-    "latin": "Norfloxacinum",
+  {
+    "name": "Norfloxacinum",
+    "image": "Norfloxacinum.jpg",
+    "latinName": "Norfloxacinum",
     "groups": ["Antibakteriális és protozón ellenes szerek"],
     "subgroup": "fluorokinolon",
     "target": "DNS-giráz",
     "generation": "II."
   },
-  "Ofloxacinum.jpg": {
-    "latin": "Ofloxacinum",
+  {
+    "name": "Ofloxacinum",
+    "image": "Ofloxacinum.jpg",
+    "latinName": "Ofloxacinum",
     "groups": ["Antibakteriális és protozón ellenes szerek"],
     "subgroup": "fluorokinolon",
     "target": "DNS-giráz",
     "generation": "III."
   },
-  "Levofloxacinum.jpg": {
-    "latin": "Levofloxacinum",
+  {
+    "name": "Levofloxacinum",
+    "image": "Levofloxacinum.jpg",
+    "latinName": "Levofloxacinum",
     "groups": ["Antibakteriális és protozón ellenes szerek"],
     "subgroup": "fluorokinolon",
     "target": "DNS-giráz",
     "generation": "III."
   },
-  "Isoniazidum.jpg": {
-    "latin": "Isoniazidum",
+  {
+    "name": "Isoniazidum",
+    "image": "Isoniazidum.jpg",
+    "latinName": "Isoniazidum",
     "groups": ["Antibakteriális és protozón ellenes szerek"],
     "subgroup": "antituberkulotikum",
     "target": "sejtfalszintézis",
     "generation": ""
   },
-  "Bifonazolum.jpg": {
-    "latin": "Bifonazolum",
+  {
+    "name": "Bifonazolum",
+    "image": "Bifonazolum.jpg",
+    "latinName": "Bifonazolum",
     "groups": ["antifungális szer"],
     "subgroup": "imidazol-származék",
     "target": "ergoszterol szintézis",
     "generation": ""
   },
-  "Clotrimazolum.jpg": {
-    "latin": "Clotrimazolum",
+  {
+    "name": "Clotrimazolum",
+    "image": "Clotrimazolum.jpg",
+    "latinName": "Clotrimazolum",
     "groups": ["antifungális szer"],
     "subgroup": "imidazol-származék",
     "target": "ergoszterol szintézis",
     "generation": ""
   },
-  "Miconazolum.jpg": {
-    "latin": "Miconazolum",
+  {
+    "name": "Miconazolum",
+    "image": "Miconazolum.jpg",
+    "latinName": "Miconazolum",
     "groups": ["antifungális szer"],
     "subgroup": "imidazol-származék",
     "target": "ergoszterol szintézis",
     "generation": ""
   },
-  "Fluconazolum.jpg": {
-    "latin": "Fluconazolum",
+  {
+    "name": "Fluconazolum",
+    "image": "Fluconazolum.jpg",
+    "latinName": "Fluconazolum",
     "groups": ["antifungális szer"],
     "subgroup": "triazol-gyűrűs",
     "target": "30s riboszóma",
     "generation": ""
   },
-  "Tetracyclinum.jpg": {
-    "latin": "Tetracyclinum",
+  {
+    "name": "Tetracyclinum",
+    "image": "Tetracyclinum.jpg",
+    "latinName": "Tetracyclinum",
     "groups": ["tetraciklin antibiotikum"],
     "subgroup": "tetraciklin",
     "target": "30s riboszóma",
     "generation": ""
   },
-  "Oxytetracyclinum.jpg": {
-    "latin": "Oxytetracyclinum",
+  {
+    "name": "Oxytetracyclinum",
+    "image": "Oxytetracyclinum.jpg",
+    "latinName": "Oxytetracyclinum",
     "groups": ["tetraciklin antibiotikum"],
     "subgroup": "tetraciklin",
     "target": "30s riboszóma",
     "generation": ""
   },
-  "Doxycyclinum.jpg": {
-    "latin": "Doxycyclinum",
+  {
+    "name": "Doxycyclinum",
+    "image": "Doxycyclinum.jpg",
+    "latinName": "Doxycyclinum",
     "groups": ["tetraciklin antibiotikum"],
     "subgroup": "tetraciklin",
     "target": "30s riboszóma",
     "generation": ""
   },
-  "Streptomycinum.jpg": {
-    "latin": "Streptomycinum",
+  {
+    "name": "Streptomycinum",
+    "image": "Streptomycinum.jpg",
+    "latinName": "Streptomycinum",
     "groups": ["tetraciklin antibiotikum"],
     "subgroup": "aminoglikozid",
     "target": "30s riboszóma",
     "generation": "I."
   },
-  "Benzylpenicillinum.jpg": {
-    "latin": "Benzylpenicillinum",
+  {
+    "name": "Benzylpenicillinum",
+    "image": "Benzylpenicillinum.jpg",
+    "latinName": "Benzylpenicillinum",
     "groups": ["béta-laktám antibiotikumok"],
     "subgroup": "béta-laktám",
     "target": "PBP",
     "generation": ""
   },
-  "Ampicillinum.jpg": {
-    "latin": "Ampicillinum",
+  {
+    "name": "Ampicillinum",
+    "image": "Ampicillinum.jpg",
+    "latinName": "Ampicillinum",
     "groups": ["béta-laktám antibiotikumok"],
     "subgroup": "béta-laktám",
     "target": "PBP",
     "generation": ""
   },
-  "Amoxicillinum.jpg": {
-    "latin": "Amoxicillinum",
+  {
+    "name": "Amoxicillinum",
+    "image": "Amoxicillinum.jpg",
+    "latinName": "Amoxicillinum",
     "groups": ["béta-laktám antibiotikumok"],
     "subgroup": "béta-laktám",
     "target": "PBP",
     "generation": ""
   },
-  "Sultamicillinum.jpg": {
-    "latin": "Sultamicillinum",
+  {
+    "name": "Sultamicillinum",
+    "image": "Sultamicillinum.jpg",
+    "latinName": "Sultamicillinum",
     "groups": ["béta-laktám antibiotikumok"],
     "subgroup": "béta-laktám és béta--laktamáz enzim gátló",
     "target": "PBP ÉS béta-laktamáz",
     "generation": ""
   },
-  "Acidum_clavulanicum.jpg": {
-    "latin": "Acidum clavulanicum",
+  {
+    "name": "Acidum clavulanicum",
+    "image": "Acidum_clavulanicum.jpg",
+    "latinName": "Acidum clavulanicum",
     "groups": ["béta-laktám antibiotikumok"],
     "subgroup": "béta-laktamáz enzim gátló",
     "target": "béta-laktamáz",
     "generation": ""
   },
-  "Sulbactamum.jpg": {
-    "latin": "Sulbactamum",
+  {
+    "name": "Sulbactamum",
+    "image": "Sulbactamum.jpg",
+    "latinName": "Sulbactamum",
     "groups": ["béta-laktám antibiotikumok"],
     "subgroup": "béta-laktamáz enzim gátló",
     "target": "béta-laktamáz",
     "generation": ""
   },
-  "Cefalexinum.jpg": {
-    "latin": "Cefalexinum",
+  {
+    "name": "Cefalexinum",
+    "image": "Cefalexinum.jpg",
+    "latinName": "Cefalexinum",
     "groups": ["béta-laktám antibiotikumok"],
     "subgroup": "kefalosporin",
     "target": "PBP",
     "generation": "II."
   },
-  "Cefaclorum.jpg": {
-    "latin": "Cefaclorum",
+  {
+    "name": "Cefaclorum",
+    "image": "Cefaclorum.jpg",
+    "latinName": "Cefaclorum",
     "groups": ["béta-laktám antibiotikumok"],
     "subgroup": "kefalosporin",
     "target": "PBP",
     "generation": "II."
   },
-  "Aciclovirum.jpg": {
-    "latin": "Aciclovirum",
+  {
+    "name": "Aciclovirum",
+    "image": "Aciclovirum.jpg",
+    "latinName": "Aciclovirum",
     "groups": ["vírusellenes szer"],
     "subgroup": "nukleozid származék",
     "target": "",
     "generation": ""
   },
-  "Zidovudinum.jpg": {
-    "latin": "Zidovudinum",
+  {
+    "name": "Zidovudinum",
+    "image": "Zidovudinum.jpg",
+    "latinName": "Zidovudinum",
     "groups": ["vírusellenes szer"],
     "subgroup": "nukleozidanalóg típusú reverz transzkriptáz gátló",
     "target": "",
     "generation": ""
   },
-  "Amantadinum.jpg": {
-    "latin": "Amantadinum",
+  {
+    "name": "Amantadinum",
+    "image": "Amantadinum.jpg",
+    "latinName": "Amantadinum",
     "groups": ["vírusellenes szer"],
     "subgroup": "adamantán-származék",
     "target": "",
     "generation": ""
   },
-  "Oseltamivirum.jpg": {
-    "latin": "Oseltamivirum",
+  {
+    "name": "Oseltamivirum",
+    "image": "Oseltamivirum.jpg",
+    "latinName": "Oseltamivirum",
     "groups": ["vírusellenes szer"],
     "subgroup": "neuraminidáz-gátló",
     "target": "neuraminidáz",
     "generation": ""
   },
-  "Cyclophosphamidum.jpg": {
-    "latin": "Cyclophosphamidum",
+  {
+    "name": "Cyclophosphamidum",
+    "image": "Cyclophosphamidum.jpg",
+    "latinName": "Cyclophosphamidum",
     "groups": ["daganat ellenes szer"],
     "subgroup": "alkilezőszer típusú citotoxikum",
     "target": "DNS",
     "generation": ""
   },
-  "Cisplatinum.jpg": {
-    "latin": "Cisplatinum",
+  {
+    "name": "Cisplatinum",
+    "image": "Cisplatinum.jpg",
+    "latinName": "Cisplatinum",
     "groups": ["daganat ellenes szer"],
     "subgroup": "platina-amminkomplex",
     "target": "DNS",
     "generation": ""
   },
-  "Fluorouracilum.jpg": {
-    "latin": "Fluorouracilum",
+  {
+    "name": "Fluorouracilum",
+    "image": "Fluorouracilum.jpg",
+    "latinName": "Fluorouracilum",
     "groups": ["daganat ellenes szer"],
     "subgroup": "pirimidin-analóg antimetabolit",
     "target": "thimidilát-szintáz",
     "generation": ""
   }
-}
+]
+    
 

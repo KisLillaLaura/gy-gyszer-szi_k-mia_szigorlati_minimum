@@ -2,17 +2,6 @@ let molekulakData = [];
 let beugroMolekulak = [];
 let gyakorlasiMolekulak = [];
 
-
-
-fetch('gyogykemsumma_dict.json')
-  .then(response => response.json())
-  .then(data => {
-    molekulakData = data;
-    populateGroupSelect();  // <- IDE hívjuk meg
-    initializeGame();       // vagy bármi más inicializálás
-  })
-  .catch(error => console.error("Hiba a JSON betöltése során:", error));
-
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const response = await fetch("gyogykemsumma_dict.json");
@@ -24,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-function populateGroupSelect() {
+function initializeGroupSelect() {
   const groupSelect = document.getElementById("groupSelect");
   const uniqueGroups = new Set();
 
@@ -40,20 +29,6 @@ function populateGroupSelect() {
   });
 }
 
-function initializeGroupSelect() {
-  const groupSet = new Set();
-  molekulakData.forEach(mol => {
-    mol.groups.forEach(group => groupSet.add(group));
-  });
-
-  const groupSelect = document.getElementById("groupSelect");
-  groupSet.forEach(group => {
-    const option = document.createElement("option");
-    option.value = group;
-    option.textContent = group;
-    groupSelect.appendChild(option);
-  });
-}
 function setupEventListeners() {
   document.getElementById("beugroBtn").addEventListener("click", () => {
     document.getElementById("beugroContainer").style.display = "block";
@@ -78,6 +53,13 @@ function setupEventListeners() {
     evaluateGyakorlas();
   });
 }
+
+function goBackToMenu() {
+  document.getElementById("beugroContainer").style.display = "none";
+  document.getElementById("gyakorlasContainer").style.display = "none";
+  document.getElementById("beugroEredmeny").innerHTML = "";
+  document.getElementById("gyakorlasEredmeny").innerHTML = "";
+}
 function startBeugroMode() {
   beugroMolekulak = getRandomElements(molekulakData, 9);
   const container = document.getElementById("beugroMolekulak");
@@ -86,6 +68,7 @@ function startBeugroMode() {
     container.appendChild(createMolekulaForm(mol, index, "beugro"));
   });
 }
+
 function startGyakorlasMode() {
   const selectedGroups = Array.from(document.getElementById("groupSelect").selectedOptions).map(opt => opt.value);
   const count = parseInt(document.getElementById("gyakorlasCount").value, 10);
@@ -105,11 +88,19 @@ function startGyakorlasMode() {
 
   document.getElementById("submitGyakorlas").style.display = "block";
 }
+
 function createMolekulaForm(mol, index, mode) {
   const div = document.createElement("div");
-  // ... [kép és latin név mező hozzáadása]
+  div.classList.add("molekula-form");
 
-  // Hatástani csoport mező
+  // Latin név input
+  const latinInput = document.createElement("input");
+  latinInput.type = "text";
+  latinInput.placeholder = "Latin név";
+  latinInput.id = `${mode}_latin_${index}`;
+  div.appendChild(latinInput);
+
+  // Hatástani csoport select
   const groupSelect = document.createElement("select");
   groupSelect.id = `${mode}_group_${index}`;
   const uniqueGroups = [...new Set(molekulakData.flatMap(m => m.groups))];
@@ -121,19 +112,19 @@ function createMolekulaForm(mol, index, mode) {
   });
   div.appendChild(groupSelect);
 
-  // Alcsoport mező
+  // Alcsoport select
   const subgroupSelect = document.createElement("select");
   subgroupSelect.id = `${mode}_subgroup_${index}`;
   subgroupSelect.disabled = true;
   div.appendChild(subgroupSelect);
 
-  // Target mező
+  // Target select
   const targetSelect = document.createElement("select");
   targetSelect.id = `${mode}_target_${index}`;
   targetSelect.disabled = true;
   div.appendChild(targetSelect);
 
-  // Generáció mező
+  // Generáció (ha van)
   if (mol.generation) {
     const generationSelect = document.createElement("select");
     generationSelect.id = `${mode}_generation_${index}`;
@@ -146,38 +137,38 @@ function createMolekulaForm(mol, index, mode) {
     div.appendChild(generationSelect);
   }
 
-  // Eseményfigyelő a hatástani csoport mezőre
+  // Dinamikus alcsoport / target frissítés group select alapján
   groupSelect.addEventListener("change", () => {
     const selectedGroup = groupSelect.value;
 
-    // Alcsoportok frissítése
+    // Alcsoport frissítés
     const subgroups = [...new Set(molekulakData
       .filter(m => m.groups.includes(selectedGroup) && m.subgroup)
       .map(m => m.subgroup))];
     subgroupSelect.innerHTML = "";
     if (subgroups.length > 0) {
-      subgroups.forEach(subgroup => {
-        const option = document.createElement("option");
-        option.value = subgroup;
-        option.textContent = subgroup;
-        subgroupSelect.appendChild(option);
+      subgroups.forEach(sub => {
+        const opt = document.createElement("option");
+        opt.value = sub;
+        opt.textContent = sub;
+        subgroupSelect.appendChild(opt);
       });
       subgroupSelect.disabled = false;
     } else {
       subgroupSelect.disabled = true;
     }
 
-    // Targetek frissítése
+    // Target frissítés
     const targets = [...new Set(molekulakData
       .filter(m => m.groups.includes(selectedGroup) && m.target)
       .map(m => m.target))];
     targetSelect.innerHTML = "";
     if (targets.length > 0) {
       targets.forEach(target => {
-        const option = document.createElement("option");
-        option.value = target;
-        option.textContent = target;
-        targetSelect.appendChild(option);
+        const opt = document.createElement("option");
+        opt.value = target;
+        opt.textContent = target;
+        targetSelect.appendChild(opt);
       });
       targetSelect.disabled = false;
     } else {
@@ -186,29 +177,6 @@ function createMolekulaForm(mol, index, mode) {
   });
 
   return div;
-}
-
-function generateSelect(options, id) {
-  let html = `<select id="${id}">`;
-  html += `<option value="">-- Válassz --</option>`;
-  options.forEach(opt => {
-    html += `<option value="${opt}">${opt}</option>`;
-  });
-  html += `</select>`;
-  return html;
-}
-
-function getSubgroupsForGroup(group) {
-  return ["vízoldható", "zsíroldható"]; // Példa, bővítsd, ha kell
-}
-
-function getTargetsForGroup(group) {
-  return ["enzimek", "receptorok", "csatornák", "opioidreceptorok"]; // Példa, bővítsd
-}
-
-function getRandomElements(arr, n) {
-  const shuffled = [...arr].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, n);
 }
 function evaluateBeugro() {
   let totalScore = 0;
@@ -220,27 +188,31 @@ function evaluateBeugro() {
     let score = 0;
     let fields = 0;
     let correct = 0;
+    const errors = [];
+
     const latin = document.getElementById(`beugro_latin_${index}`).value.trim();
-    if (latin.toLowerCase() === mol.latinName.toLowerCase()) correct++;
+    if (latin.toLowerCase() === mol.latinName.toLowerCase()) correct++; else errors.push(`Latin név: ${mol.latinName}`);
     fields++;
 
     const group = document.getElementById(`beugro_group_${index}`).value;
-    if (group === mol.groups[0]) correct++;
+    if (group === mol.groups[0]) correct++; else errors.push(`Csoport: ${mol.groups[0]}`);
     fields++;
 
     if (mol.subgroup) {
       const val = document.getElementById(`beugro_subgroup_${index}`).value;
-      if (val === mol.subgroup) correct++;
+      if (val === mol.subgroup) correct++; else errors.push(`Alcsoport: ${mol.subgroup}`);
       fields++;
     }
+
     if (mol.target) {
       const val = document.getElementById(`beugro_target_${index}`).value;
-      if (val === mol.target) correct++;
+      if (val === mol.target) correct++; else errors.push(`Target: ${mol.target}`);
       fields++;
     }
+
     if (mol.generation) {
       const val = document.getElementById(`beugro_generation_${index}`).value;
-      if (val === mol.generation) correct++;
+      if (val === mol.generation) correct++; else errors.push(`Generáció: ${mol.generation}`);
       fields++;
     }
 
@@ -248,8 +220,8 @@ function evaluateBeugro() {
     totalScore += score;
 
     if (score < 1) {
-      eredmenyDiv.innerHTML += `<p>${mol.name}: <b>${(score * 100).toFixed(1)}%</b><br>
-      Hibás válasz. Helyes: ${mol.latinName}, ${mol.groups.join(", ")}${mol.subgroup ? ", " + mol.subgroup : ""}${mol.target ? ", " + mol.target : ""}${mol.generation ? ", " + mol.generation : ""}</p>`;
+      eredmenyDiv.innerHTML += `<p><strong>${mol.name}</strong>: <b>${(score * 100).toFixed(1)}%</b><br>
+        Hibás mezők → ${errors.join(", ")}</p>`;
     }
   });
 
@@ -292,19 +264,22 @@ function evaluateGyakorlas() {
     }
 
     if (errors.length > 0) {
-      eredmenyDiv.innerHTML += `<p>${mol.name}: Hibák → ${errors.join(", ")}</p>`;
+      eredmenyDiv.innerHTML += `<p><strong>${mol.name}</strong>: Hibás → ${errors.join(", ")}</p>`;
     }
   });
 
   const percent = ((correct / total) * 100).toFixed(1);
   eredmenyDiv.innerHTML += `<h3>Helyes válaszok aránya: ${percent}%</h3>`;
-
 }
 function goBackToMenu() {
   document.getElementById("beugroContainer").style.display = "none";
   document.getElementById("gyakorlasContainer").style.display = "none";
   document.getElementById("beugroEredmeny").innerHTML = "";
   document.getElementById("gyakorlasEredmeny").innerHTML = "";
+  document.getElementById("gyakorlasMolekulak").innerHTML = "";
+  document.getElementById("beugroMolekulak").innerHTML = "";
+  document.getElementById("submitGyakorlas").style.display = "none";
 }
+
 
 

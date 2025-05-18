@@ -1,283 +1,270 @@
-// script.js - Javított változat
-
-// Adatstruktúrák
-const pharmacoGroups = [
-    "Major analgetikum",
-    "Minor analgetikum",
-    "NSAID",
-    "Szedato-hipnotikum",
-    "Lokális anesztetikum",
-    "Antipszichotikum",
-    "Antidepresszív szerek",
-    "Antiepileptikum",
-    "Paraszimpatomimetikum",
-    "Paraszimpatolitikum",
-    "Szimpatomimetikum",
-    "Emésztőrendszerre ható szer",
-    "Kardiotonikum",
-    "Antiaritmiás szer",
-    "Béta-blokkoló",
-    "Antianginás szer",
-    "Antikoaguláns",
-    "Diuretikum",
-    "Antidiabetikum",
-    "Vitamin",
-    "Antihisztamin",
-    "Antihipertenzív szer",
-    "Érelmeszesedés elleni szer",
-    "Glükokortikoidok",
-    "Nemi hormonok",
-    "Antibakteriális és protozoon ellenes szerek",
-    "Szulfonamid antibiotikumok",
-    "Antibiotikum",
-    "Antifungális szer",
-    "Tetraciklin antibiotikum",
-    "Aminoglikozid antibiotikum",
-    "Béta-laktám antibiotikumok",
-    "Vírusellenes szer",
-    "Daganat ellenes szer"
-];
-
 let moleculesData = [];
 
-async function loadMoleculesData() {
-    try {
-        const response = await fetch('gyogykemsumma_dict.json');
-        if (!response.ok) {
-            throw new Error('Hiba a JSON betöltésekor');
-        }
-        moleculesData = await response.json();
-        console.log('Molekula adatok sikeresen betöltve', moleculesData);
-    } catch (error) {
-        console.error('Hiba történt:', error);
+fetch('gyogykemsumma_dict.json')
+  .then(response => response.json())
+  .then(data => {
+    moleculesData = data.molekulak; 
+    initializeGame();
+  })
+  .catch(error => console.error('Hiba a JSON betöltése során:', error));
+
+function initializeGame() {
+  let allGroups = [...new Set(moleculesData.map(m => m.csoport))];
+  let groupSelectElem = document.getElementById('groupSelect');
+  allGroups.forEach(group => {
+    let option = document.createElement('option');
+    option.value = group;
+    option.textContent = group;
+    groupSelectElem.appendChild(option);
+  });
+
+  document.getElementById('beugroBtn').addEventListener('click', () => {
+    document.getElementById('beugroContainer').style.display = 'block';
+    document.getElementById('gyakorlasContainer').style.display = 'none';
+    startBeugro();
+  });
+  document.getElementById('gyakorlasBtn').addEventListener('click', () => {
+    document.getElementById('gyakorlasContainer').style.display = 'block';
+    document.getElementById('beugroContainer').style.display = 'none';
+    document.getElementById('gyakorlasMolekulak').innerHTML = '';
+    document.getElementById('gyakorlasEredmeny').innerHTML = '';
+    document.getElementById('submitGyakorlas').style.display = 'none';
+    document.getElementById('gyakorlasForm').style.display = 'block';
+  });
+
+  document.getElementById('startGyakorlas').addEventListener('click', (e) => {
+    e.preventDefault();
+    let groupSelect = document.getElementById('groupSelect');
+    let chosenGroups = Array.from(groupSelect.selectedOptions).map(opt => opt.value);
+    if (chosenGroups.length === 0) {
+      alert('Legalább egy csoportot válassz ki!');
+      return;
     }
-}
-
-function loadPharmacoGroups() {
-    const container = document.getElementById('pharmGroups');
-    container.innerHTML = '';
-    
-    pharmacoGroups.forEach(group => {
-        const div = document.createElement('div');
-        div.className = 'checkbox-item';
-        
-        const input = document.createElement('input');
-        input.type = 'checkbox';
-        input.id = `group-${group.replace(/\s+/g, '-').toLowerCase()}`;
-        input.value = group;
-        
-        const label = document.createElement('label');
-        label.htmlFor = input.id;
-        label.textContent = group;
-        
-        div.appendChild(input);
-        div.appendChild(label);
-        container.appendChild(div);
-    });
-}
-
-function showPracticeSubmenu() {
-    document.getElementById('practiceSubmenu').style.display = 'block';
-}
-
-function startQuiz() {
-    startGame(getRandomMolecules(9));
-}
-
-function startPractice() {
-    const selectedGroups = Array.from(document.querySelectorAll('#pharmGroups input:checked')).map(cb => cb.value);
-    const count = parseInt(document.getElementById('moleculeCount').value);
-    
-    if (selectedGroups.length === 0) {
-        alert('Válassz legalább egy hatástani csoportot!');
-        return;
+    let count = parseInt(document.getElementById('gyakorlasCount').value);
+    let available = moleculesData.filter(m => chosenGroups.includes(m.csoport));
+    if (count < 1 || count > available.length) {
+      alert('Érvénytelen darabszám.');
+      return;
     }
-    
-    startGame(getMoleculesFromGroups(selectedGroups, count));
-}
-
-function startGame(molecules) {
-    document.getElementById('practiceSubmenu').style.display = 'none';
-    document.getElementById('gameContainer').style.display = 'block';
-    
-    const container = document.getElementById('moleculeGrid');
+    let selected = [];
+    while (selected.length < count) {
+      let mol = available[Math.floor(Math.random() * available.length)];
+      if (!selected.includes(mol)) {
+        selected.push(mol);
+      }
+    }
+    let container = document.getElementById('gyakorlasMolekulak');
     container.innerHTML = '';
-    
-    molecules.forEach(molecule => {
-        const card = createMoleculeCard(molecule);
-        container.appendChild(card);
+    selected.forEach((molecule, index) => {
+      createMoleculeTable(molecule, index, 'gyakorlas');
     });
+    document.getElementById('submitGyakorlas').style.display = 'inline-block';
+    document.getElementById('gyakorlasForm').style.display = 'none';
+  });
+
+  document.getElementById('submitBeugro').addEventListener('click', () => {
+    evaluate('beugro');
+  });
+  document.getElementById('submitGyakorlas').addEventListener('click', () => {
+    evaluate('gyakorlas');
+  });
 }
 
-function createMoleculeCard(molecule) {
-    const availableFields = [
-        { key: 'latinName', label: 'Latin név', type: 'input' },
-        { 
-            key: 'groups', 
-            label: 'Hatástani csoport(ok)', 
-            type: 'select',
-            options: pharmacoGroups
-        },
-        { key: 'subgroup', label: 'Alcsoport', type: 'input' },
-        { key: 'target', label: 'Gyógyszeres célpont', type: 'input' },
-        { key: 'generation', label: 'Generáció', type: 'input', optional: true }
-    ];
-
-    const fieldsToShow = availableFields.filter(field => {
-        const value = molecule[field.key];
-        return (value !== undefined && value !== null && value !== '') || !field.optional;
-    });
-
-    const colCount = fieldsToShow.length;
-    const tableClass = `molecule-table molecule-table--${colCount}cols`;
-
-    let tableHTML = `<table class="${tableClass}">`;
-    
-    fieldsToShow.forEach(field => {
-        const value = molecule[field.key] || '';
-        const isGeneration = field.key === 'generation';
-        const rowClass = isGeneration ? 'generation-field' : '';
-        
-        tableHTML += `
-            <tr class="${rowClass}">
-                <th>${field.label}</th>
-                <td data-label="${field.label}">
-                    ${field.type === 'select' ? 
-                        `<select class="${field.key}">
-                            <option value="">Válassz...</option>
-                            ${getOptionsForField(field)}
-                        </select>` :
-                        `<input type="text" class="${field.key}" value="${value}">`
-                    }
-                </td>
-            </tr>
-        `;
-    });
-    
-    tableHTML += '</table>';
-
-    const card = document.createElement('div');
-    card.className = 'molecule-card';
-    
-    const img = document.createElement('img');
-    img.className = 'molecule-image';
-    img.src = `molekulak/${molecule.image}`;
-    img.alt = molecule.name;
-    img.onerror = function() {
-        this.src = 'placeholder.png';
-    };
-    
-    const name = document.createElement('h3');
-    name.className = 'molecule-card__title';
-    name.textContent = molecule.name || 'Molekula';
-    
-    card.appendChild(img);
-    card.appendChild(name);
-    card.innerHTML += tableHTML;
-    
-    return card;
+function startBeugro() {
+  let container = document.getElementById('beugroMolekulak');
+  container.innerHTML = '';
+  let selected = [];
+  let groups = [...new Set(moleculesData.map(m => m.csoport))];
+  while (selected.length < 9 && selected.length < moleculesData.length) {
+    let group = groups[Math.floor(Math.random() * groups.length)];
+    let mols = moleculesData.filter(m => m.csoport === group);
+    if (mols.length === 0) continue;
+    let mol = mols[Math.floor(Math.random() * mols.length)];
+    if (!selected.includes(mol)) {
+      selected.push(mol);
+    }
+  }
+  while (selected.length < 9) {
+    let mol = moleculesData[Math.floor(Math.random() * moleculesData.length)];
+    if (!selected.includes(mol)) {
+      selected.push(mol);
+    }
+  }
+  selected.forEach((molecule, index) => {
+    createMoleculeTable(molecule, index, 'beugro');
+  });
 }
 
-function getOptionsForField(field) {
-    if (!field.options) return '';
-    
-    return field.options.map(option => 
-        `<option value="${option}">${option}</option>`
-    ).join('');
-}
+function createMoleculeTable(molecule, index, mode) {
+  let table = document.createElement('table');
+  let headerRow = table.insertRow();
+  ['Kép', 'Latin név', 'Hatástani csoport', 'Alcsoport', 'Céltárgy', 'Generáció'].forEach(text => {
+    let th = document.createElement('th');
+    th.textContent = text;
+    headerRow.appendChild(th);
+  });
+  let row = table.insertRow();
+  // Kép
+  let imgTd = row.insertCell();
+  let img = document.createElement('img');
+  img.src = 'molekulak/' + molecule.image;
+  img.alt = molecule.latin;
+  img.width = 100;
+  imgTd.appendChild(img);
+  // Latin név
+  let latinTd = row.insertCell();
+  let latinInput = document.createElement('input');
+  latinInput.type = 'text';
+  latinInput.id = mode + '-latin-' + index;
+  latinTd.appendChild(latinInput);
+  // Csoport
+  let groupTd = row.insertCell();
+  let groupSelect = document.createElement('select');
+  groupSelect.id = mode + '-group-' + index;
+  let emptyOpt = document.createElement('option');
+  emptyOpt.value = '';
+  emptyOpt.textContent = 'Válassz...';
+  groupSelect.appendChild(emptyOpt);
+  let uniqueGroups = [...new Set(moleculesData.map(m => m.csoport))];
+  uniqueGroups.forEach(g => {
+    let opt = document.createElement('option');
+    opt.value = g;
+    opt.textContent = g;
+    groupSelect.appendChild(opt);
+  });
+  groupTd.appendChild(groupSelect);
+  // Alcsoport
+  let subTd = row.insertCell();
+  let subSelect = document.createElement('select');
+  subSelect.id = mode + '-sub-' + index;
+  subSelect.disabled = true;
+  subTd.appendChild(subSelect);
+  // Céltárgy
+  let targetTd = row.insertCell();
+  let targetSelect = document.createElement('select');
+  targetSelect.id = mode + '-target-' + index;
+  targetSelect.disabled = true;
+  targetTd.appendChild(targetSelect);
+  // Generáció
+  let genTd = row.insertCell();
+  let genSelect = document.createElement('select');
+  genSelect.id = mode + '-gen-' + index;
+  genSelect.disabled = true;
+  ['I.', 'II.', 'III.'].forEach(gen => {
+    let opt = document.createElement('option');
+    opt.value = gen;
+    opt.textContent = gen;
+    genSelect.appendChild(opt);
+  });
+  genTd.appendChild(genSelect);
 
-function checkAnswers() {
-    const cards = document.querySelectorAll('.molecule-card');
-    let correctCount = 0;
-    let totalCount = 0;
-
-    cards.forEach(card => {
-        const moleculeName = card.querySelector('.molecule-card__title').textContent;
-        const molecule = moleculesData.find(m => m.name === moleculeName);
-        
-        if (!molecule) return;
-
-        const inputs = card.querySelectorAll('input, select');
-        inputs.forEach(input => {
-            const field = input.classList[0];
-            const userValue = input.value.trim();
-            const correctValue = molecule[field];
-            
-            totalCount++;
-            
-            if (Array.isArray(correctValue)) {
-                if (correctValue.includes(userValue)) {
-                    input.classList.add('valid');
-                    input.classList.remove('invalid');
-                    correctCount++;
-                } else {
-                    input.classList.add('invalid');
-                    input.classList.remove('valid');
-                }
-            } else if (userValue === correctValue) {
-                input.classList.add('valid');
-                input.classList.remove('invalid');
-                correctCount++;
-            } else {
-                input.classList.add('invalid');
-                input.classList.remove('valid');
-            }
+  function updateDependent() {
+    if (latinInput.value.trim() !== '' && groupSelect.value !== '') {
+      let relevant = moleculesData.filter(m => m.csoport === groupSelect.value);
+      let subs = [...new Set(relevant.map(m => m.alcsoport).filter(v => v))];
+      subSelect.innerHTML = '';
+      if (subs.length > 0) {
+        subs.forEach(sval => {
+          let opt = document.createElement('option');
+          opt.value = sval;
+          opt.textContent = sval;
+          subSelect.appendChild(opt);
         });
-    });
-
-    const score = Math.round((correctCount / totalCount) * 100);
-    const scoreDisplay = document.getElementById('scoreDisplay');
-    scoreDisplay.className = score >= 70 ? 'score-display score-display--success' : 'score-display score-display--warning';
-    scoreDisplay.textContent = `Eredmény: ${score}% (${correctCount}/${totalCount})`;
-}
-
-function newGame() {
-    if (document.getElementById('practiceSubmenu').style.display === 'block') {
-        startPractice();
-    } else {
-        startQuiz();
+        subSelect.disabled = false;
+      } else {
+        subSelect.disabled = true;
+      }
+      let targets = [...new Set(relevant.map(m => m.target).filter(v => v))];
+      targetSelect.innerHTML = '';
+      if (targets.length > 0) {
+        targets.forEach(tval => {
+          let opt = document.createElement('option');
+          opt.value = tval;
+          opt.textContent = tval;
+          targetSelect.appendChild(opt);
+        });
+        targetSelect.disabled = false;
+      } else {
+        targetSelect.disabled = true;
+      }
+      let gens = [...new Set(relevant.map(m => m.generacio).filter(v => v))];
+      if (gens.length > 0) {
+        genSelect.disabled = false;
+      } else {
+        genSelect.disabled = true;
+      }
     }
+  }
+  latinInput.addEventListener('input', updateDependent);
+  groupSelect.addEventListener('change', updateDependent);
+
+  if (mode === 'beugro') {
+    document.getElementById('beugroMolekulak').appendChild(table);
+  } else {
+    document.getElementById('gyakorlasMolekulak').appendChild(table);
+  }
 }
 
-function backToMenu() {
-    document.getElementById('gameContainer').style.display = 'none';
-    document.getElementById('practiceSubmenu').style.display = 'none';
-}
+function evaluate(mode) {
+  let tablesContainer = (mode === 'beugro') ? 
+    document.getElementById('beugroMolekulak') : 
+    document.getElementById('gyakorlasMolekulak');
+  let tables = tablesContainer.getElementsByTagName('table');
+  let correctCount = 0;
+  let total = tables.length;
 
-function getRandomMolecules(count) {
-    if (moleculesData.length === 0) {
-        console.error('Nincsenek betöltve molekula adatok');
-        return [];
-    }
-    
-    const shuffled = [...moleculesData].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
-}
-
-function getMoleculesFromGroups(groups, count) {
-    if (moleculesData.length === 0) {
-        console.error('Nincsenek betöltve molekula adatok');
-        return [];
-    }
-    
-    const filtered = moleculesData.filter(molecule => 
-        molecule.groups && molecule.groups.some(group => groups.includes(group))
+  for (let idx = 0; idx < total; idx++) {
+    let latinInput = document.getElementById(mode + '-latin-' + idx);
+    let groupSelect = document.getElementById(mode + '-group-' + idx);
+    let subSelect = document.getElementById(mode + '-sub-' + idx);
+    let targetSelect = document.getElementById(mode + '-target-' + idx);
+    let genSelect = document.getElementById(mode + '-gen-' + idx);
+    // Helyes molekula megkeresése a beolvasott adatok között
+    // Feltételezzük, hogy az egyedi azonosítót (latin+csoport) ismerjük:
+    let chosenLatin = latinInput.value.trim().toLowerCase();
+    let chosenGroup = groupSelect.value;
+    let correctMol = moleculesData.find(m =>
+      m.latin.toLowerCase() === chosenLatin && m.csoport === chosenGroup
     );
-    
-    const shuffled = [...filtered].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, Math.min(count, shuffled.length));
+    if (!correctMol) {
+      // Ha nem találjuk, akkor biztos, hogy hibás, de folytatjuk
+      correctMol = { latin: '', csoport: '', alcsoport: '', target: '', generacio: '' };
+    }
+    let points = 0;
+    let totalFields = 2;
+    if (latinInput.value.trim().toLowerCase() === correctMol.latin.toLowerCase()) points++;
+    if (groupSelect.value === correctMol.csoport) points++;
+    if (!subSelect.disabled) {
+      totalFields++;
+      if (subSelect.value === correctMol.alcsoport) points++;
+    }
+    if (!targetSelect.disabled) {
+      totalFields++;
+      if (targetSelect.value === correctMol.target) points++;
+    }
+    if (!genSelect.disabled) {
+      totalFields++;
+      if (genSelect.value === correctMol.generacio) points++;
+    }
+    if (points === totalFields) {
+      correctCount++;
+    } else {
+      // Hibás: mutassuk a helyes megoldást
+      let helyes = `Helyes megoldás: Latin név – ${correctMol.latin}, Csoport – ${correctMol.csoport}`;
+      if (correctMol.alcsoport) helyes += `, Alcsoport – ${correctMol.alcsoport}`;
+      if (correctMol.target) helyes += `, Céltárgy – ${correctMol.target}`;
+      if (correctMol.generacio) helyes += `, Generáció – ${correctMol.generacio}`;
+      let p = document.createElement('p');
+      p.textContent = helyes;
+      tables[idx].appendChild(p);
+    }
+  }
+  if (mode === 'beugro') {
+    let eredDiv = document.getElementById('beugroEredmeny');
+    eredDiv.textContent = `Összpontszám: ${correctCount}/${total}`;
+  } else {
+    let eredDiv = document.getElementById('gyakorlasEredmeny');
+    let perc = Math.round((correctCount / total) * 100);
+    eredDiv.textContent = `Helyes válaszok: ${perc}% (${correctCount}/${total})`;
+  }
 }
-
-// Eseménykezelők beállítása
-document.addEventListener('DOMContentLoaded', async () => {
-    document.getElementById('quizBtn').addEventListener('click', startQuiz);
-    document.getElementById('practiceBtn').addEventListener('click', showPracticeSubmenu);
-    document.getElementById('startPracticeBtn').addEventListener('click', startPractice);
-    document.getElementById('checkAnswersBtn').addEventListener('click', checkAnswers);
-    document.getElementById('newGameBtn').addEventListener('click', newGame);
-    document.getElementById('backToMenuBtn').addEventListener('click', backToMenu);
-
-    await loadMoleculesData();
-    loadPharmacoGroups();
-    document.getElementById('maxMolecules').textContent = moleculesData.length;
-});

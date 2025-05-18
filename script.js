@@ -79,43 +79,87 @@ function startGyakorlasMode() {
 }
 function createMolekulaForm(mol, index, mode) {
   const div = document.createElement("div");
-  div.innerHTML = `
-    <img src="molekulak/${mol.image}" alt="${mol.name}" width="200"><br>
-    <table>
-      <tr>
-        <th>Latin név</th>
-        <td><input type="text" id="${mode}_latin_${index}"></td>
-      </tr>
-      <tr>
-        <th>Hatástani csoport</th>
-        <td>${generateSelect(mol.groups, `${mode}_group_${index}`)}</td>
-      </tr>
-    </table>
-  `;
+  // ... [kép és latin név mező hozzáadása]
 
-  if (mol.subgroup) {
-    div.innerHTML += `
-      <label>Alcsoport:</label><br>
-      ${generateSelect(getSubgroupsForGroup(mol.groups[0]), `${mode}_subgroup_${index}`)}<br>
-    `;
-  }
+  // Hatástani csoport mező
+  const groupSelect = document.createElement("select");
+  groupSelect.id = `${mode}_group_${index}`;
+  const uniqueGroups = [...new Set(molekulakData.flatMap(m => m.groups))];
+  uniqueGroups.forEach(group => {
+    const option = document.createElement("option");
+    option.value = group;
+    option.textContent = group;
+    groupSelect.appendChild(option);
+  });
+  div.appendChild(groupSelect);
 
-  if (mol.target) {
-    div.innerHTML += `
-      <label>Target:</label><br>
-      ${generateSelect(getTargetsForGroup(mol.groups[0]), `${mode}_target_${index}`)}<br>
-    `;
-  }
+  // Alcsoport mező
+  const subgroupSelect = document.createElement("select");
+  subgroupSelect.id = `${mode}_subgroup_${index}`;
+  subgroupSelect.disabled = true;
+  div.appendChild(subgroupSelect);
 
+  // Target mező
+  const targetSelect = document.createElement("select");
+  targetSelect.id = `${mode}_target_${index}`;
+  targetSelect.disabled = true;
+  div.appendChild(targetSelect);
+
+  // Generáció mező
   if (mol.generation) {
-    div.innerHTML += `
-      <label>Generáció:</label><br>
-      ${generateSelect(["I.", "II.", "III."], `${mode}_generation_${index}`)}<br>
-    `;
+    const generationSelect = document.createElement("select");
+    generationSelect.id = `${mode}_generation_${index}`;
+    ["I.", "II.", "III."].forEach(gen => {
+      const option = document.createElement("option");
+      option.value = gen;
+      option.textContent = gen;
+      generationSelect.appendChild(option);
+    });
+    div.appendChild(generationSelect);
   }
+
+  // Eseményfigyelő a hatástani csoport mezőre
+  groupSelect.addEventListener("change", () => {
+    const selectedGroup = groupSelect.value;
+
+    // Alcsoportok frissítése
+    const subgroups = [...new Set(molekulakData
+      .filter(m => m.groups.includes(selectedGroup) && m.subgroup)
+      .map(m => m.subgroup))];
+    subgroupSelect.innerHTML = "";
+    if (subgroups.length > 0) {
+      subgroups.forEach(subgroup => {
+        const option = document.createElement("option");
+        option.value = subgroup;
+        option.textContent = subgroup;
+        subgroupSelect.appendChild(option);
+      });
+      subgroupSelect.disabled = false;
+    } else {
+      subgroupSelect.disabled = true;
+    }
+
+    // Targetek frissítése
+    const targets = [...new Set(molekulakData
+      .filter(m => m.groups.includes(selectedGroup) && m.target)
+      .map(m => m.target))];
+    targetSelect.innerHTML = "";
+    if (targets.length > 0) {
+      targets.forEach(target => {
+        const option = document.createElement("option");
+        option.value = target;
+        option.textContent = target;
+        targetSelect.appendChild(option);
+      });
+      targetSelect.disabled = false;
+    } else {
+      targetSelect.disabled = true;
+    }
+  });
 
   return div;
 }
+
 function generateSelect(options, id) {
   let html = `<select id="${id}">`;
   html += `<option value="">-- Válassz --</option>`;

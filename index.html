@@ -43,14 +43,15 @@
       <label>Hány molekulán gyakoroljunk?
         <input type="number" id="gyakorlasCount" min="1" value="1" style="width:60px;">
       </label><br><br>
-      <button id="startGyakorlas">Kezdés</button>
+      <button id="startGyakorlas" type="button">Kezdés</button>
     </form>
     <div id="gyakorlasMolekulak"></div>
     <button id="submitGyakorlas" style="display:none;">Beküldés</button>
     <div id="gyakorlasEredmeny" style="margin-top:10px;"></div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- FONTOS: defer attribútummal, hogy a script a DOM után fusson le -->
+  <script src="script.js" defer></script>
 </body>
 </html>
 

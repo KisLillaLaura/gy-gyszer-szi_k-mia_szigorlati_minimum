@@ -99,7 +99,7 @@ function createMolekulaForm(mol, index, mode) {
 // Kép beszúrása
   if (mol.image) {
     const img = document.createElement("img");
-    img.src = mol.image;  // Az elérési út a JSON-ből jön
+    img.src = "molekulak/" + mol.image;  // Az elérési út a JSON-ből jön
     img.alt = mol.name;
     img.style.maxWidth = "200px";
     img.style.display = "block";

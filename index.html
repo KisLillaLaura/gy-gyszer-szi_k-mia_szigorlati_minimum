@@ -25,18 +25,23 @@
 </head>
 <body>
   <h1>Gyógyszerkémia felismertető játék</h1>
-  <button id="beugroBtn">Beugró mód</button>
-  <button id="gyakorlasBtn">Gyakorlás mód</button>
 
+  <!-- Főmenü konténer -->
+  <div id="menuContainer">
+    <button id="beugroBtn">Beugró mód</button>
+    <button id="gyakorlasBtn">Gyakorlás mód</button>
+  </div>
+
+  <!-- Beugró mód -->
   <div id="beugroContainer" style="display:none; margin-top:20px;">
     <h2>Beugró játék</h2>
     <div id="beugroMolekulak"></div>
     <button id="submitBeugro">Beküldés</button>
     <div id="beugroEredmeny" style="margin-top:10px;"></div>
     <button onclick="goBackToMenu()">Vissza a főmenübe</button>
-
   </div>
 
+  <!-- Gyakorlás mód -->
   <div id="gyakorlasContainer" style="display:none; margin-top:20px;">
     <h2>Gyakorlás játék</h2>
     <form id="gyakorlasForm">
@@ -51,11 +56,11 @@
     <button id="submitGyakorlas" style="display:none;">Beküldés</button>
     <div id="gyakorlasEredmeny" style="margin-top:10px;"></div>
     <button onclick="goBackToMenu()">Vissza a főmenübe</button>
-
   </div>
 
-  <!-- FONTOS: defer attribútummal, hogy a script a DOM után fusson le -->
+  <!-- A script defer-rel, hogy a DOM után fusson -->
   <script src="script.js" defer></script>
 </body>
 </html>
+
 

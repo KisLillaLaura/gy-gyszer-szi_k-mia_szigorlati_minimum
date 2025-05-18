@@ -96,6 +96,15 @@ function startGyakorlasMode() {
 function createMolekulaForm(mol, index, mode) {
   const div = document.createElement("div");
   div.classList.add("molekula-form");
+// Kép beszúrása
+  if (mol.image) {
+    const img = document.createElement("img");
+    img.src = mol.image;  // Az elérési út a JSON-ből jön
+    img.alt = mol.name;
+    img.style.maxWidth = "200px";
+    img.style.display = "block";
+    div.appendChild(img);
+  }
 
   // Latin név input
   const latinInput = document.createElement("input");

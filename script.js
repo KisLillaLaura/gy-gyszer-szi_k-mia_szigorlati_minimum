@@ -1,270 +1,420 @@
-let moleculesData = [];
+// game.js
 
+let molecules = [];
+let uniqueGroups = new Set();
+let uniqueSubgroups = new Set();
+let uniqueTargets = new Set();
+const generations = ["I.", "II.", "III."];
+
+// JSON betöltése és előkészítés
 fetch('gyogykemsumma_dict.json')
   .then(response => response.json())
   .then(data => {
-    moleculesData = data.molekulak; 
-    initializeGame();
-  })
-  .catch(error => console.error('Hiba a JSON betöltése során:', error));
-
-function initializeGame() {
-  let allGroups = [...new Set(moleculesData.map(m => m.csoport))];
-  let groupSelectElem = document.getElementById('groupSelect');
-  allGroups.forEach(group => {
-    let option = document.createElement('option');
-    option.value = group;
-    option.textContent = group;
-    groupSelectElem.appendChild(option);
-  });
-
-  document.getElementById('beugroBtn').addEventListener('click', () => {
-    document.getElementById('beugroContainer').style.display = 'block';
-    document.getElementById('gyakorlasContainer').style.display = 'none';
-    startBeugro();
-  });
-  document.getElementById('gyakorlasBtn').addEventListener('click', () => {
-    document.getElementById('gyakorlasContainer').style.display = 'block';
-    document.getElementById('beugroContainer').style.display = 'none';
-    document.getElementById('gyakorlasMolekulak').innerHTML = '';
-    document.getElementById('gyakorlasEredmeny').innerHTML = '';
-    document.getElementById('submitGyakorlas').style.display = 'none';
-    document.getElementById('gyakorlasForm').style.display = 'block';
-  });
-
-  document.getElementById('startGyakorlas').addEventListener('click', (e) => {
-    e.preventDefault();
-    let groupSelect = document.getElementById('groupSelect');
-    let chosenGroups = Array.from(groupSelect.selectedOptions).map(opt => opt.value);
-    if (chosenGroups.length === 0) {
-      alert('Legalább egy csoportot válassz ki!');
-      return;
-    }
-    let count = parseInt(document.getElementById('gyakorlasCount').value);
-    let available = moleculesData.filter(m => chosenGroups.includes(m.csoport));
-    if (count < 1 || count > available.length) {
-      alert('Érvénytelen darabszám.');
-      return;
-    }
-    let selected = [];
-    while (selected.length < count) {
-      let mol = available[Math.floor(Math.random() * available.length)];
-      if (!selected.includes(mol)) {
-        selected.push(mol);
-      }
-    }
-    let container = document.getElementById('gyakorlasMolekulak');
-    container.innerHTML = '';
-    selected.forEach((molecule, index) => {
-      createMoleculeTable(molecule, index, 'gyakorlas');
+    molecules = data;
+    // Különböző opciók kigyűjtése
+    molecules.forEach(mol => {
+      mol.groups.forEach(g => uniqueGroups.add(g));
+      if (mol.subgroup) uniqueSubgroups.add(mol.subgroup);
+      if (mol.target) uniqueTargets.add(mol.target);
     });
-    document.getElementById('submitGyakorlas').style.display = 'inline-block';
-    document.getElementById('gyakorlasForm').style.display = 'none';
+    // Gombok eseménykezelői
+    document.getElementById('beugroBtn').addEventListener('click', renderBeugro);
+    document.getElementById('gyakorBtn').addEventListener('click', renderGyakorSelect);
+  })
+  .catch(err => console.error('JSON betöltési hiba:', err));
+
+/* ===================== BEUGRÓ MÓD ===================== */
+function renderBeugro() {
+  const container = document.getElementById('jatek');
+  container.innerHTML = '';  // Tisztítás
+  const selectedMols = shuffle([...molecules]).slice(0, 9); // Véletlenszerű 9 molekula
+
+  // 9 dinamikus tábla létrehozása molekulánként
+  selectedMols.forEach((mol, idx) => {
+    const div = document.createElement('div');
+    div.className = 'molecule';
+    // Kép
+    const img = document.createElement('img');
+    img.src = 'molekulak/' + mol.image;
+    img.alt = mol.name;
+    div.appendChild(img);
+    // Táblázat
+    const table = document.createElement('table');
+    // Latin név
+    const rowLatin = table.insertRow();
+    rowLatin.insertCell(0).outerHTML = '<th>Latin név:</th>';
+    rowLatin.insertCell(1).innerHTML = `<input type="text" id="latin_${idx}">`;
+    // Hatástani csoport
+    if (mol.groups.length) {
+      const rowGroup = table.insertRow();
+      rowGroup.insertCell(0).outerHTML = '<th>Hatástani csoport:</th>';
+      const select = document.createElement('select');
+      select.id = `group_${idx}`;
+      select.innerHTML = '<option value="">- válassz -</option>';
+      uniqueGroups.forEach(g => {
+        const opt = document.createElement('option');
+        opt.value = g;
+        opt.textContent = g;
+        select.appendChild(opt);
+      });
+      rowGroup.insertCell(1).appendChild(select);
+    }
+    // Alcsoport
+    if (mol.subgroup) {
+      const rowSub = table.insertRow();
+      rowSub.insertCell(0).outerHTML = '<th>Alcsoport:</th>';
+      const select = document.createElement('select');
+      select.id = `subgroup_${idx}`;
+      select.innerHTML = '<option value="">- válassz -</option>';
+      uniqueSubgroups.forEach(sg => {
+        const opt = document.createElement('option');
+        opt.value = sg;
+        opt.textContent = sg;
+        select.appendChild(opt);
+      });
+      rowSub.insertCell(1).appendChild(select);
+    }
+    // Target
+    if (mol.target) {
+      const rowTarget = table.insertRow();
+      rowTarget.insertCell(0).outerHTML = '<th>Célfehérje:</th>';
+      const select = document.createElement('select');
+      select.id = `target_${idx}`;
+      select.innerHTML = '<option value="">- válassz -</option>';
+      uniqueTargets.forEach(tar => {
+        const opt = document.createElement('option');
+        opt.value = tar;
+        opt.textContent = tar;
+        select.appendChild(opt);
+      });
+      rowTarget.insertCell(1).appendChild(select);
+    }
+    // Generáció
+    if (mol.generation) {
+      const rowGen = table.insertRow();
+      rowGen.insertCell(0).outerHTML = '<th>Generáció:</th>';
+      const select = document.createElement('select');
+      select.id = `gen_${idx}`;
+      select.innerHTML = '<option value="">- válassz -</option>';
+      generations.forEach(gen => {
+        const opt = document.createElement('option');
+        opt.value = gen;
+        opt.textContent = gen;
+        select.appendChild(opt);
+      });
+      rowGen.insertCell(1).appendChild(select);
+    }
+    div.appendChild(table);
+    container.appendChild(div);
   });
 
-  document.getElementById('submitBeugro').addEventListener('click', () => {
-    evaluate('beugro');
+  // Ellenőrzés gomb és pontszám kiírás
+  const checkBtn = document.createElement('button');
+  checkBtn.textContent = 'Ellenőrzés';
+  checkBtn.addEventListener('click', () => {
+    let totalScore = 0;
+    selectedMols.forEach((mol, idx) => {
+      let correctCount = 0;
+      let fields = 1; // Latin név mindig van
+      const latinInput = document.getElementById(`latin_${idx}`);
+      if (latinInput.value.trim() === mol.latinName) {
+        correctCount++;
+      } else {
+        latinInput.classList.add('incorrect');
+      }
+      // Hatástani csoport
+      if (mol.groups.length) {
+        fields++;
+        const sel = document.getElementById(`group_${idx}`);
+        if (sel.value === mol.groups[0]) {
+          correctCount++;
+        } else {
+          sel.classList.add('incorrect');
+        }
+      }
+      // Alcsoport
+      if (mol.subgroup) {
+        fields++;
+        const sel = document.getElementById(`subgroup_${idx}`);
+        if (sel.value === mol.subgroup) {
+          correctCount++;
+        } else {
+          sel.classList.add('incorrect');
+        }
+      }
+      // Target
+      if (mol.target) {
+        fields++;
+        const sel = document.getElementById(`target_${idx}`);
+        if (sel.value === mol.target) {
+          correctCount++;
+        } else {
+          sel.classList.add('incorrect');
+        }
+      }
+      // Generáció
+      if (mol.generation) {
+        fields++;
+        const sel = document.getElementById(`gen_${idx}`);
+        if (sel.value === mol.generation) {
+          correctCount++;
+        } else {
+          sel.classList.add('incorrect');
+        }
+      }
+      // Pontozás: ha minden helyes, 1 pont; ha latin+group helyes és van több mező, részpont
+      let score = 0;
+      if (correctCount === fields) {
+        score = 1;
+      } else if (correctCount === 2 && fields > 2) {
+        score = 2 / fields;  // pl. 2/3 = 0.667 vagy 2/4 = 0.5
+      }
+      totalScore += score;
+      // Hibás válaszoknál megmutatjuk a helyes választ
+      const parentDiv = document.getElementById('jatek');
+      const info = document.createElement('p');
+      info.innerHTML = `(${mol.name} helyes megoldásai: Latin név = <span class="correct">${mol.latinName}</span>` +
+        `${mol.groups.length ? `, Csoport = <span class="correct">${mol.groups[0]}</span>` : ''}` +
+        `${mol.subgroup ? `, Alcsoport = <span class="correct">${mol.subgroup}</span>` : ''}` +
+        `${mol.target ? `, Cél = <span class="correct">${mol.target}</span>` : ''}` +
+        `${mol.generation ? `, Generáció = <span class="correct">${mol.generation}</span>` : ''})`;
+      parentDiv.appendChild(info);
+    });
+    // Összpontszám megjelenítése
+    const result = document.createElement('h3');
+    result.textContent = `Összpontszám: ${totalScore.toFixed(2)}`;
+    container.appendChild(result);
   });
-  document.getElementById('submitGyakorlas').addEventListener('click', () => {
-    evaluate('gyakorlas');
-  });
+  container.appendChild(checkBtn);
 }
 
-function startBeugro() {
-  let container = document.getElementById('beugroMolekulak');
+/* ===================== GYAKORLÁS MÓD ===================== */
+function renderGyakorSelect() {
+  const container = document.getElementById('jatek');
   container.innerHTML = '';
-  let selected = [];
-  let groups = [...new Set(moleculesData.map(m => m.csoport))];
-  while (selected.length < 9 && selected.length < moleculesData.length) {
-    let group = groups[Math.floor(Math.random() * groups.length)];
-    let mols = moleculesData.filter(m => m.csoport === group);
-    if (mols.length === 0) continue;
-    let mol = mols[Math.floor(Math.random() * mols.length)];
-    if (!selected.includes(mol)) {
-      selected.push(mol);
-    }
-  }
-  while (selected.length < 9) {
-    let mol = moleculesData[Math.floor(Math.random() * moleculesData.length)];
-    if (!selected.includes(mol)) {
-      selected.push(mol);
-    }
-  }
-  selected.forEach((molecule, index) => {
-    createMoleculeTable(molecule, index, 'beugro');
-  });
-}
 
-function createMoleculeTable(molecule, index, mode) {
-  let table = document.createElement('table');
-  let headerRow = table.insertRow();
-  ['Kép', 'Latin név', 'Hatástani csoport', 'Alcsoport', 'Céltárgy', 'Generáció'].forEach(text => {
-    let th = document.createElement('th');
-    th.textContent = text;
-    headerRow.appendChild(th);
-  });
-  let row = table.insertRow();
-  // Kép
-  let imgTd = row.insertCell();
-  let img = document.createElement('img');
-  img.src = 'molekulak/' + molecule.image;
-  img.alt = molecule.latin;
-  img.width = 100;
-  imgTd.appendChild(img);
-  // Latin név
-  let latinTd = row.insertCell();
-  let latinInput = document.createElement('input');
-  latinInput.type = 'text';
-  latinInput.id = mode + '-latin-' + index;
-  latinTd.appendChild(latinInput);
-  // Csoport
-  let groupTd = row.insertCell();
-  let groupSelect = document.createElement('select');
-  groupSelect.id = mode + '-group-' + index;
-  let emptyOpt = document.createElement('option');
-  emptyOpt.value = '';
-  emptyOpt.textContent = 'Válassz...';
-  groupSelect.appendChild(emptyOpt);
-  let uniqueGroups = [...new Set(moleculesData.map(m => m.csoport))];
+  // Választható csoportok jelölőnégyzetekkel
+  const form = document.createElement('div');
+  form.innerHTML = '<h2>Gyakorlás: válassz hatástani csoportokat és darabszámot</h2>';
   uniqueGroups.forEach(g => {
-    let opt = document.createElement('option');
-    opt.value = g;
-    opt.textContent = g;
-    groupSelect.appendChild(opt);
+    const label = document.createElement('label');
+    label.innerHTML = `<input type="checkbox" value="${g}"> ${g}<br>`;
+    form.appendChild(label);
   });
-  groupTd.appendChild(groupSelect);
+  // Darabszám mező
+  const numInput = document.createElement('input');
+  numInput.type = 'number';
+  numInput.id = 'gyakorCount';
+  numInput.value = 3;
+  numInput.min = 1;
+  numInput.max = molecules.length;
+  const numLabel = document.createElement('div');
+  numLabel.textContent = 'Molekulák száma: ';
+  numLabel.appendChild(numInput);
+  form.appendChild(numLabel);
+  // Indító gomb
+  const startBtn = document.createElement('button');
+  startBtn.textContent = 'Gyakorlás indítása';
+  startBtn.addEventListener('click', startGyakor);
+  form.appendChild(startBtn);
+  container.appendChild(form);
+}
+
+let practiceList = [];
+let currentIdx = 0;
+let correctAnswers = 0;
+
+function startGyakor() {
+  // Kiválasztott csoportok lekérdezése
+  const checked = Array.from(document.querySelectorAll('#jatek input[type="checkbox"]:checked'))
+                       .map(cb => cb.value);
+  const count = parseInt(document.getElementById('gyakorCount').value) || 1;
+  // Szűrés a kiválasztott csoportokra
+  const filtered = molecules.filter(mol => {
+    return mol.groups.some(g => checked.includes(g));
+  });
+  // Véletlenszerű lista összeállítása
+  practiceList = shuffle(filtered).slice(0, count);
+  currentIdx = 0;
+  correctAnswers = 0;
+  // Első kérdés megjelenítése
+  renderNextQuestion();
+}
+
+function renderNextQuestion() {
+  const container = document.getElementById('jatek');
+  container.innerHTML = '';
+  if (currentIdx >= practiceList.length) {
+    // Végeredmény
+    const percent = (correctAnswers / practiceList.length * 100).toFixed(1);
+    container.innerHTML = `<h2>Végeredmény: ${percent}%</h2>`;
+    return;
+  }
+  const mol = practiceList[currentIdx];
+  const div = document.createElement('div');
+  div.className = 'molecule';
+  // Kép
+  const img = document.createElement('img');
+  img.src = 'molekulak/' + mol.image;
+  img.alt = mol.name;
+  div.appendChild(img);
+  // Táblázat (ugyanúgy mint Beugró módban)
+  const table = document.createElement('table');
+  // Latin név
+  const rowLatin = table.insertRow();
+  rowLatin.insertCell(0).outerHTML = '<th>Latin név:</th>';
+  rowLatin.insertCell(1).innerHTML = `<input type="text" id="latin_g">`;
+  // Hatástani csoport
+  if (mol.groups.length) {
+    const rowGroup = table.insertRow();
+    rowGroup.insertCell(0).outerHTML = '<th>Hatástani csoport:</th>';
+    const select = document.createElement('select');
+    select.id = 'group_g';
+    select.innerHTML = '<option value="">- válassz -</option>';
+    uniqueGroups.forEach(g => {
+      const opt = document.createElement('option');
+      opt.value = g;
+      opt.textContent = g;
+      select.appendChild(opt);
+    });
+    rowGroup.insertCell(1).appendChild(select);
+  }
   // Alcsoport
-  let subTd = row.insertCell();
-  let subSelect = document.createElement('select');
-  subSelect.id = mode + '-sub-' + index;
-  subSelect.disabled = true;
-  subTd.appendChild(subSelect);
-  // Céltárgy
-  let targetTd = row.insertCell();
-  let targetSelect = document.createElement('select');
-  targetSelect.id = mode + '-target-' + index;
-  targetSelect.disabled = true;
-  targetTd.appendChild(targetSelect);
+  if (mol.subgroup) {
+    const rowSub = table.insertRow();
+    rowSub.insertCell(0).outerHTML = '<th>Alcsoport:</th>';
+    const select = document.createElement('select');
+    select.id = 'subgroup_g';
+    select.innerHTML = '<option value="">- válassz -</option>';
+    uniqueSubgroups.forEach(sg => {
+      const opt = document.createElement('option');
+      opt.value = sg;
+      opt.textContent = sg;
+      select.appendChild(opt);
+    });
+    rowSub.insertCell(1).appendChild(select);
+  }
+  // Target
+  if (mol.target) {
+    const rowTarget = table.insertRow();
+    rowTarget.insertCell(0).outerHTML = '<th>Célfehérje:</th>';
+    const select = document.createElement('select');
+    select.id = 'target_g';
+    select.innerHTML = '<option value="">- válassz -</option>';
+    uniqueTargets.forEach(tar => {
+      const opt = document.createElement('option');
+      opt.value = tar;
+      opt.textContent = tar;
+      select.appendChild(opt);
+    });
+    rowTarget.insertCell(1).appendChild(select);
+  }
   // Generáció
-  let genTd = row.insertCell();
-  let genSelect = document.createElement('select');
-  genSelect.id = mode + '-gen-' + index;
-  genSelect.disabled = true;
-  ['I.', 'II.', 'III.'].forEach(gen => {
-    let opt = document.createElement('option');
-    opt.value = gen;
-    opt.textContent = gen;
-    genSelect.appendChild(opt);
-  });
-  genTd.appendChild(genSelect);
-
-  function updateDependent() {
-    if (latinInput.value.trim() !== '' && groupSelect.value !== '') {
-      let relevant = moleculesData.filter(m => m.csoport === groupSelect.value);
-      let subs = [...new Set(relevant.map(m => m.alcsoport).filter(v => v))];
-      subSelect.innerHTML = '';
-      if (subs.length > 0) {
-        subs.forEach(sval => {
-          let opt = document.createElement('option');
-          opt.value = sval;
-          opt.textContent = sval;
-          subSelect.appendChild(opt);
-        });
-        subSelect.disabled = false;
-      } else {
-        subSelect.disabled = true;
-      }
-      let targets = [...new Set(relevant.map(m => m.target).filter(v => v))];
-      targetSelect.innerHTML = '';
-      if (targets.length > 0) {
-        targets.forEach(tval => {
-          let opt = document.createElement('option');
-          opt.value = tval;
-          opt.textContent = tval;
-          targetSelect.appendChild(opt);
-        });
-        targetSelect.disabled = false;
-      } else {
-        targetSelect.disabled = true;
-      }
-      let gens = [...new Set(relevant.map(m => m.generacio).filter(v => v))];
-      if (gens.length > 0) {
-        genSelect.disabled = false;
-      } else {
-        genSelect.disabled = true;
-      }
-    }
+  if (mol.generation) {
+    const rowGen = table.insertRow();
+    rowGen.insertCell(0).outerHTML = '<th>Generáció:</th>';
+    const select = document.createElement('select');
+    select.id = 'gen_g';
+    select.innerHTML = '<option value="">- válassz -</option>';
+    generations.forEach(gen => {
+      const opt = document.createElement('option');
+      opt.value = gen;
+      opt.textContent = gen;
+      select.appendChild(opt);
+    });
+    rowGen.insertCell(1).appendChild(select);
   }
-  latinInput.addEventListener('input', updateDependent);
-  groupSelect.addEventListener('change', updateDependent);
+  div.appendChild(table);
+  container.appendChild(div);
 
-  if (mode === 'beugro') {
-    document.getElementById('beugroMolekulak').appendChild(table);
-  } else {
-    document.getElementById('gyakorlasMolekulak').appendChild(table);
-  }
-}
-
-function evaluate(mode) {
-  let tablesContainer = (mode === 'beugro') ? 
-    document.getElementById('beugroMolekulak') : 
-    document.getElementById('gyakorlasMolekulak');
-  let tables = tablesContainer.getElementsByTagName('table');
-  let correctCount = 0;
-  let total = tables.length;
-
-  for (let idx = 0; idx < total; idx++) {
-    let latinInput = document.getElementById(mode + '-latin-' + idx);
-    let groupSelect = document.getElementById(mode + '-group-' + idx);
-    let subSelect = document.getElementById(mode + '-sub-' + idx);
-    let targetSelect = document.getElementById(mode + '-target-' + idx);
-    let genSelect = document.getElementById(mode + '-gen-' + idx);
-    // Helyes molekula megkeresése a beolvasott adatok között
-    // Feltételezzük, hogy az egyedi azonosítót (latin+csoport) ismerjük:
-    let chosenLatin = latinInput.value.trim().toLowerCase();
-    let chosenGroup = groupSelect.value;
-    let correctMol = moleculesData.find(m =>
-      m.latin.toLowerCase() === chosenLatin && m.csoport === chosenGroup
-    );
-    if (!correctMol) {
-      // Ha nem találjuk, akkor biztos, hogy hibás, de folytatjuk
-      correctMol = { latin: '', csoport: '', alcsoport: '', target: '', generacio: '' };
-    }
-    let points = 0;
-    let totalFields = 2;
-    if (latinInput.value.trim().toLowerCase() === correctMol.latin.toLowerCase()) points++;
-    if (groupSelect.value === correctMol.csoport) points++;
-    if (!subSelect.disabled) {
-      totalFields++;
-      if (subSelect.value === correctMol.alcsoport) points++;
-    }
-    if (!targetSelect.disabled) {
-      totalFields++;
-      if (targetSelect.value === correctMol.target) points++;
-    }
-    if (!genSelect.disabled) {
-      totalFields++;
-      if (genSelect.value === correctMol.generacio) points++;
-    }
-    if (points === totalFields) {
-      correctCount++;
+  // Ellenőrzés és visszajelzés
+  const checkBtn = document.createElement('button');
+  checkBtn.textContent = 'Ellenőrzés';
+  checkBtn.addEventListener('click', () => {
+    let allCorrect = true;
+    // Latin név
+    const latinInput = document.getElementById('latin_g');
+    if (latinInput.value.trim() === mol.latinName) {
+      latinInput.classList.add('correct');
+      correctAnswers++;
     } else {
-      // Hibás: mutassuk a helyes megoldást
-      let helyes = `Helyes megoldás: Latin név – ${correctMol.latin}, Csoport – ${correctMol.csoport}`;
-      if (correctMol.alcsoport) helyes += `, Alcsoport – ${correctMol.alcsoport}`;
-      if (correctMol.target) helyes += `, Céltárgy – ${correctMol.target}`;
-      if (correctMol.generacio) helyes += `, Generáció – ${correctMol.generacio}`;
-      let p = document.createElement('p');
-      p.textContent = helyes;
-      tables[idx].appendChild(p);
+      latinInput.classList.add('incorrect');
+      allCorrect = false;
     }
-  }
-  if (mode === 'beugro') {
-    let eredDiv = document.getElementById('beugroEredmeny');
-    eredDiv.textContent = `Összpontszám: ${correctCount}/${total}`;
-  } else {
-    let eredDiv = document.getElementById('gyakorlasEredmeny');
-    let perc = Math.round((correctCount / total) * 100);
-    eredDiv.textContent = `Helyes válaszok: ${perc}% (${correctCount}/${total})`;
-  }
+    // Hatástani csoport
+    if (mol.groups.length) {
+      const sel = document.getElementById('group_g');
+      if (sel.value === mol.groups[0]) {
+        sel.classList.add('correct');
+      } else {
+        sel.classList.add('incorrect');
+        allCorrect = false;
+      }
+    }
+    // Alcsoport
+    if (mol.subgroup) {
+      const sel = document.getElementById('subgroup_g');
+      if (sel.value === mol.subgroup) {
+        sel.classList.add('correct');
+      } else {
+        sel.classList.add('incorrect');
+        allCorrect = false;
+      }
+    }
+    // Target
+    if (mol.target) {
+      const sel = document.getElementById('target_g');
+      if (sel.value === mol.target) {
+        sel.classList.add('correct');
+      } else {
+        sel.classList.add('incorrect');
+        allCorrect = false;
+      }
+    }
+    // Generáció
+    if (mol.generation) {
+      const sel = document.getElementById('gen_g');
+      if (sel.value === mol.generation) {
+        sel.classList.add('correct');
+      } else {
+        sel.classList.add('incorrect');
+        allCorrect = false;
+      }
+    }
+    // Ha minden helyes, növeljük a helyes válaszok számlálót
+    if (!allCorrect) {
+      // Hibás válasznál megjelenítjük a helyes megoldást
+      const info = document.createElement('p');
+      info.innerHTML = `<span class="incorrect">Helytelen. </span> Helyes megoldás: Latin név = <span class="correct">${mol.latinName}</span>` +
+        `${mol.groups.length ? `, Csoport = <span class="correct">${mol.groups[0]}</span>` : ''}` +
+        `${mol.subgroup ? `, Alcsoport = <span class="correct">${mol.subgroup}</span>` : ''}` +
+        `${mol.target ? `, Cél = <span class="correct">${mol.target}</span>` : ''}` +
+        `${mol.generation ? `, Generáció = <span class="correct">${mol.generation}</span>` : ''}.`;
+      container.appendChild(info);
+    }
+    // Következő kérdés gomb
+    const nextBtn = document.createElement('button');
+    nextBtn.textContent = 'Következő';
+    nextBtn.addEventListener('click', () => {
+      currentIdx++;
+      renderNextQuestion();
+    });
+    container.appendChild(nextBtn);
+  });
+  container.appendChild(checkBtn);
 }
+
+// Segédfüggvény: tömb véletlenszerű elegyítése
+function shuffle(array) {
+  let currentIndex = array.length, temporaryValue, randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    // Csere
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+

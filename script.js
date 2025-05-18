@@ -2,7 +2,7 @@ let molekulakData = [];
 let beugroMolekulak = [];
 let gyakorlasiMolekulak = [];
 
-let molekulakData = [];
+
 
 fetch('gyogykemsumma_dict.json')
   .then(response => response.json())

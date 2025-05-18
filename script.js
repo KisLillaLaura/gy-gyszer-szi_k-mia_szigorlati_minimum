@@ -28,6 +28,10 @@ function initializeGroupSelect() {
     groupSelect.appendChild(option);
   });
 }
+function getRandomElements(arr, n) {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, n);
+}
 
 function setupEventListeners() {
   document.getElementById("beugroBtn").addEventListener("click", () => {

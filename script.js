@@ -226,6 +226,13 @@ function evaluateGyakorlas() {
 
   const percent = ((correct / total) * 100).toFixed(1);
   eredmenyDiv.innerHTML += `<h3>Helyes válaszok aránya: ${percent}%</h3>`;
+
+}
+function goBackToMenu() {
+  document.getElementById("beugroContainer").style.display = "none";
+  document.getElementById("gyakorlasContainer").style.display = "none";
+  document.getElementById("beugroEredmeny").innerHTML = "";
+  document.getElementById("gyakorlasEredmeny").innerHTML = "";
 }
 
 

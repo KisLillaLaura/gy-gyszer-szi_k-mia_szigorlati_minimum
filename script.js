@@ -2,6 +2,17 @@ let molekulakData = [];
 let beugroMolekulak = [];
 let gyakorlasiMolekulak = [];
 
+let molekulakData = [];
+
+fetch('gyogykemsumma_dict.json')
+  .then(response => response.json())
+  .then(data => {
+    molekulakData = data;
+    populateGroupSelect();  // <- IDE hívjuk meg
+    initializeGame();       // vagy bármi más inicializálás
+  })
+  .catch(error => console.error("Hiba a JSON betöltése során:", error));
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const response = await fetch("gyogykemsumma_dict.json");
@@ -12,6 +23,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Hiba a JSON betöltése során:", error);
   }
 });
+
+function populateGroupSelect() {
+  const groupSelect = document.getElementById("groupSelect");
+  const uniqueGroups = new Set();
+
+  molekulakData.forEach(mol => {
+    mol.groups.forEach(group => uniqueGroups.add(group));
+  });
+
+  uniqueGroups.forEach(group => {
+    const option = document.createElement("option");
+    option.value = group;
+    option.textContent = group;
+    groupSelect.appendChild(option);
+  });
+}
+
 function initializeGroupSelect() {
   const groupSet = new Set();
   molekulakData.forEach(mol => {
